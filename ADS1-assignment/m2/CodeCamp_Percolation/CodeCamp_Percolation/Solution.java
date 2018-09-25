@@ -68,7 +68,7 @@ class Percolation {
 		int row1 = row - 1;
 		int col1 = column - 1;
 		array[row1][col1] = true;
-		//count++;
+		count++;
 		if (row1 - 1 >= 0 && isOpen(row - 1, column)) {
 			wu.union(toOneD(row, column), toOneD(row - 1, column));
 		}
