@@ -72,7 +72,7 @@ class Percolation {
 		int row1 = row - 1;
 		int col1 = column - 1;
 		array[row1][col1] = true;
-		count++;
+		//count++;
 		if (row1 - 1 >= 0 && isOpen(row - 1, column)) {
 			wu.union(toOneD(row, column), toOneD(row - 1, column));
 		}
@@ -98,32 +98,32 @@ class Percolation {
 	public boolean isOpen(final int row, final int col) {
 		return array[row - 1][col - 1];
 	}
-	/**
-	 * Determines if full.
-	 *
-	 * @param      row   The row
-	 * @param      col   The col
-	 *
-	 * @return     True if full, False otherwise.
-	 */
-	public boolean isFull(final int row, final int col) {
-		if (isOpen(row, col)) {
-			for (int i = 0; i < arraySize; i++) {
-				if (wu.connected(toOneD(row, col), i)) {
-					return true;
-				}
-			}
-		}
-		return false;
-	}
-	/**
-	 * return number of open sites.
-	 *
-	 * @return count
-	 */
-	public int numberOfOpenSites() {
-		return count;
-	}
+	// /**
+	//  * Determines if full.
+	//  *
+	//  * @param      row   The row
+	//  * @param      col   The col
+	//  *
+	//  * @return     True if full, False otherwise.
+	//  */
+	// public boolean isFull(final int row, final int col) {
+	// 	if (isOpen(row, col)) {
+	// 		for (int i = 0; i < arraySize; i++) {
+	// 			if (wu.connected(toOneD(row, col), i)) {
+	// 				return true;
+	// 			}
+	// 		}
+	// 	}
+	// 	return false;
+	// }
+	// /**
+	//  * return number of open sites.
+	//  *
+	//  * @return count
+	//  */
+	// public int numberOfOpenSites() {
+	// 	return count;
+	// }
 	/**
 	 * method to check whether there is a flow.
 	 *
@@ -173,7 +173,7 @@ public final class Solution {
 		int n = Integer.parseInt(scan.nextLine());
 		while (scan.hasNext()) {
 			String[] tokens = scan.nextLine().split(" ");
-			pobj.open(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[0]));
+			pobj.open(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
 		}
 		System.out.println(pobj.percolates());
 	}
