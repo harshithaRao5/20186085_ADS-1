@@ -42,7 +42,7 @@ class Percolation {
      * @param n int
      */
     public Percolation(final int n) {
-        int arrSize = n;
+        this.arraySize = n;
         count = 0;
         array = new boolean[n][n];
         wu = new WeightedQuickUnionUF((n * n));
