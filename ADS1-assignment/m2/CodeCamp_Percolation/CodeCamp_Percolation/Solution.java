@@ -72,7 +72,7 @@ class Percolation {
 	}
 	public boolean percolates() {
 		for (int i = 0; i < arraySize; i++) {
-			for (int j = (arraySize * (arraySize - 1)); j < arraySize * arraySize; j++) {
+			for (int j = (arraySize * (arraySize - 1)-1); j < arraySize * arraySize; j++) {
 				if (wu.connected(i, j)) {
 					return true;
 				}
