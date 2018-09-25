@@ -130,11 +130,12 @@ class Percolation {
 	 * @return boolean
 	 */
 	public boolean percolates() {
-		// if (arraySize == 1) {
-		// 	if (isOpen(1, 1)) {
-		// 		return true;
-		// 	}
-		// }
+		if (arraySize == 1) {
+			if (isOpen(1, 1)) {
+				return true;
+			}
+			return false;
+		}
 		for (int j = (arraySize * (arraySize - 1) - 1);
 			j < (arraySize * arraySize); j++) {
 			for (int i = 0; i < arraySize; i++) {
