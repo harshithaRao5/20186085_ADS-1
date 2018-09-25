@@ -14,20 +14,20 @@ import java.util.Scanner;
  * Class for percolation.
  */
 class Percolation {
-	/**
-	 *the array.
-	 */
-	private boolean[] array;
-	/**
-	 *object declaration for class.
-	 */
+    /**
+     *the array.
+     */
+    private boolean[] array;
+    /**
+     *object declaration for class.
+     */
     private WeightedQuickUnionUF wu;
     /**
      *array size.
      */
     private int arraySize;
     /**
-     *size
+     *size.
      */
     private int size;
     /**
@@ -35,11 +35,11 @@ class Percolation {
      */
     private int count;
     /**
-     *first row;
+     *first row.
      */
     private int top;
     /**
-     * last row
+     * last row.
      */
     private int bottom;
     /**
@@ -53,7 +53,7 @@ class Percolation {
      *
      * @param n int
      */
-    public Percolation(final int n) {
+    Percolation(final int n) {
         this.arraySize = n;
         this.size = n * n;
         this.top = size;
@@ -75,7 +75,7 @@ class Percolation {
      * @return  onedimensional array
      */
     public int toOneD(final int row, final int col) {
-    	return (arraySize * (row - 1)) + (col - 1);
+        return (arraySize * (row - 1)) + (col - 1);
     }
     /**
      * Connects open sites(== full site).
@@ -92,10 +92,10 @@ class Percolation {
      * method that opens the blocked site.
      *
      * @param      row     The row
-     * @param      column  The column
+     * @param      col  The column
      */
-	public void open(final int row, final int col) {
-		int index = toOneD(row, col);
+    public void open(final int row, final int col) {
+        int index = toOneD(row, col);
         array[index] = true;
         count++;
         int toprow = index - arraySize;
@@ -104,99 +104,101 @@ class Percolation {
             wu.union(top, index);
             wu.union(bottom, index);
         }
-        if (bottomrow < size) { 		//bottom
+        if (bottomrow < size) {         //bottom
             connectOpenSites(index, bottomrow);
         }
-        if (toprow >= 0) { 				//top
+        if (toprow >= 0) {              //top
             connectOpenSites(index, toprow);
         }
-        if (col == 1) { 				//left
+        if (col == 1) {                 //left
             if (col != arraySize) {
                 connectOpenSites(index, index + 1);
             }
             return;
         }
-        if (col == arraySize) { 		//right
+        if (col == arraySize) {         //right
             connectOpenSites(index, index - 1);
             return;
         }
         connectOpenSites(index, index + 1);
         connectOpenSites(index, index - 1);
-	}
-	/**
-	 * Determines if open.
-	 *
-	 * @param      row   The row
-	 * @param      col   The col
-	 *
-	 * @return     True if open, False otherwise.
-	 */
-	public boolean isOpen(final int row, final int col) {
-		return array[toOneD(row, col)];
-	}
-	// /**
-	//  * Determines if full.
-	//  *
-	//  * @param      row   The row
-	//  * @param      col   The col
-	//  *
-	//  * @return     True if full, False otherwise.
-	//  */
-	public boolean isFull(final int row, final int col) {
-		if (isOpen(row, col)) {
-			for (int i = 0; i < arraySize; i++) {
-				if (wu.connected(toOneD(row, col), i)) {
-					return true;
-				}
-			}
-		}
-		return false;
-	}
-	/**
-	 * return number of open sites.
-	 *
-	 * @return count
-	 */
-	public int numberOfOpenSites() {
-		return count;
-	}
-	/**
-	 * method to check whether there is a flow.
-	 *
-	 * @return boolean
-	 */
-	public boolean percolates() {
-		return wu.connected(top, bottom);
-	}
+    }
+    /**
+     * Determines if open.
+     *
+     * @param      row   The row
+     * @param      col   The col
+     *
+     * @return     True if open, False otherwise.
+     */
+    public boolean isOpen(final int row, final int col) {
+        return array[toOneD(row, col)];
+    }
+    /**
+     * Determines if full.
+     *
+     * @param      row   The row
+     * @param      col   The col
+     *
+     * @return     True if full, False otherwise.
+     */
+    public boolean isFull(final int row, final int col) {
+        if (isOpen(row, col)) {
+            for (int i = 0; i < arraySize; i++) {
+                if (wu.connected(toOneD(row, col), i)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    /**
+     * return number of open sites.
+     *
+     * @return count
+     */
+    public int numberOfOpenSites() {
+        return count;
+    }
+    /**
+     * method to check whether there is a flow.
+     *
+     * @return boolean
+     */
+    public boolean percolates() {
+        return wu.connected(top, bottom);
+    }
 }
 /**
  * Class for solution.
  */
 public final class Solution {
-	/**
-	 * Constructs the object.
-	 */
-	protected Solution() {
+    /**
+     * Constructs the object.
+     */
+    protected Solution() {
 
-	}
-	/**
-	 * main method to read input.
-	 *
-	 * @param args String
-	 */
-	public static void main(final String[] args) {
-		Scanner scan = new Scanner(System.in);
-		// int size = scan.nextInt();
-		// while (scan.hasNext()) {
-		// 	int rows = scan.nextInt();
-		// 	int columns = scan.nextInt();
-		// }
-		int n = Integer.parseInt(scan.nextLine());
-		Percolation pobj = new Percolation(n);
-		while (scan.hasNext()) {
-			String[] tokens = scan.nextLine().split(" ");
-			pobj.open(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
-		}
-		System.out.println(pobj.percolates() && pobj.numberOfOpenSites() != 0);
-	}
+    }
+    /**
+     * main method to read input.
+     *
+     * @param args String
+     */
+    public static void main(final String[] args) {
+        Scanner scan = new Scanner(System.in);
+        // int size = scan.nextInt();
+        // while (scan.hasNext()) {
+        //  int rows = scan.nextInt();
+        //  int columns = scan.nextInt();
+        // }
+        int n = Integer.parseInt(scan.nextLine());
+        Percolation pobj = new Percolation(n);
+        while (scan.hasNext()) {
+            String[] tokens = scan.nextLine().split(" ");
+            pobj.open(Integer.parseInt(tokens[0])
+                , Integer.parseInt(tokens[1]));
+        }
+        System.out.println(pobj.percolates()
+            && pobj.numberOfOpenSites() != 0);
+    }
 }
