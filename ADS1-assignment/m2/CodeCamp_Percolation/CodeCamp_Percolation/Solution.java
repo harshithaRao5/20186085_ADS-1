@@ -71,7 +71,7 @@ class Percolation {
 	public void open(final int row, final int column) {
 		int row1 = row - 1;
 		int col1 = column - 1;
-		array[row1][col1] = true;
+		array[row][column] = true;
 		//count++;
 		if (row1 - 1 >= 0 && isOpen(row - 1, column)) {
 			wu.union(toOneD(row, column), toOneD(row - 1, column));
@@ -164,7 +164,6 @@ public final class Solution {
 	 */
 	public static void main(final String[] args) {
 		Percolation pobj = new Percolation();
-		//WeightedQuickUnionUF wobj = new WeightedQuickUnionUF();
 		Scanner scan = new Scanner(System.in);
 		// int size = scan.nextInt();
 		// while (scan.hasNext()) {
