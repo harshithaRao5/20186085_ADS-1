@@ -33,7 +33,7 @@ class Percolation {
     /**
      * Constructs the object.
      */
-    Percolation() {
+    protected Percolation() {
 
     }
     /**
@@ -41,14 +41,12 @@ class Percolation {
      *
      * @param n int
      */
-    public Percolation(int n) {
+    public Percolation(final int n) {
         int arrSize = n;
         array = new boolean[n][n];
-        wu = new WeightedQuickUnionUF((n*n));
-        for(int i = 0; i < n; i++)
-        {
-            for(int j = 0; j < n; j++)
-            {
+        wu = new WeightedQuickUnionUF((n * n));
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
                 array[i][j] = false;
             }
         }
@@ -61,8 +59,8 @@ class Percolation {
      *
      * @return  onedimensional array
      */
-    public int toOneD(int row, int col) {
-    	return (arraySize*row) + col;
+    public int toOneD(final int row, final int col) {
+    	return (arraySize * row) + col;
     }
     /**
      * method that opens the blocked site.
@@ -70,13 +68,13 @@ class Percolation {
      * @param      row     The row
      * @param      column  The column
      */
-	public void open(int row, int column) {
+	public void open(final int row, final int column) {
 		int row1 = row - 1;
 		int col1 = column - 1;
 		array[row1][col1] = true;
 		count++;
-		if (row1 - 1 >= 0 && isOpen(row-1, column)) {
-			wu.union(toOneD(row, column), toOneD(row-1, column));
+		if (row1 - 1 >= 0 && isOpen(row - 1, column)) {
+			wu.union(toOneD(row, column), toOneD(row - 1, column));
 		}
 		if (row1 + 1 < arraySize && isOpen(row + 1, column)) {
 			wu.union(toOneD(row, column), toOneD(row + 1, column));
@@ -97,8 +95,8 @@ class Percolation {
 	 *
 	 * @return     True if open, False otherwise.
 	 */
-	public boolean isOpen(int row, int col) {
-		return array[row-1][col-1];
+	public boolean isOpen(final int row, final int col) {
+		return array[row - 1][col - 1];
 	}
 	/**
 	 * Determines if full.
@@ -108,7 +106,7 @@ class Percolation {
 	 *
 	 * @return     True if full, False otherwise.
 	 */
-	public boolean isFull(int row, int col) {
+	public boolean isFull(final int row, final int col) {
 		if (isOpen(row, col)) {
 			for (int i = 0; i < arraySize; i++) {
 				if (wu.connected(toOneD(row, col), i)) {
@@ -132,6 +130,11 @@ class Percolation {
 	 * @return boolean
 	 */
 	public boolean percolates() {
+		// if (arraySize == 1) {
+		// 	if (isOpen(1, 1)) {
+		// 		return true;
+		// 	}
+		// }
 		for (int j = (arraySize * (arraySize - 1) - 1);
 			j < (arraySize * arraySize); j++) {
 			for (int i = 0; i < arraySize; i++) {
@@ -146,7 +149,7 @@ class Percolation {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
 	/**
 	 * Constructs the object.
 	 */
@@ -154,17 +157,23 @@ public class Solution {
 
 	}
 	/**
-	 * main method to read input
+	 * main method to read input.
 	 *
 	 * @param args String
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Percolation pobj = new Percolation();
+		//WeightedQuickUnionUF wobj = new WeightedQuickUnionUF();
 		Scanner scan = new Scanner(System.in);
-		int size = scan.nextInt();
-		while(scan.hasNext()) {
-			int rows = scan.nextInt();
-			int columns = scan.nextInt();
+		// int size = scan.nextInt();
+		// while (scan.hasNext()) {
+		// 	int rows = scan.nextInt();
+		// 	int columns = scan.nextInt();
+		// }
+		int n = Integer.parseInt(scan.nextLine());
+		while (scan.hasNext()) {
+			String[] tokens = scan.nextLine().split(" ");
+			pobj.open(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[0]));
 		}
 		System.out.println(pobj.percolates());
 	}
