@@ -29,7 +29,7 @@ class Percolation {
     /**
      * initializing count.
      */
-    private int count = 0;
+    private int count;
     /**
      * Constructs the object.
      */
@@ -43,13 +43,9 @@ class Percolation {
      */
     public Percolation(final int n) {
         int arrSize = n;
+        count = 0;
         array = new boolean[n][n];
         wu = new WeightedQuickUnionUF((n * n));
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                array[i][j] = false;
-            }
-        }
     }
     /**
      * method to convert from two dimensional to one dimensional.
@@ -71,7 +67,7 @@ class Percolation {
 	public void open(final int row, final int column) {
 		int row1 = row - 1;
 		int col1 = column - 1;
-		array[row][column] = true;
+		array[row1][col1] = true;
 		//count++;
 		if (row1 - 1 >= 0 && isOpen(row - 1, column)) {
 			wu.union(toOneD(row, column), toOneD(row - 1, column));
@@ -163,7 +159,6 @@ public final class Solution {
 	 * @param args String
 	 */
 	public static void main(final String[] args) {
-		Percolation pobj = new Percolation();
 		Scanner scan = new Scanner(System.in);
 		// int size = scan.nextInt();
 		// while (scan.hasNext()) {
@@ -171,6 +166,7 @@ public final class Solution {
 		// 	int columns = scan.nextInt();
 		// }
 		int n = Integer.parseInt(scan.nextLine());
+		Percolation pobj = new Percolation(n);
 		while (scan.hasNext()) {
 			String[] tokens = scan.nextLine().split(" ");
 			pobj.open(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
