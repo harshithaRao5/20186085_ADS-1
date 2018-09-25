@@ -10,15 +10,37 @@
 
 // You can implement the above API to solve the problem
 import java.util.Scanner;
-
+/**
+ * Class for percolation.
+ */
 class Percolation {
+	/**
+	 *the 2 dimensional array.
+	 */
 	private boolean[][] array;
+	/**
+	 *object declaration for class.
+	 */
     private WeightedQuickUnionUF wu;
+    /**
+     *initializing array size.
+     */
     private int arraySize;
+    /**
+     * initializing count.
+     */
     private int count = 0;
+    /**
+     * Constructs the object.
+     */
     Percolation() {
 
     }
+    /**
+     * Constructs the object.
+     *
+     * @param n int
+     */
     public Percolation(int n) {
         int arrSize = n;
         array = new boolean[n][n];
@@ -31,9 +53,23 @@ class Percolation {
             }
         }
     }
+    /**
+     * method to convert from two dimensional to one dimensional.
+     *
+     * @param      row   The row
+     * @param      col   The col
+     *
+     * @return  onedimensional array
+     */
     public int toOneD(int row, int col) {
     	return (arraySize*row) + col;
     }
+    /**
+     * method that opens the blocked site.
+     *
+     * @param      row     The row
+     * @param      column  The column
+     */
 	public void open(int row, int column) {
 		int row1 = row - 1;
 		int col1 = column - 1;
@@ -53,25 +89,51 @@ class Percolation {
 		}
 
 	}
+	/**
+	 * Determines if open.
+	 *
+	 * @param      row   The row
+	 * @param      col   The col
+	 *
+	 * @return     True if open, False otherwise.
+	 */
 	public boolean isOpen(int row, int col) {
 		return array[row-1][col-1];
 	}
+	/**
+	 * Determines if full.
+	 *
+	 * @param      row   The row
+	 * @param      col   The col
+	 *
+	 * @return     True if full, False otherwise.
+	 */
 	public boolean isFull(int row, int col) {
-		if(isOpen(row, col)) {
+		if (isOpen(row, col)) {
 			for (int i = 0; i < arraySize; i++) {
-				if(wu.connected(toOneD(row, col), i)) {
+				if (wu.connected(toOneD(row, col), i)) {
 					return true;
 				}
 			}
 		}
 		return false;
 	}
+	/**
+	 * return number of open sites.
+	 *
+	 * @return count
+	 */
 	public int numberOfOpenSites() {
-
 		return count;
 	}
+	/**
+	 * method to check whether there is a flow.
+	 *
+	 * @return boolean
+	 */
 	public boolean percolates() {
-		for (int j = (arraySize * (arraySize - 1)-1); j < arraySize * arraySize; j++) {
+		for (int j = (arraySize * (arraySize - 1) - 1);
+			j < (arraySize * arraySize); j++) {
 			for (int i = 0; i < arraySize; i++) {
 				if (wu.connected(i, j)) {
 					return true;
@@ -80,10 +142,22 @@ class Percolation {
 		}
 		return false;
 	}
-
-
 }
+/**
+ * Class for solution.
+ */
 public class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	protected Solution() {
+
+	}
+	/**
+	 * main method to read input
+	 *
+	 * @param args String
+	 */
 	public static void main(String[] args) {
 		Percolation pobj = new Percolation();
 		Scanner scan = new Scanner(System.in);
@@ -93,7 +167,5 @@ public class Solution {
 			int columns = scan.nextInt();
 		}
 		System.out.println(pobj.percolates());
-
-
 	}
 }
