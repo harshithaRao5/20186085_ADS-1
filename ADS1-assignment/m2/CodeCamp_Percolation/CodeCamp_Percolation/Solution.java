@@ -112,14 +112,14 @@ class Percolation {
 	// 	}
 	// 	return false;
 	// }
-	/**
-	 * return number of open sites.
-	 *
-	 * @return count
-	 */
-	public int numberOfOpenSites() {
-		return count;
-	}
+	// /**
+	//  * return number of open sites.
+	//  *
+	//  * @return count
+	//  */
+	// public int numberOfOpenSites() {
+	// 	return count;
+	// }
 	/**
 	 * method to check whether there is a flow.
 	 *
@@ -171,6 +171,6 @@ public final class Solution {
 			String[] tokens = scan.nextLine().split(" ");
 			pobj.open(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
 		}
-		System.out.println(pobj.percolates() && pobj.numberOfOpenSites() != 0);
+		System.out.println(pobj.percolates());
 	}
 }
