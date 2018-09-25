@@ -27,6 +27,10 @@ class Percolation {
      */
     private int arraySize;
     /**
+     *
+     */
+    private int size;
+    /**
      * initializing count.
      */
     private int count;
@@ -43,9 +47,10 @@ class Percolation {
      */
     public Percolation(final int n) {
         this.arraySize = n;
+        this.size = n;
         count = 0;
         array = new boolean[n][n];
-        wu = new WeightedQuickUnionUF((n * n));
+        wu = new WeightedQuickUnionUF(size + 2);
     }
     /**
      * method to convert from two dimensional to one dimensional.
@@ -72,13 +77,13 @@ class Percolation {
 		if (row1 >= 0 && isOpen(row1, col1)) {
 			wu.union(toOneD(row1, col1), toOneD(row1, col1));
 		}
-		if (row1 + 1 < arraySize && isOpen(row + 1, col1)) {
-			wu.union(toOneD(row1, col1), toOneD(row + 1, col1));
+		if (row1 + 1 < arraySize && isOpen(row1 + 1, col1)) {
+			wu.union(toOneD(row1, col1), toOneD(row1 + 1, col1));
 		}
 		if (col1 >= 0 && isOpen(row1, col1)) {
 			wu.union(toOneD(row1, col1), toOneD(row1, col1));
 		}
-		if (col1 + 1 < arraySize && isOpen(row, col1 + 1)) {
+		if (col1 + 1 < arraySize && isOpen(row1, col1 + 1)) {
 			wu.union(toOneD(row1, col1), toOneD(row1, col1 + 1));
 		}
 
