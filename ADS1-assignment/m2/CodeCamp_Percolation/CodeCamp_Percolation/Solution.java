@@ -15,25 +15,33 @@ import java.util.Scanner;
  */
 class Percolation {
 	/**
-	 *the 2 dimensional array.
+	 *the array.
 	 */
-	private boolean[][] array;
+	private boolean[] array;
 	/**
 	 *object declaration for class.
 	 */
     private WeightedQuickUnionUF wu;
     /**
-     *initializing array size.
+     *array size.
      */
     private int arraySize;
     /**
-     *
+     *size
      */
     private int size;
     /**
      * initializing count.
      */
     private int count;
+    /**
+     *first row;
+     */
+    private int top;
+    /**
+     * last row
+     */
+    private int bottom;
     /**
      * Constructs the object.
      */
@@ -47,10 +55,16 @@ class Percolation {
      */
     public Percolation(final int n) {
         this.arraySize = n;
-        this.size = n;
-        count = 0;
-        array = new boolean[n][n];
+        this.size = n * n;
+        this.top = size;
+        this.bottom = size + 1;
+        this.count = 0;
         wu = new WeightedQuickUnionUF(size + 2);
+        array = new boolean[size];
+        for (int i = 0; i < arraySize; i++) {
+            wu.union(top, i);
+            wu.union(bottom, size - i - 1);
+        }
     }
     /**
      * method to convert from two dimensional to one dimensional.
@@ -61,7 +75,18 @@ class Percolation {
      * @return  onedimensional array
      */
     public int toOneD(final int row, final int col) {
-    	return (arraySize * row) + col;
+    	return (arraySize * (row - 1)) + (col - 1);
+    }
+    /**
+     * Connects open sites(== full site).
+     *
+     * @param      row   The row
+     * @param      col   The col
+     */
+    private void connectOpenSites(final int row, final int col) {
+        if (array[col] && !wu.connected(row, col)) {
+            wu.union(row, col);
+        }
     }
     /**
      * method that opens the blocked site.
@@ -69,24 +94,34 @@ class Percolation {
      * @param      row     The row
      * @param      column  The column
      */
-	public void open(final int row, final int column) {
-		int row1 = row - 1;
-		int col1 = column - 1;
-		array[row1][col1] = true;
-		count++;
-		if (row1 >= 0 && isOpen(row1, col1)) {
-			wu.union(toOneD(row1, col1), toOneD(row1, col1));
-		}
-		if (row1 + 1 < arraySize && isOpen(row1 + 1, col1)) {
-			wu.union(toOneD(row1, col1), toOneD(row1 + 1, col1));
-		}
-		if (col1 >= 0 && isOpen(row1, col1)) {
-			wu.union(toOneD(row1, col1), toOneD(row1, col1));
-		}
-		if (col1 + 1 < arraySize && isOpen(row1, col1 + 1)) {
-			wu.union(toOneD(row1, col1), toOneD(row1, col1 + 1));
-		}
-
+	public void open(final int row, final int col) {
+		int index = toOneD(row, col);
+        array[index] = true;
+        count++;
+        int toprow = index - arraySize;
+        int bottomrow = index + arraySize;
+        if (arraySize == 1) {
+            wu.union(top, index);
+            wu.union(bottom, index);
+        }
+        if (bottomrow < size) { 		//bottom
+            connectOpenSites(index, bottomrow);
+        }
+        if (toprow >= 0) { 				//top
+            connectOpenSites(index, toprow);
+        }
+        if (col == 1) { 				//left
+            if (col != arraySize) {
+                connectOpenSites(index, index + 1);
+            }
+            return;
+        }
+        if (col == arraySize) { 		//right
+            connectOpenSites(index, index - 1);
+            return;
+        }
+        connectOpenSites(index, index + 1);
+        connectOpenSites(index, index - 1);
 	}
 	/**
 	 * Determines if open.
@@ -97,7 +132,7 @@ class Percolation {
 	 * @return     True if open, False otherwise.
 	 */
 	public boolean isOpen(final int row, final int col) {
-		return array[row - 1][col - 1];
+		return array[toOneD(row, col)];
 	}
 	// /**
 	//  * Determines if full.
@@ -107,16 +142,16 @@ class Percolation {
 	//  *
 	//  * @return     True if full, False otherwise.
 	//  */
-	// public boolean isFull(final int row, final int col) {
-	// 	if (isOpen(row, col)) {
-	// 		for (int i = 0; i < arraySize; i++) {
-	// 			if (wu.connected(toOneD(row, col), i)) {
-	// 				return true;
-	// 			}
-	// 		}
-	// 	}
-	// 	return false;
-	// }
+	public boolean isFull(final int row, final int col) {
+		if (isOpen(row, col)) {
+			for (int i = 0; i < arraySize; i++) {
+				if (wu.connected(toOneD(row, col), i)) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
 	/**
 	 * return number of open sites.
 	 *
@@ -131,21 +166,7 @@ class Percolation {
 	 * @return boolean
 	 */
 	public boolean percolates() {
-		if (arraySize == 1) {
-			if (isOpen(1, 1)) {
-				return true;
-			}
-			return false;
-		}
-		for (int j = (arraySize * (arraySize - 1) - 1);
-			j < (arraySize * arraySize); j++) {
-			for (int i = 0; i < arraySize; i++) {
-				if (wu.connected(i, j)) {
-					return true;
-				}
-			}
-		}
-		return false;
+		return wu.connected(top, bottom);
 	}
 }
 /**
