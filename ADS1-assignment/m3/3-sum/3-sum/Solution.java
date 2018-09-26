@@ -25,7 +25,7 @@ class ThreeSum {
    /**
     * binary search method.
     *
-    * @param      array  The array
+    * @param      arr  The array
     * @param      a      integer
     *
     * @return result
