@@ -20,9 +20,9 @@ class ThreeSum {
         int low = 0;
         int high = array.length - 1;
         while (low <= high) {
-            int mid = (low + high) / 2;
+            int mid = low + (high - low) / 2;
             if (array[mid] == a) {
-                return a;
+                return mid;
             } else if (array[mid] < a) {
                 low = mid + 1;
             } else {
@@ -36,7 +36,7 @@ class ThreeSum {
         int count = 0;
         for (int i = 0; i < a.length; i++) {
             for (int j = i+1; j < a.length; j++) {
-                int result = binarySearch(a, (a[i] + a[j]));
+                int result = binarySearch(a, -(a[i] + a[j]));
                 if (result > j && result > 0) {
                     count++;
                 }
