@@ -1,13 +1,36 @@
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for sorted array.
+ */
 class SortedArray {
+	/**
+	 * firstarray.
+	 */
 	private int[] firstarray;
+	/**
+	 * seconfarray.
+	 */
 	private int[] secondarray;
-	SortedArray(int[] a1, int[] a2) {
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      a1    A 1
+	 * @param      a2    A 2
+	 */
+	SortedArray(final int[] a1, final int[] a2) {
 		this.firstarray = a1;
 		this.secondarray = a2;
 	}
-	public String sort(int[] arr1, int[] arr2) {
+	/**
+	 * getting sorted elements.
+	 *
+	 * @param      arr1  The arr 1
+	 * @param      arr2  The arr 2
+	 *
+	 * @return   sorted array
+	 */
+	public String sort(final int[] arr1, final int[] arr2) {
 		int i = 0;
 		int j = 0, k = 0;
 		int[] array = new int[arr1.length + arr2.length];
@@ -24,25 +47,31 @@ class SortedArray {
 		while (j < arr2.length) {
 			array[k++] = arr2[j++];
 		}
-
-		// System.out.println(s.sortedArray(arr1, arr2));
-		// Collections.sort(array);
-		// return Arrays.toString(array);
 		String res = "";
 		int index = 0;
-		for (index = 0; index < array.length-1; index++) {
+		for (index = 0; index < array.length - 1; index++) {
 			res += array[index] + ",";
 		} res += array[index];
 		return res;
 	}
 }
 
-
-public class Solution {
+/**
+ * Class for solution.
+ */
+public final class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	Solution() {
 
 	}
-	public static void main(String[] args) {
+	/**
+	 * main method.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int size1 = Integer.parseInt(scan.nextLine());
 		int size2 = Integer.parseInt(scan.nextLine());
