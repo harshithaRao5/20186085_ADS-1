@@ -29,7 +29,7 @@ class ThreeSum {
                 high = mid - 1;
             }
         }
-        return 1;
+        return -1;
     }
     public static int count(int[] a) {
         Arrays.sort(a);
@@ -37,7 +37,7 @@ class ThreeSum {
         for (int i = 0; i < a.length; i++) {
             for (int j = i+1; j < a.length; j++) {
                 int result = binarySearch(a, -(a[i] + a[j]));
-                if (result > j) {
+                if (result > j && result > 0) {
                     count++;
                 }
             }
