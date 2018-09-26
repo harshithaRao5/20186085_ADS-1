@@ -7,18 +7,18 @@ class ThreeSum {
     /**
      * integer array.
      */
-    int[] array;
+    private int[] array;
     /**
-     * array size
+     * array size.
      */
-    int size;
+    private int size;
     /**
      * Constructs the object.
      *
      * @param      arr   The arr
      * @param      n     integer
      */
-    ThreeSum(int[] arr, int n) {
+    ThreeSum(final int[] arr, final int n) {
         this.array = arr;
         this.size = n;
     }
@@ -57,8 +57,8 @@ class ThreeSum {
         // System.out.println(Arrays.toString(a));
         int count = 0;
         for (int i = 0; i < a.length; i++) {
-            for (int j = i+1; j < a.length; j++) {
-                int result = binarySearch(a, -(a[i] + a[j]));
+            for (int j = i + 1; j < a.length; j++) {
+                int result = binarySearch(a, - (a[i] + a[j]));
                 //System.out.println(result + "result$$$$j" + j);
                 if (result > j) {
                     count++;
@@ -71,7 +71,7 @@ class ThreeSum {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
 /**
  * Constructs the object.
  */
