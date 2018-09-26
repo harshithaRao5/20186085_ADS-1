@@ -30,14 +30,14 @@ class ThreeSum {
     *
     * @return result
     */
-    public int binarySearch(final int[] array, final int a) {
+    public int binarySearch(final int[] arr, final int a) {
         int low = 0;
-        int high = array.length - 1;
+        int high = arr.length - 1;
         while (low <= high) {
             int mid = low + (high - low) / 2;
-            if (array[mid] == a) {
+            if (arr[mid] == a) {
                 return mid;
-            } else if (array[mid] < a) {
+            } else if (arr[mid] < a) {
                 low = mid + 1;
             } else {
                 high = mid - 1;
@@ -58,7 +58,7 @@ class ThreeSum {
         int count = 0;
         for (int i = 0; i < a.length; i++) {
             for (int j = i + 1; j < a.length; j++) {
-                int result = binarySearch(a, - (a[i] + a[j]));
+                int result = binarySearch(a, -(a[i] + a[j]));
                 //System.out.println(result + "result$$$$j" + j);
                 if (result > j) {
                     count++;
