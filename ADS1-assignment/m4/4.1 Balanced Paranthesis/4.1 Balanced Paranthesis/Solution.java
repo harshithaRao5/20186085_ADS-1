@@ -29,14 +29,12 @@ class LinkedStackOfStrings {
 			char ch = s.charAt(i);
 			if (ch == '(' || ch == '{' || ch == '[') {
 				push(ch);
-			} else {
-				if (ch == ')' && top() == '(') {
+			} else if (ch == ')' && top() == '(') {
 					pop();
-				} else if (ch == '}' && top() == '{') {
+			} else if (ch == '}' && top() == '{') {
 					pop();
-				} else if (ch == ']' && top() == '[') {
+			} else if (ch == ']' && top() == '[') {
 					pop();
-				}
 				//else return false;
 			}
 
@@ -51,7 +49,7 @@ public class Solution {
 		int size = Integer.parseInt(sc.nextLine());
 		LinkedStackOfStrings lobj = new LinkedStackOfStrings();
 		for (int i = 0; i < size; i++) {
-			String line = sc.next();
+			String line = sc.nextLine();
 			if (lobj.checkParanthesis(line)) {
 				System.out.println("YES");
 			} else {
