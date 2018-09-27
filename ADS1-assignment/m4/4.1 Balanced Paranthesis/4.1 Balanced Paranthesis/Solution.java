@@ -2,12 +2,18 @@ import java.util.Scanner;
 //import java.util.Stack;
 class LinkedStackOfStrings {
 	private Node first = null;
+
+
 	private class Node {
 		String item;
 		Node next;
+
+		Node() {
+			first.item = "7";
+		}
 	}
 	public boolean isEmpty() {
-		return first.item.equals(null);
+		return first.item.equals("7");
 	}
 	public void push(String item) {
 		Node oldfirst = first;
@@ -48,7 +54,6 @@ class LinkedStackOfStrings {
 				}
 			}
 		}
-		System.out.println(isEmpty());
 		return isEmpty();
 	}
 
