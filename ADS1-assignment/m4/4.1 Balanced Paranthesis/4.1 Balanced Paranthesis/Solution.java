@@ -1,28 +1,28 @@
 import java.util.Scanner;
 //import java.util.Stack;
 class LinkedStackOfStrings {
-	private static Node first = null;
-	private static class Node {
+	private Node first = null;
+	private class Node {
 		char item;
 		Node next;
 	}
-	public static boolean isEmpty() {
+	public boolean isEmpty() {
 		return first == null;
 	}
-	public static void push(char item) {
+	public void push(char item) {
 		Node oldfirst = first;
 		first = new Node();
 		first.item = item;
 		first.next = oldfirst;
 	}
-	public static void pop() {
+	public void pop() {
 		char item = first.item;
 		first = first.next;
 	}
-	public static char top() {
+	public char top() {
 		return first.item;
 	}
-	public static boolean checkParanthesis(String s) {
+	public boolean checkParanthesis(String s) {
 
 		int sLength = s.length();
 		for (int i = 0; i < sLength; i++) {
@@ -30,7 +30,7 @@ class LinkedStackOfStrings {
 			if (ch == '(' || ch == '{' || ch == '[') {
 				push(ch);
 			} else {
-				if (!(isEmpty())) {
+				if (isEmpty()) {
 					return false;
 				}
 				if (ch == ')' && top() == '(') {
