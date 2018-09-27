@@ -7,7 +7,7 @@ class LinkedStackOfStrings {
 		Node next;
 	}
 	public boolean isEmpty() {
-		return first == null;
+		return first.equals(null);
 	}
 	public void push(char item) {
 		Node oldfirst = first;
