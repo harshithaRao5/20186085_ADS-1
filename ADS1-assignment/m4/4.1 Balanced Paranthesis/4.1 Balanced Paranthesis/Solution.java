@@ -78,7 +78,7 @@ public final class Solution {
 		int size = Integer.parseInt(sc.nextLine());
 		for (int i = 0; i < size; i++) {
 			String line = sc.next();
-			if(checkParanthesis(line)){
+			if (checkParanthesis(line)) {
 				System.out.println("YES");
 			} else {
 				System.out.println("NO");
@@ -100,19 +100,21 @@ public final class Solution {
 			char ch = s.charAt(i);
 			if (ch == '(' || ch == '{' || ch == '[') {
 				obj.push(ch);
+			} else {
+				if (obj.isEmpty()) {
+					return false;
+				} else if (ch == ')' && obj.top() == '(') {
+					obj.pop();
+				} else if (ch == '}' && obj.top() == '{') {
+					obj.pop();
+				} else if (ch == ']' && obj.top() == '[') {
+					obj.pop();
+				} else {
+					return false;
+				}
 			}
-			else {
-				if(obj.isEmpty()) return false;
-				if (ch == ')' && obj.top() == '(') {
-				obj.pop();
-			} else if (ch == '}' && obj.top() == '{') {
-				obj.pop();
-			} else if (ch == ']' && obj.top() == '[') {
-				obj.pop();
-			} else return false;
-		}
 
+		}
+		return obj.isEmpty();
 	}
-	return obj.isEmpty();
-}
 }
