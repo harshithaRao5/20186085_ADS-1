@@ -30,9 +30,6 @@ class LinkedStackOfStrings {
 			if (ch == '(' || ch == '{' || ch == '[') {
 				push(ch);
 			} else {
-				if (isEmpty()) {
-					return false;
-				}
 				if (ch == ')' && top() == '(') {
 					pop();
 				} else if (ch == '}' && top() == '{') {
