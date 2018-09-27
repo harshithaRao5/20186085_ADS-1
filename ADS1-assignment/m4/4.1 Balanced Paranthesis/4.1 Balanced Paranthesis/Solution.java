@@ -15,9 +15,10 @@ class LinkedStackOfStrings {
 		first.item = item;
 		first.next = oldfirst;
 	}
-	public void pop() {
+	public String pop() {
 		String item = first.item;
 		first = first.next;
+		return item;
 	}
 	public String top() {
 		if (!isEmpty())
@@ -33,16 +34,16 @@ class LinkedStackOfStrings {
 		} else {
 			for (int i = 0; i < sLength; i++) {
 				ch = s.charAt(i) + "";
+				String top = top();
 				if (ch.equals("(") || ch.equals("{") || ch.equals("[")) {
 					push(ch);
-				} else if (ch.equals(")") && top().equals("(")) {
+				} else if (ch.equals(")") && top.equals("(")) {
 						pop();
-				} else if (ch.equals("}") && top().equals("{")) {
+				} else if (ch.equals("}") && top.equals("{")) {
 						pop();
-				} else if (ch.equals("]") && top().equals("[")) {
+				} else if (ch.equals("]") && top.equals("[")) {
 						pop();
 				}
-
 			}
 		}
 		return isEmpty();
