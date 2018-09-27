@@ -1,17 +1,13 @@
 import java.util.Scanner;
 //import java.util.Stack;
 class LinkedStackOfStrings {
-	private Node first = new Node();
+	private Node first = null;
 	private class Node {
 		String item;
 		Node next;
-
-		Node() {
-			first.item = "7";
-		}
 	}
 	public boolean isEmpty() {
-		return first.item.equals("7");
+		return first == null;
 	}
 	public void push(String item) {
 		Node oldfirst = first;
@@ -27,7 +23,7 @@ class LinkedStackOfStrings {
 	public String top() {
 		if (!isEmpty())
 			return first.item;
-		return "7";
+		return null;
 	}
 	public boolean checkParanthesis(String s) {
 
