@@ -41,7 +41,7 @@ class LinkedStackOfStrings {
 				} else if (ch == ']' && top() == '[') {
 					pop();
 				}
-				//else return false;
+				else return false;
 			}
 
 		}
