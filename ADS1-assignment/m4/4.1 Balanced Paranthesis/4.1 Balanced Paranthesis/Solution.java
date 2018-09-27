@@ -20,7 +20,9 @@ class LinkedStackOfStrings {
 		first = first.next;
 	}
 	public char top() {
-		return first.item;
+		if (!isEmpty())
+			return first.item;
+		return '\0';
 	}
 	public boolean checkParanthesis(String s) {
 
@@ -36,6 +38,8 @@ class LinkedStackOfStrings {
 			} else if (ch == ']' && top() == '[') {
 					pop();
 				//else return false;
+			} else {
+				return false;
 			}
 
 		}
