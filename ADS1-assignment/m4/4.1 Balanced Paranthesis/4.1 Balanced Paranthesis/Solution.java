@@ -1,86 +1,62 @@
 import java.util.Scanner;
-//import java.util.Stack;
 class LinkedStackOfStrings {
-    private Node first = null;
-
-    private class Node {
-        String item;
-        Node next;
-    }
-    public boolean isEmpty() {
-        return first == null;
-    }
-    public void push(String item) {
-        Node oldfirst = first;
-        first = new Node();
-        first.item = item;
-        first.next = oldfirst;
-    }
-    public String pop() {
-        String item = first.item;
-        first = first.next;
-        return item;
-    }
-    public String top() {
-        if (!isEmpty())
-            return first.item;
-        return null;
-    }
-
-}
-
-class BalancedParanthesis {
-
-    private String s;
-    private LinkedStackOfStrings lobj;
-
-    BalancedParanthesis() {
-        lobj = new LinkedStackOfStrings();
-    }
-
-    public void setString(String s1) {
-        this.s = s1;
-    }
-    public boolean checkParanthesis() {
-
-        int sLength = s.length();
-        String ch = s.charAt(0) + "";
-        if (ch.equals("}") || ch.equals("]") || ch.equals(")") ) {
-            return false;
-        } else {
-            for (int i = 0; i < sLength; i++) {
-                ch = s.charAt(i) + "";
-                String top = lobj.top();
-                if (ch.equals("(") || ch.equals("{") || ch.equals("[")) {
-                    lobj.push(ch);
-                } else if (ch.equals(")") && top.equals("(")) {
-                    lobj.pop();
-                } else if (ch.equals("}") && top.equals("{")) {
-                    lobj.pop();
-                } else if (ch.equals("]") && top.equals("[")) {
-                    lobj.pop();
-                } else {
-                    return false;
-                }
-            }
-        }
-        return lobj.isEmpty();
-    }
+	private Node first = null;
+	private class Node {
+		char item;
+		Node nextAddress;
+	}
+	public char top() {
+		return first.item;
+	}
+	public boolean isEmpty() {
+		return first == null;
+	}
+	public void push(char item) {
+		Node oldfirst = first;
+		first = new Node();
+		first.item = item;
+		first.nextAddress = oldfirst;
+	}
+	public char pop() {
+		char item = first.item;
+		first = first.nextAddress;
+		return item;
+	}
 }
 public class Solution {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int size = Integer.parseInt(scan.nextLine());
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int size = Integer.parseInt(sc.nextLine());
+		for (int i = 0; i < size; i++) {
+			String line = sc.next();
+			if(checkParanthesis(line)){
+				System.out.println("YES");
+			} else {
+				System.out.println("NO");
+			}
 
-        for(int i = 0; i < size;i++) {
-            BalancedParanthesis bp = new BalancedParanthesis();
-            bp.setString(scan.nextLine());
-            if (bp.checkParanthesis()) {
-                System.out.println("YES");
-            } else {
-                System.out.println("NO");
-            }
-        }
+		}
+	}
+	public static boolean checkParanthesis(String s) {
+		LinkedStackOfStrings obj = new LinkedStackOfStrings();
+		int sLength = s.length();
+		for (int i = 0; i < sLength; i++) {
+			char ch = s.charAt(i);
+			if (ch == '(' || ch == '{' || ch == '[') {
+				obj.push(ch);
+			}
+			else {
+				if(obj.isEmpty()) return false;
+				if (ch == ')' && obj.top() == '(') {
+				obj.pop();
+			} else if (ch == '}' && obj.top() == '{') {
+				obj.pop();
+			} else if (ch == ']' && obj.top() == '[') {
+				obj.pop();
+			} else return false;
+		}
 
-    }
+	}
+	return obj.isEmpty();
+}
 }
