@@ -22,7 +22,9 @@ class LinkedStackOfStrings {
         return item;
     }
     public String top() {
-        return first.item;
+        if (!isEmpty())
+            return first.item;
+        return null;
     }
 
 }
