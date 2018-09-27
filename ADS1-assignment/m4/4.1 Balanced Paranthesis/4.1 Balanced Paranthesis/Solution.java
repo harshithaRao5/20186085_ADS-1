@@ -15,10 +15,9 @@ class LinkedStackOfStrings {
 		first.item = item;
 		first.next = oldfirst;
 	}
-	public static char pop() {
+	public static void pop() {
 		char item = first.item;
 		first = first.next;
-		return item;
 	}
 	public static char top() {
 		return first.item;
@@ -41,7 +40,7 @@ class LinkedStackOfStrings {
 				} else if (ch == ']' && top() == '[') {
 					pop();
 				}
-				else return false;
+				//else return false;
 			}
 
 		}
