@@ -21,9 +21,26 @@ class LinkedStackOfStrings {
 		return item;
 	}
 	public String top() {
-		return first.item;
+		if (!isEmpty())
+			return first.item;
+		return null;
 	}
-	public boolean checkParanthesis(String s) {
+
+}
+
+class BalancedParanthesis {
+
+	private String s;
+	private LinkedStackOfStrings lobj;
+
+	BalancedParanthesis() {
+		lobj = new LinkedStackOfStrings();
+	}
+
+	public void setString(String s1) {
+		this.s = s1;
+	}
+	public boolean checkParanthesis() {
 
 		int sLength = s.length();
 		String ch = s.charAt(0) + "";
@@ -32,31 +49,31 @@ class LinkedStackOfStrings {
 		} else {
 			for (int i = 0; i < sLength; i++) {
 				ch = s.charAt(i) + "";
-				String top = top();
+				String top = lobj.top();
 				if (ch.equals("(") || ch.equals("{") || ch.equals("[")) {
-					push(ch);
+					lobj.push(ch);
 				} else if (ch.equals(")") && top.equals("(")) {
-						pop();
+					lobj.pop();
 				} else if (ch.equals("}") && top.equals("{")) {
-						pop();
+					lobj.pop();
 				} else if (ch.equals("]") && top.equals("[")) {
-						pop();
+					lobj.pop();
 				} else {
 					return false;
 				}
 			}
 		}
-		return isEmpty();
+		return lobj.isEmpty();
 	}
-
 }
 public class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int size = Integer.parseInt(scan.nextLine());
-		LinkedStackOfStrings lobj = new LinkedStackOfStrings();
+		BalancedParanthesis bp = new BalancedParanthesis();
 		while(scan.hasNext()) {
-			if (lobj.checkParanthesis(scan.nextLine())) {
+			bp.setString(scan.nextLine());
+			if (bp.checkParanthesis()) {
 				System.out.println("YES");
 			} else {
 				System.out.println("NO");
