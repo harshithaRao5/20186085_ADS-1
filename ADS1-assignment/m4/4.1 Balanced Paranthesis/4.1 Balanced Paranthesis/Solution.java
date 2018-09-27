@@ -1,9 +1,7 @@
 import java.util.Scanner;
 //import java.util.Stack;
 class LinkedStackOfStrings {
-	private Node first = null;
-
-
+	private Node first = new Node();
 	private class Node {
 		String item;
 		Node next;
@@ -29,7 +27,7 @@ class LinkedStackOfStrings {
 	public String top() {
 		if (!isEmpty())
 			return first.item;
-		return null;
+		return "7";
 	}
 	public boolean checkParanthesis(String s) {
 
