@@ -21,9 +21,7 @@ class LinkedStackOfStrings {
 		return item;
 	}
 	public String top() {
-		if (!isEmpty())
-			return first.item;
-		return null;
+		return first.item;
 	}
 	public boolean checkParanthesis(String s) {
 
