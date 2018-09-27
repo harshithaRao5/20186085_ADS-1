@@ -48,6 +48,7 @@ class LinkedStackOfStrings {
 				}
 			}
 		}
+		System.out.println(isEmpty());
 		return isEmpty();
 	}
 
