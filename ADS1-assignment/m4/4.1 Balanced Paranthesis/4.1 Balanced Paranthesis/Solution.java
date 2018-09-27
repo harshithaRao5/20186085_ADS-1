@@ -3,42 +3,43 @@ import java.util.Scanner;
 class LinkedStackOfStrings {
 	private Node first = null;
 	private class Node {
-		char item;
+		String item;
 		Node next;
 	}
 	public boolean isEmpty() {
 		return first == null;
 	}
-	public void push(char item) {
+	public void push(String item) {
 		Node oldfirst = first;
 		first = new Node();
 		first.item = item;
 		first.next = oldfirst;
 	}
 	public void pop() {
-		char item = first.item;
+		String item = first.item;
 		first = first.next;
 	}
-	public char top() {
+	public String top() {
 		if (!isEmpty())
 			return first.item;
-		return '\0';
+		return null;
 	}
 	public boolean checkParanthesis(String s) {
 
 		int sLength = s.length();
-		if (s.charAt(0) == '}' || s.charAt(0) == ']' || s.charAt(0) == ')' ) {
+		String ch = s.charAt(0) + "";
+		if (ch.equals("}") || ch.equals("]") || ch.equals(")") ) {
 			return false;
 		} else {
 			for (int i = 0; i < sLength; i++) {
-				char ch = s.charAt(i);
-				if (ch == '(' || ch == '{' || ch == '[') {
+				ch = s.charAt(i) + "";
+				if (ch.equals("(") || ch.equals("{") || ch.equals("[")) {
 					push(ch);
-				} else if (ch == ')' && top() == '(') {
+				} else if (ch.equals(")") && top().equals("(")) {
 						pop();
-				} else if (ch == '}' && top() == '{') {
+				} else if (ch.equals("}") && top().equals("{")) {
 						pop();
-				} else if (ch == ']' && top() == '[') {
+				} else if (ch.equals("]") && top().equals("[")) {
 						pop();
 				}
 
