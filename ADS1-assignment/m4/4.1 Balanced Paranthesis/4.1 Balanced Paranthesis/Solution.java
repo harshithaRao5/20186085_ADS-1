@@ -43,6 +43,8 @@ class LinkedStackOfStrings {
 						pop();
 				} else if (ch.equals("]") && top.equals("[")) {
 						pop();
+				} else {
+					return false;
 				}
 			}
 		}
