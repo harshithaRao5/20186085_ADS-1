@@ -27,21 +27,22 @@ class LinkedStackOfStrings {
 	public boolean checkParanthesis(String s) {
 
 		int sLength = s.length();
-		for (int i = 0; i < sLength; i++) {
-			char ch = s.charAt(i);
-			if (ch == '(' || ch == '{' || ch == '[') {
-				push(ch);
-			} else if (ch == ')' && top() == '(') {
-					pop();
-			} else if (ch == '}' && top() == '{') {
-					pop();
-			} else if (ch == ']' && top() == '[') {
-					pop();
-				//else return false;
-			} else {
-				return false;
-			}
+		if (s.charAt(0) == '}' || s.charAt(0) == ']' || s.charAt(0) == ')' ) {
+			return false;
+		} else {
+			for (int i = 0; i < sLength; i++) {
+				char ch = s.charAt(i);
+				if (ch == '(' || ch == '{' || ch == '[') {
+					push(ch);
+				} else if (ch == ')' && top() == '(') {
+						pop();
+				} else if (ch == '}' && top() == '{') {
+						pop();
+				} else if (ch == ']' && top() == '[') {
+						pop();
+				}
 
+			}
 		}
 		return isEmpty();
 	}
@@ -49,17 +50,15 @@ class LinkedStackOfStrings {
 }
 public class Solution {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int size = Integer.parseInt(sc.nextLine());
+		Scanner scan = new Scanner(System.in);
+		int size = Integer.parseInt(scan.nextLine());
 		LinkedStackOfStrings lobj = new LinkedStackOfStrings();
-		for (int i = 0; i < size; i++) {
-			String line = sc.nextLine();
-			if (lobj.checkParanthesis(line)) {
+		while(scan.hasNext()) {
+			if (lobj.checkParanthesis(scan.nextLine())) {
 				System.out.println("YES");
 			} else {
 				System.out.println("NO");
 			}
-
 		}
 	}
 
