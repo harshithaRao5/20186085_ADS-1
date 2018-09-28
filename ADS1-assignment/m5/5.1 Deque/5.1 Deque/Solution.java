@@ -27,52 +27,61 @@ class Deque {
 		private Node next;
 	}
 	public boolean isEmpty() {
-		return last == null || first == null;
+		return first == null;
 	}
 	public int size() {
 		return count;
 	}
 	public void pushLeft(int item) {
-		Node oldlast = first;
-        first = new Node();
-        first.item = item;
-        if (isEmpty()) {
-        	last = first;
+        count++;
+        if (first == null) {
+            //Node oldfirst = first;
+            first = new Node();
+            first.item = item;
+            first.next = null;
+            last = first;
         } else {
-        	first.next = oldlast;
+            Node oldlast = first;
+            first = new Node();
+            first.item = item;
+            first.next = oldlast;
         }
-        //System.out.println(first.item);
         count++;
 	}
 	public void pushRight(int item) {
-		Node oldlast = last;
-		last = new Node();
-		last.item = item;
-		if (isEmpty()) {
-			first = last;
-		} else {
-			oldlast.next = last;
-		}
-		count++;
-	}
-	public int popLeft() {
 
-        int item = first.item;
-		first = first.next;
-		if (isEmpty()) {
-			last = null;
-			first = null;
-		}
-		return item;
-	}
-	public int popRight() {
-		int item = last.item;
-        last = last.next;
-        if (isEmpty()) {
-        	first = null;
-        	last = null;
+		if (last == null) {
+            last = new Node();
+            last.item = item;
+            last.next = null;
+            first = last;
+        }   else {
+            Node temp = last;
+            last = new Node();
+            last.item = item;
+            last.next = null;
+            temp.next = last;
         }
-        return item;
+        count++;
+	}
+	public void popLeft() {
+
+       if (first != null) {
+            first = first.next;
+            count--;
+        }
+	}
+	public void popRight() {
+		 if (last != null) {
+            Node temp = first;
+            while (temp.next.next != null) {
+
+                temp = temp.next;
+            }
+            temp.next = null;
+            last = temp;
+            count--;
+        }
     }
     public String display() {
         if (count != 0) {
