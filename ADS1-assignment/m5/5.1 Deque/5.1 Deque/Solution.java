@@ -1,10 +1,17 @@
 import java.util.Scanner;
+
 class Deque {
 	/**
 	 * variable.
 	 */
 	public Node first;
+	/**
+	 * last variable.
+	 */
 	public Node last;
+	/**
+	 * count variable.
+	 */
 	private int count;
 
 	Deque() {
@@ -26,13 +33,28 @@ class Deque {
 		 */
 		private Node next;
 	}
+	/**
+	 * Determines if empty.
+	 *
+	 * @return     True if empty, False otherwise.
+	 */
 	public boolean isEmpty() {
 		return first == null;
 	}
+	/**
+	 * size.
+	 *
+	 * @return count.
+	 */
 	public int size() {
 		return count;
 	}
-	public void pushLeft(int item) {
+	/**
+	 * Pushes a left.
+	 *
+	 * @param      item  The item
+	 */
+	public void pushLeft(final int item) {
         if (first == null) {
             //Node oldfirst = first;
             first = new Node();
@@ -47,7 +69,12 @@ class Deque {
         }
         count++;
 	}
-	public void pushRight(int item) {
+	/**
+	 * Pushes a right.
+	 *
+	 * @param      item  The item
+	 */
+	public void pushRight(final int item) {
 		if (last == null) {
             last = new Node();
             last.item = item;
@@ -62,17 +89,22 @@ class Deque {
         }
         count++;
 	}
+	/**
+	 * pop from left.
+	 */
 	public void popLeft() {
        if (first != null) {
             first = first.next;
             count--;
         }
 	}
+	/**
+	 * pop from right.
+	 */
 	public void popRight() {
 		 if (last != null) {
             Node temp = first;
             while (temp.next.next != null) {
-
                 temp = temp.next;
             }
             temp.next = null;
@@ -80,6 +112,11 @@ class Deque {
             count--;
         }
     }
+    /**
+     * to string to display.
+     *
+     * @return  string.
+     */
     public String display() {
         if (count != 0) {
             String s = "[";
@@ -93,9 +130,22 @@ class Deque {
         return "[]";
     }
 }
-
+/**
+ * Class for solution.
+ */
 public class Solution {
-	public static void main(String[] args) {
+	/**
+	 *constructs object.
+	 */
+	private Solution() {
+
+	}
+	/**
+	 * main method.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
         int n;
         Deque link = new Deque();
