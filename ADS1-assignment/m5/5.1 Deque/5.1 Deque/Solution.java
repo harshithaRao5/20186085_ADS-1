@@ -33,7 +33,6 @@ class Deque {
 		return count;
 	}
 	public void pushLeft(int item) {
-        count++;
         if (first == null) {
             //Node oldfirst = first;
             first = new Node();
@@ -49,7 +48,6 @@ class Deque {
         count++;
 	}
 	public void pushRight(int item) {
-
 		if (last == null) {
             last = new Node();
             last.item = item;
@@ -65,7 +63,6 @@ class Deque {
         count++;
 	}
 	public void popLeft() {
-
        if (first != null) {
             first = first.next;
             count--;
