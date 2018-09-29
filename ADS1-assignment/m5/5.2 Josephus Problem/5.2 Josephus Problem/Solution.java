@@ -7,11 +7,11 @@ class Node {
     /**
      * variable.
      */
-    public int data;
+    int data;
     /**
      * variable.
      */
-    public Node next;
+    Node next;
     /**
      * Constructs the object.
      *
@@ -53,15 +53,15 @@ class Operations {
     /**
      * variable.
      */
-    public Node head;
+     Node head;
     /**
      * variable.
      */
-    public Node tail;
+     Node tail;
     /**
      * variable.
      */
-    public int size;
+     int size;
     /**
      * insert at beginning.
      *
@@ -196,7 +196,7 @@ class Operations {
      * int array.
      *
      * @param      m   int
-     * @param      size  The size
+     * @param      size1  The size
      *
      * @return   array
      */
