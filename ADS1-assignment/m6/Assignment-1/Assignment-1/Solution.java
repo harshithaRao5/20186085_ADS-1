@@ -28,14 +28,18 @@ class LinkedList {
     }
 
     public char pop() {
+
         char item = first.item;
         if (first != null) {
             first = first.next;
-            length--;
+            //System.out.println("hey");
+
         }
+        length--;
         return item;
     }
     public int size() {
+        //System.out.println(length);
         return length;
     }
 }
@@ -45,14 +49,23 @@ class AddLargeNumbers {
         public static LinkedList numberToDigits(String number) {
             for (int i = 0; i < number.length(); i++) {
                 lobj.push(number.charAt(i));
+                //System.out.println(number.charAt(i));
             }
             return lobj;
         }
         public static String digitsToNumber(LinkedList list) {
             String s = "";
-            for (int i = 0; i <= list.size(); i++) {
+            int i = 0;
+            for (i = 0; i < list.size(); i++) {
                 s += lobj.pop();
+
+                //System.out.println(s);
+
             }
+            // while (i < list.size()) {
+            //     s += lobj.pop();
+            //     i++;
+            // }
             return s;
 
         }
