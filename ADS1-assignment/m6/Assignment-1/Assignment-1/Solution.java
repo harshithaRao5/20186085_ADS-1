@@ -28,7 +28,7 @@ class LinkedList {
     }
 
     public char pop() {
-        //char item = first.item;
+        char item = first.item;
         if (first != null) {
             first = first.next;
             length--;
@@ -41,7 +41,6 @@ class LinkedList {
 }
 class AddLargeNumbers {
         private static LinkedList lobj = new LinkedList();
-
         public static LinkedList numberToDigits(String number) {
             for (int i = 0; i < number.length(); i++) {
                 lobj.push(number.charAt(i));
