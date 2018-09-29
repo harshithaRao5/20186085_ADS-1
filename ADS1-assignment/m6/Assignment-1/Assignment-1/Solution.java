@@ -28,26 +28,26 @@ class LinkedList {
     }
 
     public char pop() {
-        // char item = first.item;
-        // if (first != null) {
-        //     first = first.next;
-        //     length--;
-        // }
-        // return item;
-        // if (last != null) {
-        //     LinkedList temp = first;
-        //     while (temp.next.next != null) {
-        //         temp = temp.next;
-        //     }
-        //     temp.next = null;
-        //     last = temp;
-        //     length--;
-        // }
-        // return item;
         char item = first.item;
-        first = first.next;
-        length--;
+        if (first != null) {
+            first = first.next;
+            length--;
+        }
         return item;
+      //   // if (last != null) {
+      //   //     LinkedList temp = first;
+      //   //     while (temp.next.next != null) {
+      //   //         temp = temp.next;
+      //   //     }
+      //   //     temp.next = null;
+      //   //     last = temp;
+      //   //     length--;
+      //   // }
+      //   // return item;
+      // har item = first.item;
+      //   first = first.next;
+      //   length--;  c
+      //   return item;
     }
     public int size() {
         //System.out.println(length);
@@ -65,7 +65,7 @@ class AddLargeNumbers {
     }
     public static String digitsToNumber(LinkedList list) {
         String s = "";
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i <= list.size(); i++) {
             s += lobj.pop();
         }
         return s;
