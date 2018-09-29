@@ -1,11 +1,17 @@
 import java.util.Scanner;
-import java.util.Arrays;
+//import java.util.Arrays;
 /**
  * Class for node.
  */
 class Node {
-    int data;
-    Node next;
+    /**
+     * variable.
+     */
+    public int data;
+    /**
+     * variable.
+     */
+    public Node next;
     /**
      * Constructs the object.
      *
@@ -44,9 +50,18 @@ class Node {
  * Class for operations.
  */
 class Operations {
-    Node head;
-    Node tail;
-    int size;
+    /**
+     * variable.
+     */
+    public Node head;
+    /**
+     * variable.
+     */
+    public Node tail;
+    /**
+     * variable.
+     */
+    public int size;
     /**
      * insert at beginning.
      *
@@ -185,8 +200,8 @@ class Operations {
      *
      * @return   array
      */
-    public int[] josephus(final int m, final int size) {
-        int[] arr = new int[size];
+    public int[] josephus(final int m, final int size1) {
+        int[] arr = new int[size1];
         Node temp = head;
         int counter = 1;
         int i = 0;
@@ -210,6 +225,12 @@ class Operations {
  * Class for solution.
  */
 public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
     /**
      * main method.
      *
