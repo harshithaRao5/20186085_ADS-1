@@ -1,82 +1,69 @@
 import java.util.Scanner;
 class LinkedList {
-    /**
-     * variable.
-     */
-    private Node first = null;
-    private int length = 0;
-    /**
-     * Class for node.
-     */
-    private class Node {
-        /**
-         * variable.
-         */
-        private char item;
-        /**
-         * variable.
-         */
-        private Node nextAddress;
+    private int size = 0;
+    LinkedList() {
     }
-    /**
-     * top element of stack.
-     *
-     * @return    first element
-     */
-    public char top() {
+    Node first = null;
+    public class Node {
+        Node() {
+        }
+        int item;
+        Node next;
+        Node(int item1) {
+            this.item = item1;
+        }
+    }
+    public int top() {
         return first.item;
     }
-    /**
-     * Determines if empty.
-     *
-     * @return     True if empty, False otherwise.
-     */
+    public void push(int item) {
+        Node next = new Node(item);
+        next.next = first;
+        first = next;
+        size++;
+    }
+    public int pop() {
+        int output = first.item;
+        first = first.next;
+        size--;
+        return output;
+    }
+
     public boolean isEmpty() {
         return first == null;
     }
-    /**
-     * add element to stack.
-     *
-     * @param      item  The item
-     */
-    public void push(final char item) {
-        Node oldfirst = first;
-        first = new Node();
-        first.item = item;
-        first.nextAddress = oldfirst;
-        length++;
-    }
-    /**
-     * element deleted element.
-     *
-     * @return deleted element.
-     */
-    public char pop() {
-        char item = first.item;
-        first = first.nextAddress;
-        length--;
-        return item;
+    public String toString() {
+        Node head = first;
+        String result = "";
+        while(head != null) {
+            result = result + head.item;
+            head = head.next;
+        }
+        return result;
     }
     public int size() {
-        return length;
+        return size;
     }
+
 }
 class AddLargeNumbers {
-    private static LinkedList lobj = new LinkedList();
+    //private static LinkedLists lobj = new LinkedLists();
 
     public static LinkedList numberToDigits(String number) {
-        for (int i = 0; i < number.length(); i++) {
-            lobj.push(number.charAt(i));
+        LinkedList nobj = new LinkedList();
+        for (int i = number.length() - 1; i >= 0; i--) {
+            String s = "" + number.charAt(i);
+            nobj.push(Integer.parseInt(s));
         }
-        return lobj;
+        return nobj;
     }
     public static String digitsToNumber(LinkedList list) {
-        String s = "";
-        for (int i = 0; i < list.size(); i++) {
-            s += lobj.pop();
-        }
-        return s;
-
+        // String s = "";
+        // for (int i = 0; i < list.size(); i++) {
+        //     s += lobj.pop();
+        // }
+        // return s;
+        return list.toString();
     }
 
     public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
@@ -94,9 +81,8 @@ class AddLargeNumbers {
             case "numberToDigits":
                 LinkedList pDigits = AddLargeNumbers.numberToDigits(p);
                 LinkedList qDigits = AddLargeNumbers.numberToDigits(q);
-
-                System.out.println(AddLargeNumbers.digitsToNumber(qDigits));
                 System.out.println(AddLargeNumbers.digitsToNumber(pDigits));
+                System.out.println(AddLargeNumbers.digitsToNumber(qDigits));
                 break;
 
             case "addLargeNumbers":
