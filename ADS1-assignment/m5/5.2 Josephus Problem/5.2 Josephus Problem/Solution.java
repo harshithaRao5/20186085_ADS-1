@@ -6,28 +6,53 @@ import java.util.Arrays;
 class Node {
     int data;
     Node next;
+    /**
+     * Constructs the object.
+     *
+     * @param      value  The value
+     */
     Node(int value) {
         data = value;
         next = null;
     }
-    // Node head;
+    /**
+     * Gets the address.
+     *
+     * @return     The address.
+     */
     public Node getAddress() {
         return next;
     }
-    public void setAddress(Node address) {
+    /**
+     * Sets the address.
+     *
+     * @param      address  The address
+     */
+    public void setAddress(final Node address) {
         next = address;
     }
-
-    public void setdata(int data1) {
+    /**
+     * set data.
+     *
+     * @param      data1  The data 1
+     */
+    public void setdata(final int data1) {
         data = data1;
     }
 }
-
+/**
+ * Class for operations.
+ */
 class Operations {
     Node head;
     Node tail;
     int size;
-    public void insertAtHead(int data) {
+    /**
+     * insert at beginning.
+     *
+     * @param      data  The data
+     */
+    public void insertAtHead(final int data) {
         Node start = new Node(data);
         size++;
         if (head == null) {
@@ -41,8 +66,13 @@ class Operations {
         // System.out.println(printList());
         return;
     }
-
-    public void insertAfterElement(int data, int element) {
+    /**
+     * int at position.
+     *
+     * @param      data     The data
+     * @param      element  The element
+     */
+    public void insertAfterElement(final int data, final int element) {
         Node ins = new Node(element);
         Node temp1 = head;
         int flag = 0;
@@ -60,8 +90,12 @@ class Operations {
             size++;
         }
     }
-
-    public void insertAtTail(int data) {
+    /**
+     * insert at end.
+     *
+     * @param      data  The data
+     */
+    public void insertAtTail(final int data) {
         Node end = new Node(data);
         size++;
         if (head == null) {
@@ -74,7 +108,9 @@ class Operations {
         return;
         // System.out.println(printList());
     }
-
+    /**
+     * remove at first.
+     */
     public void popAtHead() {
         if (size == 0) {
             System.out.println("Deck is empty");
@@ -85,7 +121,9 @@ class Operations {
         temp = null;
         size--;
     }
-
+    /**
+     * remove at end.
+     */
     public void popAtTail() {
         if (size == 0) {
             System.out.println("Deck is empty");
@@ -100,7 +138,12 @@ class Operations {
         size--;
         // System.out.println(printList());
     }
-    public void deleteAfterElement(int data) {
+    /**
+     * delete.
+     *
+     * @param      data  The data
+     */
+    public void deleteAfterElement(final int data) {
         Node temp = head;
         while (temp.data != data) {
             temp = temp.next;
@@ -108,6 +151,11 @@ class Operations {
         temp.next = temp.next.next;
         size--;
     }
+    /**
+     * print.
+     *
+     * @return string
+     */
     public String printList() {
         Node temp = head;
         String str = "[";
@@ -121,11 +169,23 @@ class Operations {
         str += "]";
         return str;
     }
+    /**
+     * size.
+     *
+     * @return size
+     */
     public int size() {
         return size;
     }
-
-    public int[] josephus(int m, int size) {
+    /**
+     * int array.
+     *
+     * @param      m   int
+     * @param      size  The size
+     *
+     * @return   array
+     */
+    public int[] josephus(final int m, final int size) {
         int[] arr = new int[size];
         Node temp = head;
         int counter = 1;
@@ -137,18 +197,25 @@ class Operations {
                 popAtHead();
                 counter++;
             }
-        arr[i++] = temp.data;
-        temp = temp.next;
-        counter = 1;
-        popAtHead();
+            arr[i++] = temp.data;
+            temp = temp.next;
+            counter = 1;
+            popAtHead();
         }
         arr[i++] = temp.data;
         return arr;
     }
 }
-
-public class Solution {
-    public static void main(String[] args) {
+/**
+ * Class for solution.
+ */
+public final class Solution {
+    /**
+     * main method.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int num = scan.nextInt();
         scan.nextLine();
