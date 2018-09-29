@@ -28,9 +28,19 @@ class LinkedList {
     }
 
     public char pop() {
-        char item = first.item;
-        if (first != null) {
-            first = first.next;
+        // char item = first.item;
+        // if (first != null) {
+        //     first = first.next;
+        //     length--;
+        // }
+        // return item;
+        if (last != null) {
+            LinkedList temp = first;
+            while (temp.next.next != null) {
+                temp = temp.next;
+            }
+            temp.next = null;
+            last = temp;
             length--;
         }
         return item;
