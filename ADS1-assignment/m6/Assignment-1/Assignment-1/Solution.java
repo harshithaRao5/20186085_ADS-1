@@ -36,7 +36,7 @@ class LinkedList {
         return item;
     }
     public int size() {
-        System.out.println(length);
+        //System.out.println(length);
         return length;
     }
 }
