@@ -55,8 +55,8 @@ class AddLargeNumbers {
         }
         public static String digitsToNumber(LinkedList list) {
             String s = "";
-            int i = 0;
-            for (i = 0; i < list.size(); i++) {
+            //int i = 0;
+            for (int i = 0; i < list.size(); i++) {
                 s += lobj.pop();
 
                 //System.out.println(s);
