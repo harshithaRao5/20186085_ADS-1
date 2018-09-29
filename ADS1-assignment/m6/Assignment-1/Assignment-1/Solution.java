@@ -1,56 +1,63 @@
 import java.util.Scanner;
 class LinkedList {
-    private LinkedList first;
-    private LinkedList last;
-    private LinkedList next;
-    private char item;
-    private int length;
-    public LinkedList() {
-        first = null;
-        last = null;
-        length = 0;
+    /**
+     * variable.
+     */
+    private Node first = null;
+    private int length = 0;
+    /**
+     * Class for node.
+     */
+    private class Node {
+        /**
+         * variable.
+         */
+        private char item;
+        /**
+         * variable.
+         */
+        private Node nextAddress;
     }
-
+    /**
+     * top element of stack.
+     *
+     * @return    first element
+     */
+    public char top() {
+        return first.item;
+    }
+    /**
+     * Determines if empty.
+     *
+     * @return     True if empty, False otherwise.
+     */
     public boolean isEmpty() {
         return first == null;
     }
-    public void push(char item) {
-        LinkedList oldlast = last;
-        last = new LinkedList();
-        last.item = item;
-        last.next = null;
-        if (isEmpty()) {
-            first = last;
-        } else {
-            oldlast.next = last;
-        }
+    /**
+     * add element to stack.
+     *
+     * @param      item  The item
+     */
+    public void push(final char item) {
+        Node oldfirst = first;
+        first = new Node();
+        first.item = item;
+        first.nextAddress = oldfirst;
         length++;
     }
-
+    /**
+     * element deleted element.
+     *
+     * @return deleted element.
+     */
     public char pop() {
         char item = first.item;
-        if (first != null) {
-            first = first.next;
-            length--;
-        }
+        first = first.nextAddress;
+        length--;
         return item;
-      //   // if (last != null) {
-      //   //     LinkedList temp = first;
-      //   //     while (temp.next.next != null) {
-      //   //         temp = temp.next;
-      //   //     }
-      //   //     temp.next = null;
-      //   //     last = temp;
-      //   //     length--;
-      //   // }
-      //   // return item;
-      // har item = first.item;
-      //   first = first.next;
-      //   length--;  c
-      //   return item;
     }
     public int size() {
-        //System.out.println(length);
         return length;
     }
 }
@@ -65,7 +72,7 @@ class AddLargeNumbers {
     }
     public static String digitsToNumber(LinkedList list) {
         String s = "";
-        for (int i = 0; i <= list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             s += lobj.pop();
         }
         return s;
@@ -87,8 +94,9 @@ class AddLargeNumbers {
             case "numberToDigits":
                 LinkedList pDigits = AddLargeNumbers.numberToDigits(p);
                 LinkedList qDigits = AddLargeNumbers.numberToDigits(q);
-                System.out.println(AddLargeNumbers.digitsToNumber(pDigits));
+
                 System.out.println(AddLargeNumbers.digitsToNumber(qDigits));
+                System.out.println(AddLargeNumbers.digitsToNumber(pDigits));
                 break;
 
             case "addLargeNumbers":
