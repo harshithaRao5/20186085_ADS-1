@@ -43,14 +43,14 @@ class AddLargeNumbers {
         private static LinkedList lobj = new LinkedList();
 
         public static LinkedList numberToDigits(String number) {
-            for (int i = 0; i < number.length(); i++) {
+            for (int i = 0; i < number.length()-1; i++) {
                 lobj.push(number.charAt(i));
             }
             return lobj;
         }
         public static String digitsToNumber(LinkedList list) {
             String s = "";
-            for (int i = 0; i < list.size(); i++) {
+            for (int i = 0; i <= list.size(); i++) {
                 s += lobj.pop();
             }
             return s;
