@@ -166,11 +166,9 @@ public class Solution {
 					break;
 					default:
 					sobj = new Steque();
+					System.out.println();
 					break;
 				}
-				if (tokens[0].equals("")) {
-                    System.out.println();
-                }
 			}
 		}
 	}
