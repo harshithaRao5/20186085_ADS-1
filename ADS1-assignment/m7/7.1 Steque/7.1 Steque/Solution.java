@@ -169,6 +169,7 @@ public class Solution {
 					sobj.displayAll();
 					break;
 					default:
+					sobj = new Steque();
 					break;
 				}
 			}
