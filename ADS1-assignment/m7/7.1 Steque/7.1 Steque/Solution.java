@@ -104,10 +104,10 @@ public class Solution {
 					default:
 					break;
 				}
-				if (tokens[0].equals("")) {
-                    System.out.println();
-                    break;
-                }
+				// if (tokens[0].equals("")) {
+    //                 System.out.println();
+    //                 break;
+    //             }
 			}
 		}
 	}
