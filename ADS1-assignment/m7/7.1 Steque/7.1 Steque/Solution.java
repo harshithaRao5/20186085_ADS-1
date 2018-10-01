@@ -99,6 +99,10 @@ class Steque {
     public int top() {
         return first.item;
     }
+    public void clear() {
+    	length = 0;
+    	System.out.println();
+    }
     /**
      *size method to get the length.
      *
@@ -145,7 +149,7 @@ public class Solution {
 		while (sc.hasNext()) {
 			String line = sc.nextLine();
 			if (line.length() == 0) {
-				System.out.println();
+				sobj.clear();
 			} else {
 			   String[] tokens = line.split(" ");
 				switch(tokens[0]) {
@@ -162,7 +166,6 @@ public class Solution {
 					sobj.displayAll();
 					break;
 					default:
-					sobj = new Steque();
 					break;
 				}
 			}
