@@ -70,7 +70,7 @@ class Steque {
         return length;
     }
     public void displayAll() {
-        if (length != 0) {
+        if (length > 0) {
             String s = "";
             Node temp = first;
             while (temp != null) {
@@ -90,6 +90,7 @@ public class Solution {
 		int n = sc.nextInt();
 		for (int i = 1; i <= n; i++) {
 			Steque sobj = new Steque();
+			System.out.println();
 			while (sc.hasNext()) {
 				String[] tokens = sc.nextLine().split(" ");
 				switch(tokens[0]) {
