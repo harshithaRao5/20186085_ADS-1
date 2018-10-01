@@ -153,7 +153,6 @@ public class Solution {
 				String[] tokens = sc.nextLine().split(" ");
 				if (tokens[0].equals("")) {
                     System.out.println();
-                    break;
                 }
 				switch(tokens[0]) {
 					case "push":
