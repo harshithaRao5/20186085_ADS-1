@@ -74,9 +74,8 @@ class Steque {
                 temp = temp.next;
             }
             System.out.println(s.substring(0, s.length() - 2));
-        } else{
+        }
         System.out.println("");
-    }
     }
 }
 public class Solution {
