@@ -44,7 +44,7 @@ class Steque {
     }
     public void enequeue(final int item) {
     	//System.out.println("hey");
-        if (last == null) {
+        if (last == null || first == null) {
             last = new Node();
             last.item = item;
             last.next = null;
