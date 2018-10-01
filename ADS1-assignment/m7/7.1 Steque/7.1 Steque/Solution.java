@@ -4,15 +4,15 @@ import java.util.Scanner;
  */
 class Steque {
 	/**
-	 * { var_description }
+	 * variable.
 	 */
     private int length = 0;
     /**
-     * { var_description }
+     * variable.
      */
     private Node first = null;
     /**
-     * { var_description }
+     * variable.
      */
     private Node last = null;
     /**
@@ -20,11 +20,11 @@ class Steque {
      */
     private class Node {
     	/**
-    	 * { var_description }
+    	 * variable.
     	 */
         private int item;
         /**
-         * { var_description }
+         * variable.
          */
         private Node next;
     }
@@ -37,7 +37,7 @@ class Steque {
         return first == null||last == null;
     }
     /**
-     * { function_description }
+     * push method to enter element.
      *
      * @param      item  The item
      */
@@ -56,9 +56,9 @@ class Steque {
         length++;
     }
     /**
-     * { function_description }
+     * pop method to delete.
      *
-     * @return     { description_of_the_return_value }
+     * @return value.
      */
     public int pop() {
         if (first != null) {
@@ -68,13 +68,9 @@ class Steque {
             return value;
         }
         return 0;
-        //  else {
-        // 	last = null;
-        // }
-
     }
     /**
-     * { function_description }
+     * push at end.
      *
      * @param      item  The item
      */
@@ -148,11 +144,11 @@ public class Solution {
 		int n = sc.nextInt();
 		for (int i = 0; i < n; i++) {
 			Steque sobj = new Steque();
-			//System.out.println();
 			while (sc.hasNext()) {
 				String[] tokens = sc.nextLine().split(" ");
 				if (tokens[0].equals("")) {
-                    System.out.println();
+                    System.out.println("\n");
+                    break;
                 }
 				switch(tokens[0]) {
 					case "push":
