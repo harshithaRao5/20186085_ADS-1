@@ -15,7 +15,7 @@ class Steque {
     public boolean isEmpty() {
         return first == null;
     }
-    public void enequeue(final int item) {
+    public void push(final int item) {
         if (first == null) {
             first = new Node();
             first.item = item;
@@ -29,7 +29,7 @@ class Steque {
         }
         length++;
     }
-    public void push(final int item) {
+    public void enequeue(final int item) {
         if (last == null) {
             last = new Node();
             last.item = item;
@@ -45,16 +45,22 @@ class Steque {
         length++;
     }
     public void pop() {
-        if (last != null) {
-            Node temp = first;
-            while (temp.next.next != null) {
-                temp = temp.next;
-            }
-            temp.next = null;
-            last = temp;
+        if (first != null) {
+            first = first.next;
             length--;
         }
     }
+    // public void pop() {
+    //     if (last != null) {
+    //         Node temp = first;
+    //         while (temp.next.next != null) {
+    //             temp = temp.next;
+    //         }
+    //         temp.next = null;
+    //         last = temp;
+    //         length--;
+    //     }
+    // }
     public int top() {
         return first.item;
     }
