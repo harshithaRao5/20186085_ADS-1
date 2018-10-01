@@ -170,7 +170,7 @@ public class Solution {
 					sobj.displayAll();
 					break;
 					default:
-					// sobj = new Steque();
+					sobj = new Steque();
 					break;
 				}
 				if (tokens[0].equals(" ")) {
