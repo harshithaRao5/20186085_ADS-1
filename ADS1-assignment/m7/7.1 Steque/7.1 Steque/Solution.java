@@ -141,15 +141,13 @@ public class Solution {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		for (int i = 0; i < n; i++) {
-			Steque sobj = new Steque();
-			while (sc.hasNext()) {
-				String[] tokens = sc.nextLine().split(" ");
-				if (tokens[0].length() == 0) {
-                    System.out.println();
-
-                } else {
+		Steque sobj = new Steque();
+		while (sc.hasNext()) {
+			String line = sc.nextLine();
+			if (line.length() == 0) {
+				System.out.println();
+			} else {
+			   String[] tokens = line.split(" ");
 				switch(tokens[0]) {
 					case "push":
 					sobj.push(Integer.parseInt(tokens[1]));
@@ -168,8 +166,6 @@ public class Solution {
 					break;
 				}
 			}
-
 			}
 		}
-	}
 }
