@@ -13,7 +13,7 @@ class Steque {
         private Node next;
     }
     public boolean isEmpty() {
-        return first == null;
+        return first == null||last == null;
     }
     public void push(final int item) {
         if (first == null) {
@@ -29,13 +29,17 @@ class Steque {
         }
         length++;
     }
-    public void pop() {
+    public int pop() {
         if (first != null) {
+        	int value = first.item;
             first = first.next;
             length--;
-        } else {
-        	last = null;
+            return value;
         }
+        return 0;
+        //  else {
+        // 	last = null;
+        // }
 
     }
     public void enequeue(final int item) {
@@ -53,6 +57,7 @@ class Steque {
             temp.next = last;
         }
         length++;
+        //System.out.println("harshitha"+length);
     }
     public int top() {
         return first.item;
