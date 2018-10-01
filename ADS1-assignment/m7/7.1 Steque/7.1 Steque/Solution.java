@@ -68,6 +68,10 @@ class Steque {
             return value;
         }
         return 0;
+        //  else {
+        // 	last = null;
+        // }
+
     }
     /**
      * push at end.
@@ -98,13 +102,6 @@ class Steque {
      */
     public int top() {
         return first.item;
-    }
-    public void clear() {
-    	while(length > 0) {
-    		pop();
-    		length--;
-    	}
-    	System.out.println();
     }
     /**
      *size method to get the length.
@@ -148,13 +145,15 @@ public class Solution {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Steque sobj = new Steque();
-		while (sc.hasNext()) {
-			String line = sc.nextLine();
-			if (line.length() == 0) {
-				sobj.clear();
-			} else {
-			   String[] tokens = line.split(" ");
+		int n = sc.nextInt();
+		for (int i = 0; i < n; i++) {
+			Steque sobj = new Steque();
+			//System.out.println();
+			while (sc.hasNext()) {
+				String[] tokens = sc.nextLine().split(" ");
+				if (tokens[0].equals("")) {
+                    System.out.println();
+                }
 				switch(tokens[0]) {
 					case "push":
 					sobj.push(Integer.parseInt(tokens[1]));
@@ -172,7 +171,8 @@ public class Solution {
 					sobj = new Steque();
 					break;
 				}
-			}
+
 			}
 		}
+	}
 }
