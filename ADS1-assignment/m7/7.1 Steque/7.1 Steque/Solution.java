@@ -111,7 +111,7 @@ public class Solution {
 					break;
 				}
 				if (tokens[0].equals(" ")) {
-                    System.out.println();
+                    System.out.println("\n");
                     break;
                 }
 			}
