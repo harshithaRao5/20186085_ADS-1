@@ -90,7 +90,7 @@ public class Solution {
 		int n = sc.nextInt();
 		for (int i = 1; i <= n; i++) {
 			Steque sobj = new Steque();
-			System.out.println();
+			//System.out.println();
 			while (sc.hasNext()) {
 				String[] tokens = sc.nextLine().split(" ");
 				switch(tokens[0]) {
@@ -105,6 +105,9 @@ public class Solution {
 					case "enqueue":
 					sobj.enequeue(Integer.parseInt(tokens[1]));
 					sobj.displayAll();
+					break;
+					default:
+					sobj = new Steque();
 					break;
 
 				}
