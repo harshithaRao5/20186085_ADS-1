@@ -100,7 +100,10 @@ class Steque {
         return first.item;
     }
     public void clear() {
-    	length = 0;
+    	while(length > 0) {
+    		pop();
+    		length--;
+    	}
     	System.out.println();
     }
     /**
