@@ -87,8 +87,9 @@ public class Solution {
 			Steque sobj = new Steque();
 			//System.out.println();
 			while (sc.hasNext()) {
-				String[] tokens = sc.nextLine().split(" ");
-				if (tokens[0].equals("")) {
+				String s = sc.nextLine();
+				String[] tokens = s.split(" ");
+				if (s.equals("\n")) {
                     System.out.println();
                     break;
                 }
