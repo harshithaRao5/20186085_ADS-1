@@ -102,12 +102,13 @@ public class Solution {
 					sobj.displayAll();
 					break;
 					default:
+					sobj = new Steque();
 					break;
 				}
-				// if (tokens[0].equals("")) {
-    //                 System.out.println();
-    //                 break;
-    //             }
+				if (tokens[0].equals("")) {
+                    System.out.println();
+                    break;
+                }
 			}
 		}
 	}
