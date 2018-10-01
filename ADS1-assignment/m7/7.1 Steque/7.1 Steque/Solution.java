@@ -66,7 +66,7 @@ class Steque {
         return length;
     }
     public void displayAll() {
-        if (length > 0) {
+        if (length != 0) {
             String s = "";
             Node temp = first;
             while (temp != null) {
@@ -75,7 +75,7 @@ class Steque {
             }
             System.out.println(s.substring(0, s.length() - 2));
         } else{
-        System.out.println("Steque is empty.");
+        System.out.println("");
     }
     }
 }
@@ -95,7 +95,11 @@ public class Solution {
 					break;
 					case "pop":
 					sobj.pop();
-					sobj.displayAll();
+					if (sobj.isEmpty()) {
+						System.out.println("Steque is Empty.");
+					} else {
+						sobj.displayAll();
+					}
 					break;
 					case "enqueue":
 					sobj.enequeue(Integer.parseInt(tokens[1]));
