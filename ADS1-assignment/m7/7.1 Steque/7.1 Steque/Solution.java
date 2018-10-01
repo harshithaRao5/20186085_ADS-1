@@ -151,6 +151,10 @@ public class Solution {
 			//System.out.println();
 			while (sc.hasNext()) {
 				String[] tokens = sc.nextLine().split(" ");
+				if (tokens[0].equals("")) {
+                    System.out.println();
+                    break;
+                }
 				switch(tokens[0]) {
 					case "push":
 					sobj.push(Integer.parseInt(tokens[1]));
@@ -168,10 +172,7 @@ public class Solution {
 					sobj = new Steque();
 					break;
 				}
-				if (tokens[0].equals("")) {
-                    System.out.println();
-                    break;
-                }
+
 			}
 		}
 	}
