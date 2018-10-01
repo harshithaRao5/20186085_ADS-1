@@ -3,9 +3,9 @@ import java.util.Scanner;
  * Class for steque.
  */
 class Steque {
-	/**
-	 * variable.
-	 */
+    /**
+     * variable.
+     */
     private int length = 0;
     /**
      * variable.
@@ -19,9 +19,9 @@ class Steque {
      * Class for node.
      */
     private class Node {
-    	/**
-    	 * variable.
-    	 */
+        /**
+         * variable.
+         */
         private int item;
         /**
          * variable.
@@ -34,7 +34,7 @@ class Steque {
      * @return     True if empty, False otherwise.
      */
     public boolean isEmpty() {
-        return first == null||last == null;
+        return first == null || last == null;
     }
     /**
      * push method to enter element.
@@ -62,14 +62,14 @@ class Steque {
      */
     public int pop() {
         if (first != null) {
-        	int value = first.item;
+            int value = first.item;
             first = first.next;
             length--;
             return value;
         }
         return 0;
         //  else {
-        // 	last = null;
+        //  last = null;
         // }
 
     }
@@ -78,8 +78,8 @@ class Steque {
      *
      * @param      item  The item
      */
-    public void enequeue(final int item) {
-    	//System.out.println("hey");
+    public void enqueue(final int item) {
+        //System.out.println("hey");
         if (last == null || first == null) {
             last = new Node();
             last.item = item;
@@ -124,52 +124,52 @@ class Steque {
             }
             System.out.println(s.substring(0, s.length() - 2));
         } else {
-        System.out.println("Steque is empty.");
-    	}
+            System.out.println("Steque is empty.");
+        }
     }
 }
 /**
  * Class for solution.
  */
-public class Solution {
-	/**
-	 * Constructs the object.
-	 */
-	private Solution() {
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
 
-	}
-	/**
-	 *main method.
-	 *
-	 * @param      args  The arguments
-	 */
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int n = Integer.parseInt(sc.nextLine());
-		for (int i = 0; i < n; i++) {
-			Steque sobj = new Steque();
-			//System.out.println();
-			while (sc.hasNext()) {
-				String[] tokens = sc.nextLine().split(" ");
-				switch(tokens[0]) {
-					case "push":
-					sobj.push(Integer.parseInt(tokens[1]));
-					sobj.displayAll();
-					break;
-					case "pop":
-					sobj.pop();
-					sobj.displayAll();
-					break;
-					case "enqueue":
-					sobj.enequeue(Integer.parseInt(tokens[1]));
-					sobj.displayAll();
-					break;
-					default:
-					sobj = new Steque();
-					System.out.println();
-					break;
-				}
-			}
-		}
-	}
+    }
+    /**
+     *main method.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = Integer.parseInt(sc.nextLine());
+        for (int i = 0; i < n; i++) {
+            Steque sobj = new Steque();
+            //System.out.println();
+            while (sc.hasNext()) {
+                String[] tokens = sc.nextLine().split(" ");
+                switch (tokens[0]) {
+                case "push":
+                    sobj.push(Integer.parseInt(tokens[1]));
+                    sobj.displayAll();
+                    break;
+                case "pop":
+                    sobj.pop();
+                    sobj.displayAll();
+                    break;
+                case "enqueue":
+                    sobj.enqueue(Integer.parseInt(tokens[1]));
+                    sobj.displayAll();
+                    break;
+                default:
+                    sobj = new Steque();
+                    System.out.println();
+                    break;
+                }
+            }
+        }
+    }
 }
