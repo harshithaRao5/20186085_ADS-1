@@ -34,6 +34,9 @@ class Steque {
             first = first.next;
             length--;
         }
+        if (first.next == null) {
+        	last.next = null;
+        }
     }
     public void enequeue(final int item) {
     	//System.out.println("hey");
