@@ -150,11 +150,7 @@ public class Solution {
 			Steque sobj = new Steque();
 			//System.out.println();
 			while (sc.hasNext()) {
-				String s = sc.nextLine();
-				if (s.equals("")) {
-                    break;
-                }
-				String[] tokens = s.split(" ");
+				String[] tokens = sc.nextLine().split(" ");
 				switch(tokens[0]) {
 					case "push":
 					sobj.push(Integer.parseInt(tokens[1]));
@@ -172,9 +168,11 @@ public class Solution {
 					sobj = new Steque();
 					break;
 				}
-
+				if (tokens[0].equals("")) {
+                    System.out.println();
+                    break;
+                }
 			}
-			System.out.println();
 		}
 	}
 }
