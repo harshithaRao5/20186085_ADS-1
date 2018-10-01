@@ -103,6 +103,7 @@ public class Solution {
 					break;
 					default:
 					sobj = new Steque();
+					System.out.println();
 					break;
 
 				}
