@@ -146,7 +146,7 @@ public class Solution {
 			Steque sobj = new Steque();
 			while (sc.hasNext()) {
 				String[] tokens = sc.nextLine().split(" ");
-				if (tokens[0].equals("")) {
+				if (tokens[0].equals(" ")) {
                     System.out.println("\n");
 
                 } else {
