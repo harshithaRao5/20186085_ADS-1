@@ -96,7 +96,7 @@ public class Solution {
 					case "pop":
 					sobj.pop();
 					if (sobj.isEmpty()) {
-						System.out.println("Steque is Empty.");
+						System.out.println("Steque is empty.");
 					} else {
 						sobj.displayAll();
 					}
