@@ -29,7 +29,14 @@ class Steque {
         }
         length++;
     }
+    public void pop() {
+        if (first != null) {
+            first = first.next;
+            length--;
+        }
+    }
     public void enequeue(final int item) {
+    	//System.out.println("hey");
         if (last == null) {
             last = new Node();
             last.item = item;
@@ -44,13 +51,8 @@ class Steque {
         }
         length++;
     }
-    public void pop() {
-        if (first != null) {
-            first = first.next;
-            length--;
-        }
-    }
-    // public void pop() {
+
+    // public void popAtEnd() {
     //     if (last != null) {
     //         Node temp = first;
     //         while (temp.next.next != null) {
@@ -99,7 +101,7 @@ public class Solution {
 					sobj.pop();
 					sobj.displayAll();
 					break;
-					case "enequeue":
+					case "enqueue":
 					sobj.enequeue(Integer.parseInt(tokens[1]));
 					sobj.displayAll();
 					break;
