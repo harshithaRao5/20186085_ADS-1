@@ -110,7 +110,10 @@ public class Solution {
 					sobj = new Steque();
 					break;
 				}
-
+				if (tokens[0].equals("\n")) {
+                    System.out.println();
+                    break;
+                }
 			}
 		}
 	}
