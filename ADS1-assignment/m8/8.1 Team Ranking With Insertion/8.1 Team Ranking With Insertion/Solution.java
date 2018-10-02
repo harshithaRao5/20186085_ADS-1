@@ -27,6 +27,7 @@ class Tournament implements Comparable<Tournament> {
         return this.draws;
     }
     public int compareTo(Tournament that) {
+    	that = new Tournament();
     	if (this.getWins() > that.getWins()) {
     		return 1;
     	} else if (this.getWins() < that.getWins()) {
@@ -68,7 +69,7 @@ class InsertionSort {
 	public void insertionsort() {
 		int n = tournamentArray.length;
 		for (int i = 0; i < n; i++) {
-			for (int j = i; j >0; j--) {
+			for (int j = i; j > 0; j--) {
 				if (tournamentArray[j].compareTo(tournamentArray[j-1]) == 1) {
 					exchange(tournamentArray, j , j-1);
 				} else {
