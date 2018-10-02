@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
-class Tournament implements Comparable<Tournament> {
+class Tournament implements Comparable {
 	private String teamName;
     private int wins;
     private int losses;
@@ -26,8 +26,8 @@ class Tournament implements Comparable<Tournament> {
     public int getDraws() {
         return this.draws;
     }
-    public int compareTo(Tournament that) {
-    	that = new Tournament();
+    public int compareTo(Object object) {
+    	Tournament that = (Tournament) object;
     	if (this.getWins() > that.getWins()) {
     		return 1;
     	} else if (this.getWins() < that.getWins()) {
