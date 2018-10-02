@@ -1,48 +1,86 @@
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for tournament.
+ */
 class Tournament implements Comparable<Tournament> {
+    /**
+     * declaration of teamName.
+     */
     private String teamName;
+    /**
+     * declaration of win.
+     */
     private int wins;
+    /**
+     * declaration of losses.
+     */
     private int losses;
+    /**
+     * declaration of draw.
+     */
     private int draws;
+    /**
+     * Constructs the object.
+     */
     Tournament() {
-        this.teamName = null;
-        this.wins = 0;
-        this.losses = 0;
-        this.draws = 0;
     }
-    Tournament(final String name, final int win, final int loss, final int draw) {
+    /**
+     * Constructs the object.
+     *
+     * @param      name  The name
+     * @param      win   The window
+     * @param      loss  The loss
+     * @param      draw  The draw
+     */
+    Tournament(final String name, final int win,
+        final int loss, final int draw) {
         this.teamName = name;
         this.wins = win;
         this.losses = loss;
         this.draws = draw;
     }
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     public String getName() {
         return this.teamName;
     }
+    /**
+     * Gets the wins.
+     *
+     * @return     The wins.
+     */
     public int getWins() {
         return this.wins;
     }
+    /**
+     * Gets the loss.
+     *
+     * @return     The loss.
+     */
     public int getLoss() {
         return this.losses;
     }
+    /**
+     * Gets the draws.
+     *
+     * @return     The draws.
+     */
     public int getDraws() {
         return this.draws;
     }
-    public void setName(final String name) {
-        this.teamName = name;
-    }
-    public void setWins(final int wins1) {
-        this.wins = wins1;
-    }
-    public void setLoss(final int loss1) {
-        this.losses = loss1;
-    }
-    public void setDraws(final int draw) {
-        this.draws = draw;
-    }
+    /**
+     * compare method to compare the array.
+     * @param      that  The that
+     *
+     * @return  integer.
+     */
     public int compareTo(Tournament that) {
-
+        //System.out.println("i am compareto");
+        //Tournament that = (Tournament) object;
         if (this.getWins() > that.getWins()) {
             return 1;
         } else if (this.getWins() < that.getWins()) {
@@ -58,25 +96,50 @@ class Tournament implements Comparable<Tournament> {
         } else if (this.getDraws() < that.getDraws()) {
             return -1;
         }
-
-
         return 0;
     }
 
 }
+/**
+ * Class for insertion sort.
+ */
 class SelectionSort {
+    /**
+     * declaration tournamentArray.
+     */
     private Tournament[]tournamentArray;
+    /**
+     * declaration size.
+     */
     private int size;
+    /**
+     * Constructs the object.
+     */
+    private static final int TEN = 10;
     SelectionSort() {
         this.size = 0;
-        this.tournamentArray = new Tournament[10];
+        this.tournamentArray = new Tournament[TEN];
     }
+    /**
+     * size method.
+     *
+     * @return size of array.
+     */
     public int size() {
         return size;
     }
+    /**
+     *resize the array.
+     */
     public void resize() {
-        tournamentArray = Arrays.copyOf(tournamentArray, 2 * tournamentArray.length);
+        tournamentArray = Arrays.copyOf(tournamentArray,
+            2 * tournamentArray.length);
     }
+    /**
+     * add method.
+     *
+     * @param      game  The game
+     */
     public void add(Tournament game) {
         if (size == tournamentArray.length) {
             resize();
@@ -94,11 +157,23 @@ class SelectionSort {
             exchange(tournamentArray, i, min);
         }
     }
+    /**
+     * exchange method.
+     *
+     * @param      a array.
+     * @param      i integer.
+     * @param      j integer.
+     */
     public void exchange(Comparable[] a, int i, int j) {
         Comparable swap = a[i];
         a[i] = a[j];
         a[j] = swap;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         int k = 0;
         String str = "";
@@ -109,18 +184,30 @@ class SelectionSort {
         return str;
     }
 }
-
+/**
+ *client class.
+ */
 public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
+    /**
+     * main method.
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         SelectionSort isobj = new SelectionSort();
         while (scan.hasNext()) {
             String[] tokens = scan.nextLine().split(",");
             isobj.add(new Tournament(tokens[0], Integer.parseInt(tokens[1]),
-                                     Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3])));
+            Integer.parseInt(tokens[2]), Integer.parseInt(tokens[2 + 1])));
         }
         isobj.selectionSort();
         System.out.println(isobj);
-
     }
 }
