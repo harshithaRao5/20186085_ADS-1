@@ -133,7 +133,8 @@ class InsertionSort {
      *resize the array.
      */
     public void resize() {
-        tournamentArray = Arrays.copyOf(tournamentArray, 2 * tournamentArray.length);
+        tournamentArray = Arrays.copyOf(tournamentArray,
+            2 * tournamentArray.length);
     }
     /**
      * add method.
@@ -153,7 +154,7 @@ class InsertionSort {
         for (int i = 0; i < size; i++) {
             for (int j = i; j > 0; j--) {
                 if (tournamentArray[j].compareTo(tournamentArray[j - 1]) == 1) {
-                    exchange(tournamentArray, j , j - 1);
+                    exchange(tournamentArray, j, j - 1);
                 } else {
                     break;
                 }
