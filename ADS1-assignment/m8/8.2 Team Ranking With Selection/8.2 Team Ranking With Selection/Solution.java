@@ -42,7 +42,7 @@ class Tournament implements Comparable<Tournament> {
         this.draws = draw;
     }
     public int compareTo(Tournament that) {
-
+        that = new Tournament();
         if (this.getWins() > that.getWins()) {
             return 1;
         } else if (this.getWins() < that.getWins()) {
