@@ -113,9 +113,12 @@ class SelectionSort {
      */
     private int size;
     /**
-     * Constructs the object.
+     * magic number case.
      */
     private static final int TEN = 10;
+    /**
+     * Constructs the object.
+     */
     SelectionSort() {
         this.size = 0;
         this.tournamentArray = new Tournament[TEN];
