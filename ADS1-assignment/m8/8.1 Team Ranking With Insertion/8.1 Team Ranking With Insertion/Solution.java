@@ -31,19 +31,17 @@ class Tournament implements Comparable<Tournament> {
     		return 1;
     	} else if (this.getWins() < that.getWins()) {
     		return -1;
-    	} else {
-	    	if (this.getLoss() < that.getLoss()) {
-	    		return 1;
-	    	} else if (this.getLoss() > that.getLoss()) {
-	    		return -1;
-	    	} else {
-		    	if (this.getDraws() > that.getDraws()) {
-		    		return 1;
-		    	} else if (this.getDraws() < that.getDraws()) {
-		    		return -1;
-		    	}
-		    }
+    	}
+	    if (this.getLoss() < that.getLoss()) {
+	    	return 1;
+	    } else if (this.getLoss() > that.getLoss()) {
+	    	return -1;
 	    }
+		if (this.getDraws() > that.getDraws()) {
+		   	return 1;
+		} else if (this.getDraws() < that.getDraws()) {
+		   	return -1;
+		}
 	    return 0;
     }
 
@@ -70,8 +68,8 @@ class InsertionSort {
 	public void insertionsort() {
 		int n = tournamentArray.length;
 		for (int i = 0; i < n; i++) {
-			for (int j = 1; j >0; j++) {
-				if (tournamentArray[j].compareTo(tournamentArray[j-1])==+1) {
+			for (int j = i; j >0; j--) {
+				if (tournamentArray[j].compareTo(tournamentArray[j-1]) == 1) {
 					exchange(tournamentArray, j , j-1);
 				} else {
 					break;
