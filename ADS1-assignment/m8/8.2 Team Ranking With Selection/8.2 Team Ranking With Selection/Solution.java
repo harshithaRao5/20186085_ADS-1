@@ -74,6 +74,7 @@ class Tournament implements Comparable<Tournament> {
     }
     /**
      * compare method to compare the array.
+     *time complexity is constant.
      * @param      that  The that
      *
      * @return  integer.
@@ -151,6 +152,7 @@ class SelectionSort {
     }
     /**
      * sorting of elements using selection sort.
+     * time complexity is N^2
      */
     public void selectionSort() {
         for (int i = 0; i < size; i++) {
