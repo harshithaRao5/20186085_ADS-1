@@ -78,7 +78,7 @@ class Tournament implements Comparable<Tournament> {
      *
      * @return  integer.
      */
-    public int compareTo(Tournament that) {
+    public int compareTo(final Tournament that) {
         //System.out.println("i am compareto");
         //Tournament that = (Tournament) object;
         if (this.getWins() > that.getWins()) {
@@ -143,12 +143,15 @@ class SelectionSort {
      *
      * @param      game  The game
      */
-    public void add(Tournament game) {
+    public void add(final Tournament game) {
         if (size == tournamentArray.length) {
             resize();
         }
         tournamentArray[size++] = game;
     }
+    /**
+     * sorting of elements using selection sort.
+     */
     public void selectionSort() {
         for (int i = 0; i < size; i++) {
             int min = i;
@@ -167,7 +170,7 @@ class SelectionSort {
      * @param      i integer.
      * @param      j integer.
      */
-    public void exchange(Comparable[] a, int i, int j) {
+    public void exchange(final Comparable[] a, final int i, final int j) {
         Comparable swap = a[i];
         a[i] = a[j];
         a[j] = swap;
@@ -202,7 +205,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         SelectionSort isobj = new SelectionSort();
         while (scan.hasNext()) {
