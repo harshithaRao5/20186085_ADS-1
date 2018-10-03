@@ -7,7 +7,9 @@ class Merge {
      * cutoff to insertion sort.
      */
     private final int x = 7;
-
+    /**
+     * Constructs the object.
+     */
     Merge() {
         //Unused Constructor.
     }
@@ -146,7 +148,7 @@ class Merge {
         return true;
     }
     /**
-     * to String method
+     * to String method.
      *
      * @param      array  The array
      *
