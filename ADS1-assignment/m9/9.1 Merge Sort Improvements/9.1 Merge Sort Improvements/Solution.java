@@ -1,106 +1,132 @@
 import java.util.Scanner;
+/**
+ * Class for merge.
+ */
 class Merge {
-	private int CUTOFF = 7;
-	Merge() {
+    /**
+     * cutoff to insertion sort.
+     */
+    private final int x = 7;
 
-	}
-	private void merge(Comparable[] array, Comparable[] aux, int low, int mid, int high) {
-		// assert isSorted(array, low, mid);
-		// assert isSorted(array, mid+1, high);
-		int i = low;
-		int j = mid + 1;
-		for (int k = low; k <= high; k++) {
-			if (i > mid) {
-				array[k] = aux[j++];
-			} else if (j > high) {
-				array[k] = aux[i++];
-			} else if (less(aux[j], (aux[i]))) {
-				array[k] = aux[j++];
-			} else {
-				array[k] = aux[i++];
-			}
-		}
-		//assert isSorted(aux,low,high);
-	}
-	private void sort(Comparable[]array, Comparable[]aux, int low, int high) {
-		if (high <= low + CUTOFF) {
-			insertionsort(array, low, high);
-			System.out.println("Insertion sort method invoked...");
-			return;
-		}
+    Merge() {
+        //Unused Constructor.
+    }
 
-		int mid = low + (high - low) / 2;
-		sort(array, aux, 0, mid);
-		sort(array, aux, mid + 1, high);
-		if (!less(array[mid + 1], (array[mid]))) {
-			System.out.println("Array is already sorted. So, skipped the call to merge...");
-			return;
-		}
-		merge(array, aux, low, mid, high);
-	}
-	public void sort(Comparable[] array) {
-		Comparable[] aux = new Comparable[array.length];
-		sort(array, aux, 0, array.length - 1);
-		//assert isSorted(array);
-	}
-	public void insertionsort(Comparable[] array, int i, int j) {
-		for (i = 0; i < array.length; i++) {
-			for (j = i; j > 0; j--) {
-				if (less(array[j], (array[j - 1]))) {
-					exchange(array, j, j - 1);
-				} else {
-					break;
-				}
-			}
-		}
-	}
-	/**
-	 * exchange method.
-	 *
-	 * @param      a array.
-	 * @param      i integer.
-	 * @param      j integer.
-	 */
-	public void exchange(final Comparable[] a, final int i, final int j) {
-		Comparable swap = a[i];
-		a[i] = a[j];
-		a[j] = swap;
-	}
-	 public boolean less(final Comparable a, final Comparable b) {
+    public void merge(final Comparable[] array, final Comparable[] aux,
+        final int low, final int mid, final int high) {
+        assert isSorted(array, low, mid);
+        assert isSorted(array, mid + 1, high);
+        int i = low;
+        int j = mid + 1;
+        for (int k = low; k <= high; k++) {
+            if (i > mid) {
+                aux[k] = array[j++];
+            } else if (j > high) {
+                aux[k] = array[i++];
+            } else if (less(array[j], array[i])) {
+                aux[k] = array[j++];
+            } else {
+                aux[k] = array[i++];
+            }
+        }
+        assert isSorted(aux, low, high);
+    }
+
+    public void sort(final Comparable[] array, final Comparable[] aux,
+        final int low, final int high) {
+        if (high <= low + x) {
+            insertionSort(aux, low, high);
+            System.out.println("Insertion sort method invoked...");
+            return;
+        }
+        int mid = low + (high - low) / 2;
+        sort(aux, array, low, mid);
+        sort(aux, array, mid + 1, high);
+        if (!less(array[mid + 1], array[mid])) {
+            for (int i = low; i <= high; i++) {
+                aux[i] = array[i];
+            }
+            System.out.println(
+                "Array is already sorted. So, skipped the call to merge...");
+            return;
+        }
+        merge(array, aux, low, mid, high);
+    }
+
+    public void sort(final Comparable[] a) {
+        Comparable[] aux = a.clone();
+        sort(aux, a, 0, a.length - 1);
+        assert isSorted(a);
+    }
+
+    public void insertionSort(final Comparable[] a,
+        final int low, final int high) {
+        for (int i = low; i <= high; i++) {
+            for (int j = i; j > low && less(a[j], a[j - 1]); j--) {
+                exch(a, j, j - 1);
+            }
+        }
+    }
+
+    public void exch(final Comparable[] a,
+        final int i, final int j) {
+        Comparable swap = a[i];
+        a[i] = a[j];
+        a[j] = swap;
+    }
+
+    public boolean less(final Comparable a, final Comparable b) {
         return a.compareTo(b) < 0;
     }
-	// public boolean isSorted(String[] array) {
-	// 	return isSorted(array, 0, a.length - 1);
-	// }
-	public String toString(Comparable[] array) {
-		//System.out.println("hello");
-		int k = 0;
-		String s = "[";
-		for (k = 0; k < array.length - 1; k++) {
-			s += array[k] + ", ";
-			//System.out.println(s + "string");
-		}
-		s += array[k] + "]";
-		return s;
-	}
+
+    public boolean isSorted(final Comparable[] a) {
+        return isSorted(a, 0, a.length - 1);
+    }
+
+    public boolean isSorted(final Comparable[] a,
+        final int low, final int high) {
+        for (int i = low + 1; i <= high; i++) {
+            if (less(a[i], a[i - 1])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public String show(final Comparable[] array) {
+        String str = "[";
+        int i;
+        for (i = 0; i < array.length - 1; i++) {
+            str += array[i] + ", ";
+        }
+        str += array[i] + "]";
+        return str;
+    }
 }
-
-
+/**
+ * Class for solution.
+ */
 public final class Solution {
-	private Solution() {
-
-	}
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		// int n = Integer.parseInt(sc.nextLine());
-		// for (int i = 0; i < n; i++) {
-		Merge mergeobj = new Merge();
-		while (sc.hasNext()) {
-			String[] tokens = sc.nextLine().split(",");
-			mergeobj.sort(tokens);
-			System.out.println(mergeobj.toString(tokens));
-			System.out.println();
-		}
-
-	}
+    /**
+     * Constructs the object.
+     * Time complexity of thighs method is O(1).
+     */
+    private Solution() {
+        //Unused Constructor.
+    }
+    /**
+     * {Client Program}.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner scan = new Scanner(System.in);
+        Merge mergeobj = new Merge();
+        while (scan.hasNext()) {
+            String[] tokens = scan.nextLine().split(",");
+            mergeobj.sort(tokens);
+            System.out.println(mergeobj.show(tokens));
+            System.out.println();
+        }
+    }
 }
