@@ -11,7 +11,15 @@ class Merge {
     Merge() {
         //Unused Constructor.
     }
-
+    /**
+     * merge method.
+     * time complexity is N.
+     * @param      array  The array
+     * @param      aux    The auxiliary
+     * @param      low    The low
+     * @param      mid    The middle
+     * @param      high   The high
+     */
     public void merge(final Comparable[] array, final Comparable[] aux,
         final int low, final int mid, final int high) {
         assert isSorted(array, low, mid);
@@ -31,7 +39,14 @@ class Merge {
         }
         assert isSorted(aux, low, high);
     }
-
+    /**
+     *sorting the elements recursively.
+     *time complexity is logN.
+     * @param      array  The array
+     * @param      aux    The auxiliary
+     * @param      low    The low
+     * @param      high   The high
+     */
     public void sort(final Comparable[] array, final Comparable[] aux,
         final int low, final int high) {
         if (high <= low + x) {
@@ -52,13 +67,24 @@ class Merge {
         }
         merge(array, aux, low, mid, high);
     }
-
+    /**
+     *
+     * sort method.
+     * @param      a comparable
+     */
     public void sort(final Comparable[] a) {
         Comparable[] aux = a.clone();
         sort(aux, a, 0, a.length - 1);
         assert isSorted(a);
     }
-
+    /**
+     * insertion sort algorithm.
+     *to sort array with size less than 7.
+     *time complexity is N^2/2
+     * @param      a    comparable type.
+     * @param      low   The low
+     * @param      high  The high
+     */
     public void insertionSort(final Comparable[] a,
         final int low, final int high) {
         for (int i = low; i <= high; i++) {
@@ -67,22 +93,49 @@ class Merge {
             }
         }
     }
-
+    /**
+     * exchange method.
+     *
+     * @param      a comparable type
+     * @param      i integer
+     * @param      j integer
+     */
     public void exch(final Comparable[] a,
         final int i, final int j) {
         Comparable swap = a[i];
         a[i] = a[j];
         a[j] = swap;
     }
-
-    public boolean less(final Comparable a, final Comparable b) {
-        return a.compareTo(b) < 0;
+    /**
+     * comparing method.
+     *
+     * @param      i comparable type.
+     * @param      j comparable type.
+     *
+     * @return    boolean.
+     */
+    public boolean less(final Comparable i, final Comparable j) {
+        return i.compareTo(j) < 0;
     }
-
+    /**
+     * Determines if sorted.
+     *
+     * @param      a array
+     *
+     * @return     True if sorted, False otherwise.
+     */
     public boolean isSorted(final Comparable[] a) {
         return isSorted(a, 0, a.length - 1);
     }
-
+    /**
+     * Determines if sorted.
+     *
+     * @param      a     array
+     * @param      low   The low
+     * @param      high  The high
+     *
+     * @return     True if sorted, False otherwise.
+     */
     public boolean isSorted(final Comparable[] a,
         final int low, final int high) {
         for (int i = low + 1; i <= high; i++) {
@@ -92,8 +145,14 @@ class Merge {
         }
         return true;
     }
-
-    public String show(final Comparable[] array) {
+    /**
+     * to String method
+     *
+     * @param      array  The array
+     *
+     * @return    string
+     */
+    public String toString(final Comparable[] array) {
         String str = "[";
         int i;
         for (i = 0; i < array.length - 1; i++) {
@@ -115,7 +174,7 @@ public final class Solution {
         //Unused Constructor.
     }
     /**
-     * {Client Program}.
+     * Client Program.
      *
      * @param      args  The arguments
      */
@@ -125,7 +184,7 @@ public final class Solution {
         while (scan.hasNext()) {
             String[] tokens = scan.nextLine().split(",");
             mergeobj.sort(tokens);
-            System.out.println(mergeobj.show(tokens));
+            System.out.println(mergeobj.toString(tokens));
             System.out.println();
         }
     }
