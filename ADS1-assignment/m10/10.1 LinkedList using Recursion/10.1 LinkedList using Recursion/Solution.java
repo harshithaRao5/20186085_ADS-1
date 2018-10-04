@@ -40,7 +40,7 @@ class Node {
 /**
  * List of linkeds.
  */
-class linkedList {
+class LinkedList {
     /**
      * variable declaration.
      */
@@ -52,7 +52,7 @@ class linkedList {
     /**
      * Constructs the object.
      */
-    linkedList() {
+    LinkedList() {
         head = null;
         size = 0;
     }
@@ -108,17 +108,17 @@ class linkedList {
         size++;
     }
     /**
-     * { function_description }
+     * reverse.
      */
     public void reverse() {
         head = reverse(head);
     }
     /**
-     * { function_description }
+     *reverse of list.
      *
      * @param      head  The head
      *
-     * @return     { description_of_the_return_value }
+     * @return  node.
      */
     private Node reverse(final Node head) {
         if (head == null || head.next == null) {
@@ -164,7 +164,7 @@ public class Solution {
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        linkedList llobj = new linkedList();
+        LinkedList llobj = new LinkedList();
         while (sc.hasNext()) {
             String[] tokens = sc.nextLine().split(" ");
             switch (tokens[0]) {
