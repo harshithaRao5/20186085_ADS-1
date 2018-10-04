@@ -1,4 +1,4 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 5
 7, 5
@@ -8,7 +8,7 @@ Your Output:
 5
 7, 5
 7, 6, 5
-5 ,6 ,7
+5, 6, 7
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -29,22 +29,26 @@ Your Output:
 5
 7, 5
 7, 9, 5
-5 ,9 ,7
+5, 9, 7
 Can't insert at this position.
-7, 9, 5
+5, 9, 7
 Can't insert at this position.
-7, 9, 5
-7, 9, 17, 5
-7, 9, 27, 17, 5
-71, 7, 9, 27, 17, 5
-75, 71, 7, 9, 27, 17, 5
-75, 71, 7, 9, 27, 66, 17, 5
-75, 71, 7, 9, 27, 32, 66, 17, 5
-5 ,71 ,66 ,23 ,72 ,9 ,7 ,17 ,57
+5, 9, 7
+5, 9, 17, 7
+5, 9, 27, 17, 7
+71, 5, 9, 27, 17, 7
+75, 71, 5, 9, 27, 17, 7
+75, 71, 5, 9, 27, 66, 17, 7
+75, 71, 5, 9, 27, 32, 66, 17, 7
+7, 17, 66, 32, 27, 9, 5, 71, 75
 ----------------------------------------
-########## Testcase 2: Passed ##########
+########## Testcase 2: Failed ##########
 Expected Output: 
 No elements to reverse.
 Your Output: 
-No elements to reverse.
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 0, end -2, length 0
+	at java.base/java.lang.String.checkBoundsBeginEnd(Unknown Source)
+	at java.base/java.lang.String.substring(Unknown Source)
+	at linkedList.toString(Solution.java:72)
+	at Solution.main(Solution.java:103)
 ----------------------------------------

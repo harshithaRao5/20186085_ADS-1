@@ -48,6 +48,18 @@ class linkedList {
 		}
 		size++;
 	}
+	public void reverse() {
+		head = reverse(head);
+	}
+	private Node reverse(Node head) {
+		if(head == null || head.next == null) {
+            return head;
+        }
+        Node temp = reverse(head.next);
+        head.next.next = head;
+        head.next = null;
+        return temp;
+	}
 	public String toString() {
 		String s = "";
 		if (size != 0) {
@@ -59,17 +71,17 @@ class linkedList {
 		}
 		return s.substring(0, s.length() - 2);
 	}
-	public String reverse() {
-		String reverse = "";
-		if (size != 0) {
-			for (int i = toString().length() - 1; i >= 0; i--) {
-				reverse = reverse + toString(). charAt(i);
-			}
-			return reverse;
-		} else {
-			return "No elements to reverse.";
-		}
-	}
+	// public String reverse() {
+	// 	String reverse = "";
+	// 	if (size != 0) {
+	// 		for (int i = toString().length() - 1; i >= 0; i--) {
+	// 			reverse = reverse + toString(). charAt(i);
+	// 		}
+	// 		return reverse;
+	// 	} else {
+	// 		return "No elements to reverse.";
+	// 	}
+	// }
 }
 public class Solution {
 
@@ -87,7 +99,8 @@ public class Solution {
 				System.out.println(llobj.toString());
 				break;
 			case "reverse":
-				System.out.println(llobj.reverse());
+				llobj.reverse();
+				System.out.println(llobj.toString());
 				break;
 			}
 		}
