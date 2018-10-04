@@ -6,11 +6,11 @@ class Node {
     /**
      * variable declarartion.
      */
-    public int item;
+    private int item;
     /**
      * variable declarartion.
      */
-    public Node next;
+    private Node next;
     /**
      * Constructs the object.
      *
@@ -35,6 +35,14 @@ class Node {
      */
     public Node getNext() {
         return next;
+    }
+    /**.
+     * Sets the next.
+     *
+     * @param      item  The item
+     */
+    public void setNext(Node item){
+        this.next = item;
     }
 }
 /**
@@ -95,7 +103,7 @@ class LinkedList {
         } else if (position == 0 && head != null) {
             Node oldhead = head;
             head = new Node(item1);
-            head.next = oldhead;
+            head.setNext(oldhead);
         } else {
             Node temp = head;
             for (int i = 0; i < position - 1; i++) {
@@ -103,8 +111,8 @@ class LinkedList {
             }
             Node nextNode = temp.getNext();
             Node node1 = new Node(item1);
-            temp.next = node1;
-            node1.next = nextNode;
+            temp.setNext(node1);
+            node1.setNext(nextNode);
         }
         size++;
     }
@@ -121,13 +129,13 @@ class LinkedList {
      *
      * @return  node.
      */
-    private Node reverse(final Node head) {
-        if (head == null || head.next == null) {
-            return head;
+    private Node reverse(final Node head1) {
+        if (head1 == null || head1.getNext()==null) {
+            return head1;
         }
-        Node temp = reverse(head.next);
-        head.next.next = head;
-        head.next = null;
+        Node temp = reverse(head1.getNext());
+        head1.getNext().setNext(head1);
+        head1.setNext(null);
         return temp;
     }
     /**
@@ -140,8 +148,8 @@ class LinkedList {
         if (size != 0) {
             Node temp = head;
             while (temp != null) {
-                s += temp.item + ", ";
-                temp = temp.next;
+                s += temp.getItem() + ", ";
+                temp = temp.getNext();
             }
         }
         return s.substring(0, s.length() - 2);
