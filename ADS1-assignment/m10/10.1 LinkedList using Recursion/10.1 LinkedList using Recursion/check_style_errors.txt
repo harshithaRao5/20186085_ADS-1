@@ -1,10 +1,5 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:44:25: Parameter item should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:44:30: 'item' hides a field. [HiddenField]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:44:35: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:128:8: Unused @param tag for 'head'. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:132:37: Expected @param tag for 'head1'. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:133:45: '==' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:133:47: '==' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:42:8: Unused @param tag for 'item'. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:44:36: Expected @param tag for 'item1'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 2 errors.

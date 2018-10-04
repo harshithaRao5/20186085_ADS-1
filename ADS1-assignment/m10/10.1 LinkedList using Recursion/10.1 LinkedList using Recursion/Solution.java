@@ -41,8 +41,8 @@ class Node {
      *
      * @param      item  The item
      */
-    public void setNext(Node item){
-        this.next = item;
+    public void setNext(final Node item1) {
+        this.next = item1;
     }
 }
 /**
@@ -97,7 +97,7 @@ class LinkedList {
      * @param      item1     The item 1
      */
     private void insertAt(final Node node,
-        final int position, final int item1) {
+                          final int position, final int item1) {
         if (position == 0 && head == null) {
             head = new Node(item1);
         } else if (position == 0 && head != null) {
@@ -125,12 +125,12 @@ class LinkedList {
     /**
      *reverse of list.
      *
-     * @param      head  The head
+     * @param      head1  The head
      *
      * @return  node.
      */
     private Node reverse(final Node head1) {
-        if (head1 == null || head1.getNext()==null) {
+        if (head1 == null || head1.getNext() == null) {
             return head1;
         }
         Node temp = reverse(head1.getNext());
@@ -196,7 +196,7 @@ public final class Solution {
                     break;
                 }
             default:
-            break;
+                break;
             }
         }
 
