@@ -24,12 +24,12 @@ class linkedList {
 		return size;
 	}
 	public void insertAt(int position, int item1) {
-		if (position < 0) {
+		if (position < 0 || position > size) {
 			System.out.println("Can't insert at this position.");
 			return;
-		} else if (position > size) {
-			System.out.println("Can't insert at this position.");
-			return;
+		// } else if (position > size) {
+		// 	System.out.println("Can't insert at this position.");
+		// 	return;
 		} else if (position == 0 && head == null) {
 			head = new Node(item1);
 		} else if (position == 0 && head != null) {
