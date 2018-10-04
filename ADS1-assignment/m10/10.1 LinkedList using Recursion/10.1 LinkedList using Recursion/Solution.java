@@ -56,10 +56,10 @@ class linkedList {
 				s += temp.item + ", ";
 				temp = temp.next;
 			}
+			return s.substring(0, s.length() - 2);
 		} else {
-			System.out.println("No elements to reverse.");
+			return "No elements to reverse.";
 		}
-		return s.substring(0, s.length() - 2);
 	}
 	public String reverse() {
 		String reverse = "";
