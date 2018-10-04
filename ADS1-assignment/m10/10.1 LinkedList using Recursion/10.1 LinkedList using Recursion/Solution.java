@@ -88,7 +88,8 @@ class LinkedList {
      * @param      position  The position
      * @param      item1     The item 1
      */
-    private void insertAt(final Node node, final int position, final int item1) {
+    private void insertAt(final Node node,
+        final int position, final int item1) {
         if (position == 0 && head == null) {
             head = new Node(item1);
         } else if (position == 0 && head != null) {
@@ -150,7 +151,7 @@ class LinkedList {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -158,7 +159,7 @@ public class Solution {
 
     }
     /**
-     * { function_description }
+     * client program.
      *
      * @param      args  The arguments
      */

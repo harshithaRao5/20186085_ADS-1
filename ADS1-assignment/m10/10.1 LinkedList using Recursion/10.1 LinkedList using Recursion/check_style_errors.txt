@@ -1,9 +1,6 @@
 Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:9:16: Variable 'item' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:13:17: Variable 'next' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:91: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:123:37: 'head' hides a field. [HiddenField]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:153: Class Solution should be declared as final. [FinalClass]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:160: First sentence should end with a period. [JavadocStyle]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:124:37: 'head' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 6 errors.
+Checkstyle ends with 3 errors.
