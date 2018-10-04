@@ -1,17 +1,7 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:9:20: Variable 'item' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:13:21: Variable 'next' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:43:7: Name 'linkedList' must match pattern '^[A-Z][a-zA-Z0-9]*$'. [TypeName]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:91: Line is longer than 80 characters (found 85). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:123:41: 'head' hides a field. [HiddenField]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:153: Class Solution should be declared as final. [FinalClass]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:170: switch without "default" clause. [MissingSwitchDefault]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:172: Line is longer than 80 characters (found 88). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:174: Line is longer than 80 characters (found 93). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:176: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:177: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:186: Line is longer than 80 characters (found 86). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:9:16: Variable 'item' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:13:17: Variable 'next' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:124:37: 'head' hides a field. [HiddenField]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:171: switch without "default" clause. [MissingSwitchDefault]
 Audit done.
-Checkstyle ends with 14 errors.
+Checkstyle ends with 4 errors.
