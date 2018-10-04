@@ -23,14 +23,14 @@ class linkedList {
 	public int length() {
 		return size;
 	}
+	public boolean isEmpty() {
+		return head == null;
+	}
 	public void insertAt(int position, int item1) {
-		if (position < 0 || position > size) {
-			System.out.println("Can't insert at this position.");
-			return;
-		// } else if (position > size) {
-		// 	System.out.println("Can't insert at this position.");
-		// 	return;
-		} else if (position == 0 && head == null) {
+		insertAt(head, position, item1);
+	}
+	private void insertAt(Node node, int position, int item1) {
+		if (position == 0 && head == null) {
 			head = new Node(item1);
 		} else if (position == 0 && head != null) {
 			Node oldhead = head;
@@ -42,23 +42,25 @@ class linkedList {
 				temp = temp.getNext();
 			}
 			Node nextNode = temp.getNext();
-			Node node = new Node(item1);
+			node = new Node(item1);
 			temp.next = node;
 			node.next = nextNode;
 		}
 		size++;
 	}
+
+
 	public void reverse() {
 		head = reverse(head);
 	}
 	private Node reverse(Node head) {
-		if(head == null || head.next == null) {
-            return head;
-        }
-        Node temp = reverse(head.next);
-        head.next.next = head;
-        head.next = null;
-        return temp;
+		if (head == null || head.next == null) {
+			return head;
+		}
+		Node temp = reverse(head.next);
+		head.next.next = head;
+		head.next = null;
+		return temp;
 	}
 	public String toString() {
 		String s = "";
@@ -71,17 +73,7 @@ class linkedList {
 		}
 		return s.substring(0, s.length() - 2);
 	}
-	// public String reverse() {
-	// 	String reverse = "";
-	// 	if (size != 0) {
-	// 		for (int i = toString().length() - 1; i >= 0; i--) {
-	// 			reverse = reverse + toString(). charAt(i);
-	// 		}
-	// 		return reverse;
-	// 	} else {
-	// 		return "No elements to reverse.";
-	// 	}
-	// }
+
 }
 public class Solution {
 
@@ -95,13 +87,23 @@ public class Solution {
 			String[] tokens = sc.nextLine().split(" ");
 			switch (tokens[0]) {
 			case "insertAt":
-				llobj.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
-				System.out.println(llobj.toString());
-				break;
+				if (Integer.parseInt(tokens[1]) < 0 || Integer.parseInt(
+                        tokens[1]) > llobj.length() + 1) {
+                        System.out.println("Can't insert at this position.");
+                    } else {
+                        llobj.insertAt(Integer.parseInt(tokens[1]),
+                            Integer.parseInt(tokens[2]));
+                        System.out.println(llobj.toString());
+                    }
+                    break;
 			case "reverse":
-				llobj.reverse();
-				System.out.println(llobj.toString());
-				break;
+				if (!llobj.isEmpty()) {
+					llobj.reverse();
+					System.out.println(llobj.toString());
+				} else {
+					System.out.println("No elements to reverse.");
+					break;
+				}
 			}
 		}
 
