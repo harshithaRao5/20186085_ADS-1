@@ -39,7 +39,7 @@ class Node {
     /**.
      * Sets the next.
      *
-     * @param      item  The item
+     * @param      item1  The item
      */
     public void setNext(final Node item1) {
         this.next = item1;
