@@ -96,7 +96,7 @@ public class Solution {
 			switch (tokens[0]) {
 			case "insertAt":
 				llobj.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
-				System.out.println(llobj.toString());
+				//System.out.println(llobj.toString());
 				break;
 			case "reverse":
 				llobj.reverse();

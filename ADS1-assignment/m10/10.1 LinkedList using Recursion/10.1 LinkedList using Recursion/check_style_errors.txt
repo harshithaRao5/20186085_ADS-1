@@ -23,7 +23,7 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:54:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:54:30: Parameter head should be final. [FinalParameters]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:54:35: 'head' hides a field. [HiddenField]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:55:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:55:19: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:63:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:86: Class Solution should be declared as final. [FinalClass]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m10\10.1 LinkedList using Recursion\10.1 LinkedList using Recursion\Solution.java:86: Missing a Javadoc comment. [JavadocType]
