@@ -86,7 +86,7 @@ public class Solution {
 				System.out.println(llobj);
 				break;
 			case "reverse":
-				System.out.println(llobj.reverse());
+				//System.out.println(llobj.reverse());
 				break;
 			}
 		}

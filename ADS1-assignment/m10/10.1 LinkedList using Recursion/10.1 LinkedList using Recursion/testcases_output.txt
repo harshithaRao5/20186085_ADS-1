@@ -8,7 +8,6 @@ Your Output:
 5
 7, 5
 7, 6, 5
-5 ,6 ,7
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -29,7 +28,6 @@ Your Output:
 5
 7, 5
 7, 9, 5
-5 ,9 ,7
 Can't insert at this position.
 7, 9, 5
 Can't insert at this position.
@@ -40,11 +38,10 @@ Can't insert at this position.
 75, 71, 7, 9, 27, 17, 5
 75, 71, 7, 9, 27, 66, 17, 5
 75, 71, 7, 9, 27, 32, 66, 17, 5
-5 ,71 ,66 ,23 ,72 ,9 ,7 ,17 ,57
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
 No elements to reverse.
 Your Output: 
-.esrever ot stnemele oN
+
 ----------------------------------------
