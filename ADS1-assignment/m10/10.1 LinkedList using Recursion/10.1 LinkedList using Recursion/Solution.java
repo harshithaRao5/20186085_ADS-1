@@ -100,7 +100,7 @@ public class Solution {
 				break;
 			case "reverse":
 				llobj.reverse();
-				//System.out.println(llobj.toString());
+				System.out.println(llobj.toString());
 				break;
 			}
 		}
