@@ -46,10 +46,11 @@ Can't insert at this position.
 Expected Output: 
 No elements to reverse.
 Your Output: 
+No elements to reverse.
 Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 0, end -2, length 0
 	at java.base/java.lang.String.checkBoundsBeginEnd(Unknown Source)
 	at java.base/java.lang.String.substring(Unknown Source)
-	at linkedList.toString(Solution.java:60)
-	at linkedList.reverse(Solution.java:64)
-	at Solution.main(Solution.java:87)
+	at linkedList.toString(Solution.java:62)
+	at linkedList.reverse(Solution.java:66)
+	at Solution.main(Solution.java:89)
 ----------------------------------------
