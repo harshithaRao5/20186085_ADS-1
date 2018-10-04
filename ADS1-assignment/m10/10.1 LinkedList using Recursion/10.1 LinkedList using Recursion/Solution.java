@@ -56,19 +56,20 @@ class linkedList {
 				s += temp.item + ", ";
 				temp = temp.next;
 			}
-			return s.substring(0, s.length() - 2);
+		}
+		return s.substring(0, s.length() - 2);
+	}
+	public String reverse() {
+		String reverse = "";
+		if (size != 0) {
+			for (int i = toString().length() - 1; i >= 0; i--) {
+				reverse = reverse + toString(). charAt(i);
+			}
+			return reverse;
 		} else {
 			return "No elements to reverse.";
 		}
 	}
-	public String reverse() {
-		String reverse = "";
-		for (int i = toString().length() - 1; i >= 0; i--) {
-			reverse = reverse + toString(). charAt(i);
-		}
-		return reverse;
-	}
-
 }
 public class Solution {
 
@@ -86,7 +87,7 @@ public class Solution {
 				System.out.println(llobj.toString());
 				break;
 			case "reverse":
-				//System.out.println(llobj.reverse());
+				System.out.println(llobj.reverse());
 				break;
 			}
 		}
