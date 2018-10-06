@@ -26,6 +26,7 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:230: Line is longer than 80 characters (found 127). [LineLength]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:238: Class Solution should be declared as final. [FinalClass]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:245: First sentence should end with a period. [JavadocStyle]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:259: Line is longer than 80 characters (found 82). [LineLength]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:263: Line is longer than 80 characters (found 112). [LineLength]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:263:109: '3' is a magic number. [MagicNumber]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:264: Line is longer than 80 characters (found 83). [LineLength]
@@ -33,5 +34,10 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:265: Line is longer than 80 characters (found 96). [LineLength]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:265:80: '5' is a magic number. [MagicNumber]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:265:92: '6' is a magic number. [MagicNumber]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:271:68: '100' is a magic number. [MagicNumber]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:274: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:280: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:286: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:292: Line is longer than 80 characters (found 81). [LineLength]
 Audit done.
-Checkstyle ends with 34 errors.
+Checkstyle ends with 40 errors.

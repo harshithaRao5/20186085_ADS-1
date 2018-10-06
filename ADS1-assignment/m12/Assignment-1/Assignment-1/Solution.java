@@ -256,7 +256,7 @@ public class Solution {
 		int bc = Integer.parseInt(sc.nextLine());
 		int sC = Integer.parseInt(sc.nextLine());
 		int st = Integer.parseInt(sc.nextLine());
-		Reserve resobj = new Reserve(vacancies, unreserved, bc, sC, st);
+		//Reserve resobj = new Reserve(vacancies, unreserved, bc, sC, st);
 		while (sc.hasNext()) {
 			String[] tokens = sc.nextLine().split(",");
 			sortobj.add(new StudentDetails(tokens[0], tokens[1],
@@ -267,7 +267,33 @@ public class Solution {
 		sortobj.insertionsort();
 		System.out.println(sortobj);
 		System.out.println();
-		resobj.reservation();
-
+		//resobj.reservation();
+		StudentDetails[] studentArray = new StudentDetails[100];
+		for (int s = 0; s < studentArray.length; s++) {
+		for (int i = 0; i <= unreserved; i++) {
+				if (studentArray[s].getCategory().equals("open")) {
+					sortobj.toString();
+					return;
+				}
+			}
+			for (int j = 0; j <= bc; j++) {
+				if (studentArray[s].getCategory().equals("BC")) {
+					sortobj.toString();
+					return;
+				}
+			}
+			for (int k = 0; k <= sC; k++) {
+				if (studentArray[s].getCategory().equals("SC")) {
+					sortobj.toString();
+					return;
+				}
+			}
+			for (int l = 0; l <= st; l++) {
+				if (studentArray[s].getCategory().equals("ST")) {
+					sortobj.toString();
+					return;
+				}
+			}
+		}
 	}
 }

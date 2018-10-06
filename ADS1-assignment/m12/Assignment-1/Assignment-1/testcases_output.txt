@@ -54,11 +54,6 @@ Manoj,39,ST
 Anjali,38,ST
 Aryan,32,ST
 Shreya,23,ST
-
-Exception in thread "main" java.lang.NullPointerException
-	at Sort.toString(Solution.java:230)
-	at Reserve.reservation(Reserve.java:103)
-	at Solution.main(Solution.java:270)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -132,11 +127,6 @@ Manoj,39,ST
 Anjali,38,ST
 Aryan,32,ST
 Shreya,23,ST
-
-Exception in thread "main" java.lang.NullPointerException
-	at Sort.toString(Solution.java:230)
-	at Reserve.reservation(Reserve.java:103)
-	at Solution.main(Solution.java:270)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -196,11 +186,6 @@ Amit,70,ST
 Priyanka,70,ST
 Tanya,66,ST
 Abhishek,60,ST
-
-Exception in thread "main" java.lang.NullPointerException
-	at Sort.toString(Solution.java:230)
-	at Reserve.reservation(Reserve.java:103)
-	at Solution.main(Solution.java:270)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -359,9 +344,4 @@ Anjali,38,ST
 Manoj,32,ST
 Aryan,32,ST
 Shreya,23,ST
-
-Exception in thread "main" java.lang.NullPointerException
-	at Sort.toString(Solution.java:230)
-	at Reserve.reservation(Reserve.java:103)
-	at Solution.main(Solution.java:270)
 ----------------------------------------
