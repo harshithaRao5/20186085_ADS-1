@@ -29,11 +29,11 @@ public class Reserve {
 	}
 	public void reservation() {
 		Sort obj = new Sort();
-		System.out.println("hello");
 		for (int s = 0; s < size; s++) {
 			for (int i = 0; i <= unreserved; i++) {
 				if (studentArray[s].getCategory().equals("open")) {
 					obj.toString();
+					System.out.println("hello");
 					break;
 				}
 			}
