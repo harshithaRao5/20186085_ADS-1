@@ -47,11 +47,10 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:117:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:118:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:118:33: Parameter args should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:127: Line is longer than 80 characters (found 82). [LineLength]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:131: Line is longer than 80 characters (found 81). [LineLength]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:131:78: '3' is a magic number. [MagicNumber]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:132:49: '4' is a magic number. [MagicNumber]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:133:49: '5' is a magic number. [MagicNumber]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:133:61: '6' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 54 errors.
+Checkstyle ends with 53 errors.

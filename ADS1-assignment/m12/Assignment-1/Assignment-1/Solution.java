@@ -124,7 +124,7 @@ public class Solution {
 		int bc = Integer.parseInt(sc.nextLine());
 		int sC = Integer.parseInt(sc.nextLine());
 		int st = Integer.parseInt(sc.nextLine());
-		//Reserve resobj = new Reserve(vacancies, unreserved, bc, sC, st);
+		Reserve resobj = new Reserve(vacancies, unreserved, bc, sC, st);
 		while (sc.hasNext()) {
 			String[] tokens = sc.nextLine().split(",");
 			sortobj.add(new StudentDetails(tokens[0], tokens[1],
@@ -134,7 +134,7 @@ public class Solution {
 		}
 		sortobj.insertionsort();
 		System.out.println(sortobj);
-		//System.out.println();
+		System.out.println();
 
 	}
 }
