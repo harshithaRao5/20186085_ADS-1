@@ -270,7 +270,7 @@ public class Solution {
 		//resobj.reservation();
 		StudentDetails[] studentArray = new StudentDetails[100];
 		for (int j = studentArray.length - 1; j >= studentArray.length -unreserved; j--) {
-			System.out.println(studentArray[j].toString());
+			System.out.println(sortobj.toString());
 		}
 		for (int i = studentArray.length - unreserved; i > 0; i--) {
 			for (int j = 0; j < st; j++) {
