@@ -54,6 +54,12 @@ Manoj,39,ST
 Anjali,38,ST
 Aryan,32,ST
 Shreya,23,ST
+
+hello
+Exception in thread "main" java.lang.NullPointerException
+	at Sort.toString(Solution.java:111)
+	at Reserve.reservation(Reserve.java:54)
+	at Solution.main(Solution.java:138)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -127,6 +133,12 @@ Manoj,39,ST
 Anjali,38,ST
 Aryan,32,ST
 Shreya,23,ST
+
+hello
+Exception in thread "main" java.lang.NullPointerException
+	at Sort.toString(Solution.java:111)
+	at Reserve.reservation(Reserve.java:54)
+	at Solution.main(Solution.java:138)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -155,6 +167,17 @@ Amit,70,Open
 Priyanka,70,Open
 Tanya,66,Open
 Abhishek,60,Open
+
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -186,6 +209,12 @@ Amit,70,ST
 Priyanka,70,ST
 Tanya,66,ST
 Abhishek,60,ST
+
+hello
+Exception in thread "main" java.lang.NullPointerException
+	at Sort.toString(Solution.java:111)
+	at Reserve.reservation(Reserve.java:54)
+	at Solution.main(Solution.java:138)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -264,6 +293,17 @@ Anjali,38,Open
 Aryan,32,Open
 Shreya,23,Open
 shyam,23,Open
+
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
 ----------------------------------------
 ########## Testcase 5: Failed ##########
 Expected Output: 
@@ -344,4 +384,10 @@ Anjali,38,ST
 Manoj,32,ST
 Aryan,32,ST
 Shreya,23,ST
+
+hello
+Exception in thread "main" java.lang.NullPointerException
+	at Sort.toString(Solution.java:111)
+	at Reserve.reservation(Reserve.java:54)
+	at Solution.main(Solution.java:138)
 ----------------------------------------

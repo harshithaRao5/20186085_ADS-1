@@ -29,7 +29,7 @@ public class Reserve {
 	}
 	public void reservation() {
 		Sort obj = new Sort();
-		for (int s = 0; s < size; s++) {
+		for (int s = 0; s < studentArray.length; s++) {
 					System.out.println("hello");
 			for (int i = 0; i <= unreserved; i++) {
 				if (studentArray[s].getCategory().equals("open")) {
