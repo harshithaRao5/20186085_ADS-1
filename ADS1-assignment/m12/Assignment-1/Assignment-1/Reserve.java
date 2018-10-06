@@ -5,6 +5,8 @@ public class Reserve {
 	private int bc;
 	private int sc;
 	private int st;
+	private StudentDetails[] studentArray = new StudentDetails[10];
+	private int size = 0;
 	Reserve(int vac, int ur, int bc1, int sc1, int st1) {
 		this.vacancies = vac;
 		this.unreserved = ur;
@@ -12,8 +14,6 @@ public class Reserve {
 		this.sc = sc1;
 		this.st = st1;
 	}
-	private StudentDetails[] studentArray = new StudentDetails[10];
-	private int size = 0;
 	public int size() {
 		return size;
 	}
@@ -29,6 +29,7 @@ public class Reserve {
 	}
 	public void reservation() {
 		Sort obj = new Sort();
+		System.out.println("hello");
 		for (int s = 0; s < size; s++) {
 			for (int i = 0; i <= unreserved; i++) {
 				if (studentArray[s].getCategory().equals("open")) {
