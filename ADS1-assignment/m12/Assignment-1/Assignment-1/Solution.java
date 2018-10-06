@@ -9,7 +9,7 @@ class StudentDetails implements Comparable<StudentDetails> {
 	private int totalmarks;
 	private String category;
 	StudentDetails(String n, String dob, int s1,
-		int s2, int s3, int tm, String rc) {
+	               int s2, int s3, int tm, String rc) {
 		this.name = n;
 		this.dateOfBirth = dob;
 		this.subject1 = s1;
@@ -41,12 +41,12 @@ class StudentDetails implements Comparable<StudentDetails> {
 	}
 	public int compareTo(StudentDetails that) {
 		//Date dateobj = new Date();
-		if(this.getTotalmarks() > that.getTotalmarks()) {
+		if (this.getTotalmarks() > that.getTotalmarks()) {
 			return 1;
 		} else if (this.getTotalmarks() < that.getTotalmarks()) {
 			return -1;
 		}
-		if(this.getSubject3() > that.getSubject3()) {
+		if (this.getSubject3() > that.getSubject3()) {
 			return 1;
 		} else if (this.getSubject3() < that.getSubject3()) {
 			return -1;
@@ -75,52 +75,55 @@ class Sort {
 		return size;
 	}
 	public void resize() {
-        studentArray = Arrays.copyOf(studentArray,
-            2 * studentArray.length);
-    }
-    public void add(final StudentDetails student) {
-        if (size == studentArray.length) {
-            resize();
-        }
-        studentArray[size++] = student;
-    }
-    public void insertionsort() {
-        for (int i = 0; i < size; i++) {
-            for (int j = i; j > 0; j--) {
-                if (studentArray[j].compareTo(studentArray[j - 1]) == 1) {
-                    exchange(studentArray, j, j - 1);
-                } else {
-                    break;
-                }
-            }
-        }
-    }
-    public void exchange(final Comparable[] a, final int i, final int j) {
-        Comparable swap = a[i];
-        a[i] = a[j];
-        a[j] = swap;
-    }
-    public String toString() {
-        int k = 0;
-        String str = "";
-        for (k = 0; k < size - 1; k++) {
-            str += studentArray[k].getName() + ","+studentArray[k].getTotalmarks()+","+studentArray[k].getCategory();
-        }
-        str += studentArray[k].getName() + ","+studentArray[k].getTotalmarks()+","+studentArray[k].getCategory();
-        return str;
-    }
+		studentArray = Arrays.copyOf(studentArray,
+		                             2 * studentArray.length);
+	}
+	public void add(final StudentDetails student) {
+		if (size == studentArray.length) {
+			resize();
+		}
+		studentArray[size++] = student;
+	}
+	public void insertionsort() {
+		for (int i = 0; i < size; i++) {
+			for (int j = i; j > 0; j--) {
+				if (studentArray[j].compareTo(studentArray[j - 1]) == 1) {
+					exchange(studentArray, j, j - 1);
+				} else {
+					break;
+				}
+			}
+		}
+	}
+	public void exchange(final Comparable[] a, final int i, final int j) {
+		Comparable swap = a[i];
+		a[i] = a[j];
+		a[j] = swap;
+	}
+	public String toString() {
+		int k = 0;
+		String str = "";
+		for (k = 0; k < size - 1; k++) {
+			str += studentArray[k].getName() + "," + studentArray[k].getTotalmarks() + "," + studentArray[k].getCategory();
+		}
+		str += studentArray[k].getName() + "," + studentArray[k].getTotalmarks() + "," + studentArray[k].getCategory();
+		return str;
+	}
 
 }
 public class Solution {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Sort sortobj = new Sort();
-		while(sc.hasNext()) {
-		String[] tokens = sc.nextLine().split(",");
-		sortobj.add(new StudentDetails(tokens[0], tokens[1],
-			Integer.parseInt(tokens[2]),Integer.parseInt(tokens[3]),
+		for (int i = 0; i < 6; i++) {
+			int students = Integer.parseInt(sc.nextLine());
+		}
+		while (sc.hasNext()) {
+			String[] tokens = sc.nextLine().split(",");
+			sortobj.add(new StudentDetails(tokens[0], tokens[1],
+			Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]),
 			Integer.parseInt(tokens[4]),
-			Integer.parseInt(tokens[5]),tokens[6]));
+			Integer.parseInt(tokens[5]), tokens[6]));
 		}
 		sortobj.insertionsort();
 		System.out.println(sortobj);
