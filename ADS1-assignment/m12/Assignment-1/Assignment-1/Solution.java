@@ -269,31 +269,22 @@ public class Solution {
 		System.out.println();
 		//resobj.reservation();
 		StudentDetails[] studentArray = new StudentDetails[100];
-		for (int s = 0; s < studentArray.length; s++) {
-		for (int i = 0; i <= unreserved; i++) {
-				if (studentArray[s].getCategory().equals("open")) {
-					sortobj.toString();
-					return;
+		for (int j = studentArray.length - 1; j >= studentArray.length -unreserved; j--) {
+			System.out.println(studentArray[j].toString());
+		}
+		for (int i = studentArray.length - unreserved; i > 0; i--) {
+			for (int j = 0; j < st; j++) {
+				if(studentArray[i].getCategory().equals("ST")) {
+					System.out.println(studentArray[i].toString());
 				}
 			}
-			for (int j = 0; j <= bc; j++) {
-				if (studentArray[s].getCategory().equals("BC")) {
-					sortobj.toString();
-					return;
-				}
-			}
-			for (int k = 0; k <= sC; k++) {
-				if (studentArray[s].getCategory().equals("SC")) {
-					sortobj.toString();
-					return;
-				}
-			}
-			for (int l = 0; l <= st; l++) {
-				if (studentArray[s].getCategory().equals("ST")) {
-					sortobj.toString();
+			for (int k = 0;k<sC;k++) {
+				if(studentArray[i].getCategory().equals("SC")) {
+					System.out.println(studentArray[i].toString());
 					return;
 				}
 			}
 		}
+
 	}
 }

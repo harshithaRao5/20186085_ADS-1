@@ -35,9 +35,15 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:265:80: '5' is a magic number. [MagicNumber]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:265:92: '6' is a magic number. [MagicNumber]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:271:68: '100' is a magic number. [MagicNumber]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:274: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:280: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:286: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:292: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:272: Line is longer than 80 characters (found 98). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:272:81: '-' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:277:35: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:278: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:281:40: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:281:41: '<' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:281:42: '<' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:281:45: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:282:35: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:283: Line is longer than 80 characters (found 87). [LineLength]
 Audit done.
-Checkstyle ends with 40 errors.
+Checkstyle ends with 46 errors.
