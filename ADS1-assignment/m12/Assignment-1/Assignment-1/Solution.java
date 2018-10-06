@@ -7,7 +7,7 @@ class StudentDetails implements Comparable<StudentDetails> {
 	private int subject2;
 	private int subject3;
 	private int totalmarks;
-	private String category;
+	private static String category;
 	StudentDetails(String n, String dob, int s1,
 	               int s2, int s3, int tm, String rc) {
 		this.name = n;
@@ -36,8 +36,8 @@ class StudentDetails implements Comparable<StudentDetails> {
 	public int getTotalmarks() {
 		return this.totalmarks;
 	}
-	public String getCategory() {
-		return this.category;
+	public static String getCategory() {
+		return category;
 	}
 	public int compareTo(StudentDetails that) {
 		//Date dateobj = new Date();
@@ -95,11 +95,13 @@ class Sort {
 			}
 		}
 	}
+
 	public void exchange(final Comparable[] a, final int i, final int j) {
 		Comparable swap = a[i];
 		a[i] = a[j];
 		a[j] = swap;
 	}
+
 	public String toString() {
 		int k = 0;
 		String str = "";
@@ -111,13 +113,18 @@ class Sort {
 	}
 
 }
+
 public class Solution {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Sort sortobj = new Sort();
-		for (int i = 0; i < 6; i++) {
-			int students = Integer.parseInt(sc.nextLine());
-		}
+		int students = Integer.parseInt(sc.nextLine());
+		int vacancies = Integer.parseInt(sc.nextLine());
+		int unreserved = Integer.parseInt(sc.nextLine());
+		int bc = Integer.parseInt(sc.nextLine());
+		int sC = Integer.parseInt(sc.nextLine());
+		int st = Integer.parseInt(sc.nextLine());
+		//Reserve resobj = new Reserve(vacancies, unreserved, bc, sC, st);
 		while (sc.hasNext()) {
 			String[] tokens = sc.nextLine().split(",");
 			sortobj.add(new StudentDetails(tokens[0], tokens[1],
@@ -127,5 +134,7 @@ public class Solution {
 		}
 		sortobj.insertionsort();
 		System.out.println(sortobj);
+		//System.out.println();
+
 	}
 }
