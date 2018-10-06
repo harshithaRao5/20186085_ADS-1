@@ -135,6 +135,7 @@ public class Solution {
 		sortobj.insertionsort();
 		System.out.println(sortobj);
 		System.out.println();
+		resobj.reservation();
 
 	}
 }
