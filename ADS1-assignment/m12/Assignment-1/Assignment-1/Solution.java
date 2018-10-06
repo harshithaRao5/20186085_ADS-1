@@ -104,7 +104,7 @@ class Sort {
 		int k = 0;
 		String str = "";
 		for (k = 0; k < size - 1; k++) {
-			str += studentArray[k].getName() + "," + studentArray[k].getTotalmarks() + "," + studentArray[k].getCategory();
+			str += studentArray[k].getName() + "," + studentArray[k].getTotalmarks() + "," + studentArray[k].getCategory()+"\n";
 		}
 		str += studentArray[k].getName() + "," + studentArray[k].getTotalmarks() + "," + studentArray[k].getCategory();
 		return str;

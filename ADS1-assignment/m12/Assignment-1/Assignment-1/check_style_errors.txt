@@ -39,7 +39,9 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:90: Line is longer than 80 characters (found 90). [LineLength]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:98:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:103:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:107: Line is longer than 80 characters (found 135). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:107: Line is longer than 80 characters (found 140). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:107:135: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:107:136: '+' is not followed by whitespace. [WhitespaceAround]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:109: Line is longer than 80 characters (found 127). [LineLength]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:114: Missing a Javadoc comment. [JavadocType]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:114:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
@@ -52,4 +54,4 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:126:49: '5' is a magic number. [MagicNumber]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m12\Assignment-1\Assignment-1\Solution.java:126:61: '6' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 52 errors.
+Checkstyle ends with 54 errors.
