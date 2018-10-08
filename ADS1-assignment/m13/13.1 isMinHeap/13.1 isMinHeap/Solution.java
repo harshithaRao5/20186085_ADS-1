@@ -1,25 +1,28 @@
 import java.util.Scanner;
+/**
+ * Class for is minimum heap.
+ *
+ * @param      <E> generic.
+ */
 class IsMinHeap<E extends Comparable<E>> {
+	/**
+	 * array of generic type.
+	 */
 	private E[] array;
-
+	/**
+	 * Constructs the object.
+	 *
+	 * @param  a generic type
+	 */
 	IsMinHeap(E[] a) {
 		this.array = a;
 	}
-	// private boolean isMinHeap() {
-//        return isMinHeap(1);
-//    }
-
+	/**
+	 * Determines if minimum heap.
+	 *
+	 * @return     True if minimum heap, False otherwise.
+	 */
 	public boolean isMinHeap() {
-		// if (k > n) return true;
-		// int left = 2*k + 1;
-		// int right = 2*k + 2;
-		// if (left  <= n && greater(k, left)) {
-		// 	return false;
-		// }
-		// if (right <= n && greater(k, right)) {
-		// 	return false;
-		// }
-		// return isMinHeap(left) && isMinHeap(right);
 		for (int i = 0; i < array.length - 1; i++) {
 			if (less(i + 1, i)) {
 				return false;
@@ -27,6 +30,14 @@ class IsMinHeap<E extends Comparable<E>> {
 		}
 		return true;
 	}
+	/**
+	 * checks whether the element is less.
+	 *
+	 * @param      i  integer.
+	 * @param      j  integer.
+	 *
+	 * @return   True if less, False otherwise.
+	 */
 	public boolean less(int i, int j) {
 		return array[i].compareTo(array[j]) < 0;
 	}
@@ -86,18 +97,18 @@ public final class Solution {
 			int n3 = Integer.parseInt(sc.nextLine());
 			for (int i = 0; i < n3; i++) {
 				String str = sc.nextLine();
-				if(str.equals("")) {
+				if (str.equals("")) {
 					System.out.println("false");
 					break;
 				} else {
-				String[] tokens = str.split(",");
-				Float[] elementFloat = new Float[tokens.length];
-				for (int j = 0; j < tokens.length; j++) {
-					elementFloat[j] = Float.parseFloat(tokens[j]);
+					String[] tokens = str.split(",");
+					Float[] elementFloat = new Float[tokens.length];
+					for (int j = 0; j < tokens.length; j++) {
+						elementFloat[j] = Float.parseFloat(tokens[j]);
+					}
+					IsMinHeap<Float> isobj = new IsMinHeap<Float>(elementFloat);
+					System.out.println(isobj.isMinHeap());
 				}
-				IsMinHeap<Float> isobj = new IsMinHeap<Float>(elementFloat);
-				System.out.println(isobj.isMinHeap());
-			}
 			}
 			break;
 		}
