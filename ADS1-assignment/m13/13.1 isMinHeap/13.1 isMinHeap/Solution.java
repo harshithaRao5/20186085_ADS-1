@@ -19,7 +19,7 @@ class IsMinHeap<E extends Comparable<E>> {
     }
     /**
      * Determines if minimum heap.
-     *
+     * time complexity is N.
      * @return     True if minimum heap, False otherwise.
      */
     public boolean isMinHeap() {
