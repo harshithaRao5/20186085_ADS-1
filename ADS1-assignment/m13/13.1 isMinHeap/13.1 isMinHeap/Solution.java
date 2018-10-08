@@ -85,13 +85,19 @@ public final class Solution {
 		case "Float":
 			int n3 = Integer.parseInt(sc.nextLine());
 			for (int i = 0; i < n3; i++) {
-				String[] tokens = sc.nextLine().split(",");
+				String str = sc.nextLine();
+				if(str.equals("")) {
+					System.out.println("false");
+					break;
+				} else {
+				String[] tokens = str.split(",");
 				Float[] elementFloat = new Float[tokens.length];
 				for (int j = 0; j < tokens.length; j++) {
 					elementFloat[j] = Float.parseFloat(tokens[j]);
 				}
 				IsMinHeap<Float> isobj = new IsMinHeap<Float>(elementFloat);
 				System.out.println(isobj.isMinHeap());
+			}
 			}
 			break;
 		}
