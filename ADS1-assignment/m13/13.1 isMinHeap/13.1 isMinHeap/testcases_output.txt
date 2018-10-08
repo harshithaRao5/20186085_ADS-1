@@ -5,7 +5,11 @@ false
 true
 false
 Your Output: 
-
+false
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
+	at IsMinHeap.less(Solution.java:31)
+	at IsMinHeap.isMinHeap(Solution.java:24)
+	at Solution.main(Solution.java:62)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -16,7 +20,10 @@ false
 false
 false
 Your Output: 
-
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 11
+	at IsMinHeap.less(Solution.java:31)
+	at IsMinHeap.isMinHeap(Solution.java:24)
+	at Solution.main(Solution.java:62)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -29,7 +36,13 @@ false
 true
 false
 Your Output: 
-
+false
+false
+false
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 5
+	at IsMinHeap.less(Solution.java:31)
+	at IsMinHeap.isMinHeap(Solution.java:24)
+	at Solution.main(Solution.java:75)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -37,7 +50,10 @@ true
 false
 false
 Your Output: 
-
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 324
+	at IsMinHeap.less(Solution.java:31)
+	at IsMinHeap.isMinHeap(Solution.java:24)
+	at Solution.main(Solution.java:87)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -45,9 +61,9 @@ true
 true
 false
 Your Output: 
-Exception in thread "main" java.lang.NumberFormatException: empty String
-	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(Unknown Source)
-	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(Unknown Source)
-	at java.base/java.lang.Float.parseFloat(Unknown Source)
-	at Solution.main(Solution.java:92)
+false
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at IsMinHeap.less(Solution.java:31)
+	at IsMinHeap.isMinHeap(Solution.java:24)
+	at Solution.main(Solution.java:99)
 ----------------------------------------

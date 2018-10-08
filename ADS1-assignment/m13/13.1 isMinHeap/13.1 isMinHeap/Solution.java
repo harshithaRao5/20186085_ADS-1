@@ -5,11 +5,11 @@ class IsMinHeap<E extends Comparable<E>> {
 	IsMinHeap(E[] a) {
 		this.array = a;
 	}
-	private boolean isMinHeap() {
-        return isMinHeap(1);
-    }
+	// private boolean isMinHeap() {
+ //        return isMinHeap(1);
+ //    }
 
-    private boolean isMinHeap(int k) {
+    public boolean isMinHeap() {
         // if (k > n) return true;
         // int left = 2*k + 1;
         // int right = 2*k + 2;
@@ -59,6 +59,8 @@ public final class Solution {
 					element[j] = tokens[j];
 				}
 				IsMinHeap<String> isobj = new IsMinHeap<String>(element);
+				System.out.println(isobj.isMinHeap());
+
 			}
 			break;
 		case "Integer":
@@ -70,6 +72,7 @@ public final class Solution {
 					elementInt[j] = Integer.parseInt(tokens[j]);
 				}
 				IsMinHeap<Integer> isobj = new IsMinHeap<Integer>(elementInt);
+				System.out.println(isobj.isMinHeap());
 			}
 			break;
 		case "Double":
@@ -81,6 +84,7 @@ public final class Solution {
 					elementDouble[j] = Double.parseDouble(tokens[j]);
 				}
 				IsMinHeap<Double> isobj = new IsMinHeap<Double>(elementDouble);
+				System.out.println(isobj.isMinHeap());
 			}
 			break;
 		case "Float":
@@ -92,6 +96,7 @@ public final class Solution {
 					elementFloat[j] = Float.parseFloat(tokens[j]);
 				}
 				IsMinHeap<Float> isobj = new IsMinHeap<Float>(elementFloat);
+				System.out.println(isobj.isMinHeap());
 			}
 			break;
 		}
