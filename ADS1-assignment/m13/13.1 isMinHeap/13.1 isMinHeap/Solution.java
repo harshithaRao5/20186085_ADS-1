@@ -20,7 +20,7 @@ class IsMinHeap<E extends Comparable<E>> {
 		// 	return false;
 		// }
 		// return isMinHeap(left) && isMinHeap(right);
-		for (int i = 0; i < array.length; i++) {
+		for (int i = 0; i < array.length - 1; i++) {
 			if (less(i + 1, i)) {
 				return false;
 			}
