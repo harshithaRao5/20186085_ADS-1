@@ -6,8 +6,9 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:5:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:5:19: Parameter a should be final. [FinalParameters]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:12:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:24:30: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:24:31: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:24:27: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:24:28: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:24:30: ',' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:30:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:30:25: Parameter i should be final. [FinalParameters]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:30:32: Parameter j should be final. [FinalParameters]
@@ -23,4 +24,4 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:96: Line is longer than 80 characters (found 86). [LineLength]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:98: Line is longer than 80 characters (found 92). [LineLength]
 Audit done.
-Checkstyle ends with 23 errors.
+Checkstyle ends with 24 errors.

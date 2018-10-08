@@ -5,13 +5,12 @@ false
 true
 false
 Your Output: 
-false
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 8
 	at IsMinHeap.less(Solution.java:31)
 	at IsMinHeap.isMinHeap(Solution.java:24)
 	at Solution.main(Solution.java:62)
 ----------------------------------------
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 false
 false
@@ -20,10 +19,12 @@ false
 false
 false
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 11
-	at IsMinHeap.less(Solution.java:31)
-	at IsMinHeap.isMinHeap(Solution.java:24)
-	at Solution.main(Solution.java:62)
+false
+false
+false
+false
+false
+false
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -36,10 +37,7 @@ false
 true
 false
 Your Output: 
-false
-false
-false
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 5
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 9
 	at IsMinHeap.less(Solution.java:31)
 	at IsMinHeap.isMinHeap(Solution.java:24)
 	at Solution.main(Solution.java:75)
@@ -61,8 +59,7 @@ true
 true
 false
 Your Output: 
-false
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
 	at IsMinHeap.less(Solution.java:31)
 	at IsMinHeap.isMinHeap(Solution.java:24)
 	at Solution.main(Solution.java:99)
