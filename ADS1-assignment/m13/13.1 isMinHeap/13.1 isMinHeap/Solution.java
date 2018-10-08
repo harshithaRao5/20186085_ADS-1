@@ -6,30 +6,30 @@ class IsMinHeap<E extends Comparable<E>> {
 		this.array = a;
 	}
 	// private boolean isMinHeap() {
- //        return isMinHeap(1);
- //    }
+//        return isMinHeap(1);
+//    }
 
-    public boolean isMinHeap() {
-        // if (k > n) return true;
-        // int left = 2*k + 1;
-        // int right = 2*k + 2;
-        // if (left  <= n && greater(k, left)) {
-        // 	return false;
-        // }
-        // if (right <= n && greater(k, right)) {
-        // 	return false;
-        // }
-        // return isMinHeap(left) && isMinHeap(right);
-        for (int i = 0; i < array.length; i++) {
-        	if (less(i+1,i)) {
-        		return false;
-        	}
-        }
-        return true;
-    }
-    public boolean less(int i, int j) {
-    	return array[i].compareTo(array[j]) < 0;
-    }
+	public boolean isMinHeap() {
+		// if (k > n) return true;
+		// int left = 2*k + 1;
+		// int right = 2*k + 2;
+		// if (left  <= n && greater(k, left)) {
+		// 	return false;
+		// }
+		// if (right <= n && greater(k, right)) {
+		// 	return false;
+		// }
+		// return isMinHeap(left) && isMinHeap(right);
+		for (int i = 0; i < array.length; i++) {
+			if (less(i + 1, i)) {
+				return false;
+			}
+		}
+		return true;
+	}
+	public boolean less(int i, int j) {
+		return array[i].compareTo(array[j]) < 0;
+	}
 
 }
 
@@ -54,13 +54,8 @@ public final class Solution {
 			int n = Integer.parseInt(sc.nextLine());
 			for (int i = 0; i < n; i++) {
 				String[] tokens = sc.nextLine().split(",");
-				String[] element = new String[tokens.length];
-				for (int j = 0; j < tokens.length; j++) {
-					element[j] = tokens[j];
-				}
-				IsMinHeap<String> isobj = new IsMinHeap<String>(element);
+				IsMinHeap<String> isobj = new IsMinHeap<String>(tokens);
 				System.out.println(isobj.isMinHeap());
-
 			}
 			break;
 		case "Integer":
