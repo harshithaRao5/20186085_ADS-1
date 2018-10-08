@@ -14,7 +14,7 @@ class IsMinHeap<E extends Comparable<E>> {
 	 *
 	 * @param  a generic type
 	 */
-	IsMinHeap(E[] a) {
+	IsMinHeap(final E[] a) {
 		this.array = a;
 	}
 	/**
@@ -38,13 +38,15 @@ class IsMinHeap<E extends Comparable<E>> {
 	 *
 	 * @return   True if less, False otherwise.
 	 */
-	public boolean less(int i, int j) {
+	public boolean less(final int i, final int j) {
 		return array[i].compareTo(array[j]) < 0;
 	}
 
 }
 
-
+/**
+ * client class.
+ */
 public final class Solution {
 	/**
 	 * Constructs the object.
@@ -65,7 +67,8 @@ public final class Solution {
 			int n = Integer.parseInt(sc.nextLine());
 			for (int i = 0; i < n; i++) {
 				String[] tokens = sc.nextLine().split(",");
-				IsMinHeap<String> isobj = new IsMinHeap<String>(tokens);
+				IsMinHeap<String> isobj
+				= new IsMinHeap<String>(tokens);
 				System.out.println(isobj.isMinHeap());
 			}
 			break;
@@ -77,7 +80,8 @@ public final class Solution {
 				for (int j = 0; j < tokens.length; j++) {
 					elementInt[j] = Integer.parseInt(tokens[j]);
 				}
-				IsMinHeap<Integer> isobj = new IsMinHeap<Integer>(elementInt);
+				IsMinHeap<Integer> isobj
+				= new IsMinHeap<Integer>(elementInt);
 				System.out.println(isobj.isMinHeap());
 			}
 			break;
@@ -89,7 +93,8 @@ public final class Solution {
 				for (int j = 0; j < tokens.length; j++) {
 					elementDouble[j] = Double.parseDouble(tokens[j]);
 				}
-				IsMinHeap<Double> isobj = new IsMinHeap<Double>(elementDouble);
+				IsMinHeap<Double> isobj
+				= new IsMinHeap<Double>(elementDouble);
 				System.out.println(isobj.isMinHeap());
 			}
 			break;
@@ -106,7 +111,8 @@ public final class Solution {
 					for (int j = 0; j < tokens.length; j++) {
 						elementFloat[j] = Float.parseFloat(tokens[j]);
 					}
-					IsMinHeap<Float> isobj = new IsMinHeap<Float>(elementFloat);
+					IsMinHeap<Float> isobj
+					 = new IsMinHeap<Float>(elementFloat);
 					System.out.println(isobj.isMinHeap());
 				}
 			}
