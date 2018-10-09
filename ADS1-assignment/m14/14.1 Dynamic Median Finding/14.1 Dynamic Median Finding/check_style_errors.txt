@@ -1,0 +1,7 @@
+Starting audit...
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.1 Dynamic Median Finding\14.1 Dynamic Median Finding\Solution.java:2: Missing a Javadoc comment. [JavadocType]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.1 Dynamic Median Finding\14.1 Dynamic Median Finding\Solution.java:3:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.1 Dynamic Median Finding\14.1 Dynamic Median Finding\Solution.java:3:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.1 Dynamic Median Finding\14.1 Dynamic Median Finding\Solution.java:6:9: Missing a Javadoc comment. [JavadocMethod]
+Audit done.
+Checkstyle ends with 4 errors.
