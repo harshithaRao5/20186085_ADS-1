@@ -78,5 +78,7 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:416:24: '-' is not followed by whitespace. [WhitespaceAround]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:417:13: '-' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:417:14: '-' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:419:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:419:30: Parameter a should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 79 errors.
+Checkstyle ends with 81 errors.

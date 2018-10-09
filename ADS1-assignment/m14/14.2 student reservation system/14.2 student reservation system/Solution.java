@@ -416,7 +416,11 @@ class Heap {
         pq[i-1] = pq[j-1];
         pq[j-1] = swap;
     }
-
+    private static void show(Comparable[] a) {
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
+    }
 
 }
 
