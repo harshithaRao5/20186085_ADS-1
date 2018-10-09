@@ -238,8 +238,8 @@ class Student implements Comparable<Student> {
      * @param      rc           Reservation Category.
      */
     Student(String studentName, String dateOfBirth,
-            int m1, int m2, int m3, int tm,
-            String rc) {
+                   int m1, int m2, int m3, int tm,
+                   String rc) {
         this.studentName = studentName;
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
@@ -416,11 +416,11 @@ class Heap {
         pq[i-1] = pq[j-1];
         pq[j-1] = swap;
     }
+
+    // print array to standard output
     private static void show(Comparable[] a) {
         for (int i = 0; i < a.length; i++) {
             System.out.println(a[i]);
         }
     }
-
 }
-
