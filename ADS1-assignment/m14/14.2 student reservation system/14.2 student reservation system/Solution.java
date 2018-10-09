@@ -400,7 +400,7 @@ class Insertion {
     public static void sort(Comparable[] a) {
         int n = a.length;
         for (int k = n / 2; k >= 0; k--)
-            sink(a, k, n);
+            sink(a, k, n-1);
         while (n > 0) {
             exch(a, 0, n);
             sink(a, 0, --n);
