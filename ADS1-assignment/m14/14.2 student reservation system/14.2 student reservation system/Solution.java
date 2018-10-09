@@ -398,9 +398,9 @@ class Insertion {
      * @param a contains elements that are to be sorted.
      */
     public static void sort(Comparable[] a) {
-        int n = a.length;
+        int n = a.length-1;
         for (int k = n / 2; k >= 0; k--)
-            sink(a, k, n-1);
+            sink(a, k, n);
         while (n > 0) {
             exch(a, 0, n);
             sink(a, 0, --n);
