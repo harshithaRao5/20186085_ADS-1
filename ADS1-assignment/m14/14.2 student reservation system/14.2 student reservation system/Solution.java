@@ -39,7 +39,7 @@ public final class Solution {
                 tokens[2 + 2 + 2]);
         }
 
-        Insertion.sort(students);
+        Heap.sort(students);
         print(students);
 
         allotment(students, vacancies, noCategry, noOfBC,
