@@ -1,5 +1,4 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:70:34: Parameter vacancies should be final. [FinalParameters]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:71:34: Parameter noCategry should be final. [FinalParameters]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:72:34: Parameter noBC should be final. [FinalParameters]
@@ -49,4 +48,4 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:412: 'if' construct must use '{}'s. [NeedBraces]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:413: 'if' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 49 errors.
+Checkstyle ends with 48 errors.
