@@ -1,10 +1,21 @@
 import java.util.Scanner;
+/**
+ * client program.
+ */
 public final class Solution {
-	private Solution() {
-
-	}
-	public static void main(final String[] args) {
-		Scanner scan = new Scanner(System.in);
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //unused constructor.
+    }
+    /**
+     * main method that returns median.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         MinPQ<Float> minpq = new MinPQ<Float>(n);
         MaxPQ<Float> maxpq = new MaxPQ<Float>(n);
@@ -38,5 +49,5 @@ public final class Solution {
             }
 
         }
-	}
+    }
 }
