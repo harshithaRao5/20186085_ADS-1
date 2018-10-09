@@ -376,6 +376,15 @@ class Student implements Comparable<Student> {
  * Class for insertion.
  */
 class Insertion {
+    /**
+     * { function_description }.
+     *
+     * @param      pq    { parameter_description }
+     * @param      i     { parameter_description }
+     * @param      j     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     private static boolean less(Comparable[] pq, int i, int j) {
         return pq[i - 1].compareTo(pq[j - 1]) < 0;
     }
@@ -406,6 +415,13 @@ class Insertion {
             sink(a, 0, --n);
         }
     }
+    /**
+     * { function_description }.
+     *
+     * @param      pq    { parameter_description }
+     * @param      k     { parameter_description }
+     * @param      n     { parameter_description }
+     */
     private static void sink(Comparable[] pq, int k, int n) {
         while (2 * k <= n) {
             int j = 2 * k;
