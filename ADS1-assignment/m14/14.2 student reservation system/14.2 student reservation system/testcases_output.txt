@@ -31,9 +31,9 @@ tanvi,90,BC
 Aditya,80,ST
 priya,72,SC
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 23
 	at Insertion.less(Solution.java:380)
-	at Insertion.sink(Solution.java:413)
+	at Insertion.sink(Solution.java:412)
 	at Insertion.sort(Solution.java:403)
 	at Solution.main(Solution.java:42)
 ----------------------------------------

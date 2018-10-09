@@ -40,8 +40,6 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:379:50: Parameter i should be final. [FinalParameters]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:379:57: Parameter j should be final. [FinalParameters]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:400:29: Parameter a should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:401:25: '-' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:401:26: '-' is not followed by whitespace. [WhitespaceAround]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:402: 'for' construct must use '{}'s. [NeedBraces]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:409:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:409:30: Parameter pq should be final. [FinalParameters]
@@ -52,4 +50,4 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:412:37: '+' is not followed by whitespace. [WhitespaceAround]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:413: 'if' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 52 errors.
+Checkstyle ends with 50 errors.
