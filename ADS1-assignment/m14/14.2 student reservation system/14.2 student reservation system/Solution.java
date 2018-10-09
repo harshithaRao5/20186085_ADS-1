@@ -370,65 +370,53 @@ class Student implements Comparable<Student> {
         return sb.toString();
     }
 }
+class Heap {
 
-
-/**
- * Class for insertion.
- */
-class Insertion {
-    /**
-     * { function_description }.
-     *
-     * @param      pq    { parameter_description }
-     * @param      i     { parameter_description }
-     * @param      j     { parameter_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    private static boolean less(Comparable[] pq, int i, int j) {
-        return pq[i - 1].compareTo(pq[j - 1]) < 0;
-    }
+    // This class should not be instantiated.
+    private Heap() { }
 
     /**
-     * { function_description }.
-     *
-     * @param      a     { parameter_description }
-     * @param      i     { parameter_description }
-     * @param      j     { parameter_description }
+     * Rearranges the array in ascending order, using the natural order.
+     * @param pq the array to be sorted
      */
-    private static void exch(final Comparable[] a, final int i, final int j) {
-        Comparable swap = a[i];
-        a[i] = a[j];
-        a[j] = swap;
-    }
-
-    /**
-     * Sorts the elements using insertion sort.
-     * @param a contains elements that are to be sorted.
-     */
-    public static void sort(Comparable[] a) {
-        int n = a.length;
-        for (int k = n / 2; k >= 0; k--)
-            sink(a, k, n);
-        while (n > 0) {
-            exch(a, 0, n);
-            sink(a, 0, --n);
+    public static void sort(Comparable[] pq) {
+        int n = pq.length;
+        for (int k = n/2; k >= 1; k--)
+            sink(pq, k, n);
+        while (n > 1) {
+            exch(pq, 1, n--);
+            sink(pq, 1, n);
         }
     }
-    /**
-     * { function_description }.
-     *
-     * @param      pq    { parameter_description }
-     * @param      k     { parameter_description }
-     * @param      n     { parameter_description }
-     */
+
+   /***************************************************************************
+    * Helper functions to restore the heap invariant.
+    ***************************************************************************/
+
     private static void sink(Comparable[] pq, int k, int n) {
-        while (2 * k <= n) {
-            int j = 2 * k;
-            if (j < n && less(pq, j+1, j + 2)) j++;
+        while (2*k <= n) {
+            int j = 2*k;
+            if (j < n && less(pq, j, j+1)) j++;
             if (!less(pq, k, j)) break;
             exch(pq, k, j);
             k = j;
         }
     }
+
+   /***************************************************************************
+    * Helper functions for comparisons and swaps.
+    * Indices are "off-by-one" to support 1-based indexing.
+    ***************************************************************************/
+    private static boolean less(Comparable[] pq, int i, int j) {
+        return pq[i-1].compareTo(pq[j-1]) < 0;
+    }
+
+    private static void exch(Object[] pq, int i, int j) {
+        Object swap = pq[i-1];
+        pq[i-1] = pq[j-1];
+        pq[j-1] = swap;
+    }
+
+
 }
+
