@@ -32,9 +32,9 @@ Aditya,80,ST
 priya,72,SC
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 23
-	at Insertion.exch(Solution.java:260)
-	at Insertion.sort(Solution.java:273)
-	at Solution.main(Solution.java:324)
+	at Insertion.exch(Solution.java:392)
+	at Insertion.sort(Solution.java:405)
+	at Solution.main(Solution.java:42)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -79,9 +79,9 @@ Aditya,80,ST
 priya,72,SC
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 30
-	at Insertion.exch(Solution.java:260)
-	at Insertion.sort(Solution.java:273)
-	at Solution.main(Solution.java:324)
+	at Insertion.exch(Solution.java:392)
+	at Insertion.sort(Solution.java:405)
+	at Solution.main(Solution.java:42)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -101,9 +101,9 @@ Aditya,80,ST
 priya,76,SC
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
-	at Insertion.exch(Solution.java:260)
-	at Insertion.sort(Solution.java:273)
-	at Solution.main(Solution.java:324)
+	at Insertion.exch(Solution.java:392)
+	at Insertion.sort(Solution.java:405)
+	at Solution.main(Solution.java:42)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -126,9 +126,9 @@ Ajay,76,Open
 Tanya,66,BC
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
-	at Insertion.exch(Solution.java:260)
-	at Insertion.sort(Solution.java:273)
-	at Solution.main(Solution.java:324)
+	at Insertion.exch(Solution.java:392)
+	at Insertion.sort(Solution.java:405)
+	at Solution.main(Solution.java:42)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -178,9 +178,9 @@ Amit,76,Open
 Arjun,75,Open
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 30
-	at Insertion.exch(Solution.java:260)
-	at Insertion.sort(Solution.java:273)
-	at Solution.main(Solution.java:324)
+	at Insertion.exch(Solution.java:392)
+	at Insertion.sort(Solution.java:405)
+	at Solution.main(Solution.java:42)
 ----------------------------------------
 ########## Testcase 5: Failed ##########
 Expected Output: 
@@ -232,7 +232,7 @@ priya,72,SC
 varsha,66,BC
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 30
-	at Insertion.exch(Solution.java:260)
-	at Insertion.sort(Solution.java:273)
-	at Solution.main(Solution.java:324)
+	at Insertion.exch(Solution.java:392)
+	at Insertion.sort(Solution.java:405)
+	at Solution.main(Solution.java:42)
 ----------------------------------------
