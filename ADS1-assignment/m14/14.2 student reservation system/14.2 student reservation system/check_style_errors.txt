@@ -46,6 +46,8 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:409:47: Parameter k should be final. [FinalParameters]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:409:54: Parameter n should be final. [FinalParameters]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:412: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:412:36: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:412:37: '+' is not followed by whitespace. [WhitespaceAround]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m14\14.2 student reservation system\14.2 student reservation system\Solution.java:413: 'if' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 48 errors.
+Checkstyle ends with 50 errors.
