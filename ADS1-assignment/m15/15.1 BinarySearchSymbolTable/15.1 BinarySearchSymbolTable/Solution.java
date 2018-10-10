@@ -29,9 +29,11 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
 		return size() == 0;
 	}
 	public boolean contains(Key key) {
+		if (key == null) throw new IllegalArgumentException("argument to contains() is null");
 		return get(key) != null;
 	}
 	public Value get(Key key) {
+		if (key == null) throw new IllegalArgumentException("argument to contains() is null");
 		if (isEmpty()) return null;
 		int i = rank(key);
 		if (i < n && keys[i].compareTo(key) == 0) {
@@ -41,6 +43,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
 	}
 
 	public int rank(Key key) {
+		if (key == null) throw new IllegalArgumentException("argument to contains() is null");
 		int lo = 0, hi = n - 1;
 		while (lo <= hi) {
 			int mid = lo + (hi - lo) / 2;
@@ -56,6 +59,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
 		return lo;
 	}
 	public void put(Key key, Value val)  {
+		if (key == null) throw new IllegalArgumentException("argument to contains() is null");
 		if (val == null) {
 			delete(key);
 			return;
@@ -79,6 +83,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
 		//System.out.println(keys[i]+" "+vals[i]);
 	}
 	public void delete(Key key) {
+		if (key == null) throw new IllegalArgumentException("argument to contains() is null");
         if (isEmpty()) return;
         int i = rank(key);
         if (i == n || keys[i].compareTo(key) != 0) {
@@ -96,15 +101,19 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
 
     }
 	public void deleteMin() {
+		if (isEmpty()) throw new IllegalArgumentException("argument to contains() is null");
         delete(min());
     }
     public Key min() {
+    	if (isEmpty()) throw new IllegalArgumentException("argument to contains() is null");
         return keys[0];
     }
     public Key max() {
+    	if (isEmpty()) throw new IllegalArgumentException("argument to contains() is null");
         return keys[n-1];
     }
     public Key floor(Key key) {
+    	if (key == null) throw new IllegalArgumentException("argument to contains() is null");
         int i = rank(key);
         if (i < n && key.compareTo(keys[i]) == 0) {
         	return keys[i];
