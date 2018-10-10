@@ -207,7 +207,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
     public String toString() {
         String s = "";
         for(int i = 0; i < size(); i++) {
-            s = keys[i] + " " + vals[i] + "\n";
+            s += keys[i] + " " + vals[i] + "\n";
         }
         return s;
 
