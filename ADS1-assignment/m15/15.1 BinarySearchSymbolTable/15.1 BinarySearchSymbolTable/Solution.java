@@ -1,8 +1,19 @@
 import java.util.Scanner;
+/**
+ * client program.
+ */
 public final class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	private Solution() {
-
+		//unused constructor.
 	}
+	/**
+	 * main method.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		BinarySearchST<String, Integer> bst = new BinarySearchST<String, Integer>();
