@@ -1,4 +1,29 @@
 import java.util.Scanner;
+// class BinarySearchST<Key extends Comparable<Key>, Value> {
+// 	private static final int INIT_CAPACITY = 2;
+// 	private Key[] keys;
+// 	private Value[] vals;
+// 	private int n = 0;
+// 	BinarySearchST() {
+// 		this(INIT_CAPACITY);
+// 	}
+
+// 	public BinarySearchST(int capacity) {
+// 		keys = (Key[]) new Comparable[capacity];
+// 		vals = (Value[]) new Object[capacity];
+// 	}
+// 	private void resize(int capacity) {
+// 		Key[]   tempk = (Key[])   new Comparable[capacity];
+//         Value[] tempv = (Value[]) new Object[capacity];
+//         for (int i = 0; i < n; i++) {
+//             tempk[i] = keys[i];
+//             tempv[i] = vals[i];
+//         }
+//         vals = tempv;
+//         keys = tempk;
+// 	}
+
+// }
 public final class Solution {
 	private Solution() {
 
@@ -34,7 +59,8 @@ public final class Solution {
 				case "get":
 				System.out.println(bst.get(tokens[1]));
 				break;
-
+				default:
+				break;
 
 				}
 			}
