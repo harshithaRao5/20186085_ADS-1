@@ -17,22 +17,22 @@ public final class Solution {
 				System.out.println(bst.max());
 				break;
 			case "floor":
-				System.out.println(bst.floor(tokens[1]));
+				System.out.println(bst.floor(choice[1]));
 				break;
 			case "rank":
-				System.out.println(bst.rank(tokens[1]));
+				System.out.println(bst.rank(choice[1]));
 				break;
 			case "deleteMin":
 				bst.deleteMin();
 				break;
 			case "contains":
-				System.out.println(bst.contains(tokens[1]));
+				System.out.println(bst.contains(choice[1]));
 				break;
 			case "keys":
 				System.out.println(bst);
 				break;
 			case "get":
-				System.out.println(bst.get(tokens[1]));
+				System.out.println(bst.get(choice[1]));
 				break;
 			default:
 				break;
