@@ -49,10 +49,10 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:112:30: '-' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:112:31: '-' is not followed by whitespace. [WhitespaceAround]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:115:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:117:12: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:126: Missing a Javadoc comment. [JavadocType]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:127:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:130:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:132: Line is longer than 80 characters (found 92). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:118:12: 'for' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:127: Missing a Javadoc comment. [JavadocType]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:128:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:131:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:133: Line is longer than 80 characters (found 92). [LineLength]
 Audit done.
 Checkstyle ends with 55 errors.
