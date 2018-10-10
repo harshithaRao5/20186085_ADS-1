@@ -15,10 +15,144 @@ S 0
 X 7
 null
 Your Output: 
+
+S 0
+
+E 1
+S 0
+
+A 2
+E 1
+S 0
+
+A 2
+E 1
+R 3
+S 0
+
+A 2
+C 4
+E 1
+R 3
+S 0
+
+A 2
+C 4
+E 1
+H 5
+R 3
+S 0
+
+A 2
+C 4
+E 6
+H 5
+R 3
+S 0
+
+A 2
+C 4
+E 6
+H 5
+R 3
+S 0
+X 7
+
+A 8
+C 4
+E 6
+H 5
+R 3
+S 0
+X 7
+
+A 8
+C 4
+E 6
+H 5
+M 9
+R 3
+S 0
+X 7
+
+A 8
+C 4
+E 6
+H 5
+M 9
+P 10
+R 3
+S 0
+X 7
+
+A 8
+C 4
+E 6
+H 5
+L 11
+M 9
+P 10
+R 3
+S 0
+X 7
+
 X
+A 8
+C 4
+E 12
+H 5
+L 11
+M 9
+P 10
+R 3
+S 0
+X 7
+
 E
+A 8
+C 4
+E 12
+H 5
+L 11
+M 9
+P 10
+R 3
+S 0
+X 7
+
 2
+A 8
+C 4
+E 12
+H 5
+L 11
+M 9
+P 10
+R 3
+S 0
+X 7
+
+C 4
+E 12
+H 5
+L 11
+M 9
+P 10
+R 3
+S 0
+X 7
+
 true
+C 4
+E 12
+H 5
+L 11
+M 9
+P 10
+R 3
+S 0
+X 7
+
 C 4
 E 12
 H 5
@@ -49,6 +183,113 @@ O
 false
 null
 Your Output: 
+
+E 0
+
+A 1
+E 0
+
+A 1
+E 0
+S 2
+
+A 1
+E 0
+S 2
+Y 3
+
+A 1
+E 0
+Q 4
+S 2
+Y 3
+
+A 1
+E 0
+Q 4
+S 2
+U 5
+Y 3
+
+A 1
+E 6
+Q 4
+S 2
+U 5
+Y 3
+
+A 1
+E 6
+Q 4
+S 7
+U 5
+Y 3
+
+A 1
+E 6
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
+A 1
+E 6
+I 9
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
+A 1
+E 6
+I 9
+O 10
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
+A 1
+E 6
+I 9
+N 11
+O 10
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
+E 6
+I 9
+N 11
+O 10
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
+I 9
+N 11
+O 10
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
+N 11
+O 10
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
 Y
 O 10
 Q 4
@@ -57,13 +298,69 @@ T 8
 U 5
 Y 3
 
+O 10
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
 null
+O 10
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
 null
+O 10
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
 null
+O 10
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
 null
+O 10
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
 null
+O 10
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
 0
+O 10
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
 false
+O 10
+Q 4
+S 7
+T 8
+U 5
+Y 3
+
 null
 ----------------------------------------
 ########## Testcase 2: Failed ##########
@@ -89,7 +386,94 @@ true
 5
 T
 Your Output: 
+
+S 0
+
+O 1
+S 0
+
+O 1
+R 2
+S 0
+
+O 1
+R 2
+S 0
+T 3
+
+E 4
+O 1
+R 2
+S 0
+T 3
+
+E 4
+O 1
+R 2
+S 0
+T 3
+X 5
+
+A 6
+E 4
+O 1
+R 2
+S 0
+T 3
+X 5
+
+A 6
+E 4
+M 7
+O 1
+R 2
+S 0
+T 3
+X 5
+
+A 6
+E 4
+M 7
+O 1
+P 8
+R 2
+S 0
+T 3
+X 5
+
+A 6
+E 4
+L 9
+M 7
+O 1
+P 8
+R 2
+S 0
+T 3
+X 5
+
 X
+A 6
+E 10
+L 9
+M 7
+O 1
+P 8
+R 2
+S 0
+T 3
+X 5
+
+E 10
+L 9
+M 7
+O 1
+P 8
+R 2
+S 0
+T 3
+X 5
+
 E 10
 L 9
 M 7
@@ -101,14 +485,104 @@ T 3
 X 5
 
 3
+E 10
+L 9
+M 7
+O 1
+P 8
+R 2
+S 0
+T 3
+X 5
+
 3
+E 10
+L 9
+M 7
+O 1
+P 8
+R 2
+S 0
+T 3
+X 5
+
 3
+E 10
+L 9
+M 7
+O 1
+P 8
+R 2
+S 0
+T 3
+X 5
+
 3
+E 10
+L 9
+M 7
+O 1
+P 8
+R 2
+S 0
+T 3
+X 5
+
 3
+E 10
+L 9
+M 7
+O 1
+P 8
+R 2
+S 0
+T 3
+X 5
+
 3
+E 10
+L 9
+M 7
+O 1
+P 8
+R 2
+S 0
+T 3
+X 5
+
 3
+E 10
+L 9
+M 7
+O 1
+P 8
+R 2
+S 0
+T 3
+X 5
+
 true
+E 10
+L 9
+M 7
+O 1
+P 8
+R 2
+S 0
+T 3
+X 5
+
 1
+E 10
+L 9
+M 7
+O 1
+P 8
+R 2
+S 0
+T 3
+X 5
+
 O
 ----------------------------------------
 ########## Testcase 3: Failed ##########
@@ -132,6 +606,182 @@ true
 13
 P
 Your Output: 
+
+B 0
+
+B 0
+I 1
+
+B 0
+I 1
+N 2
+
+A 3
+B 0
+I 1
+N 2
+
+A 3
+B 0
+I 1
+N 2
+R 4
+
+A 3
+B 0
+I 1
+N 2
+R 4
+Y 5
+
+A 3
+B 0
+I 1
+N 2
+R 4
+S 6
+Y 5
+
+A 3
+B 0
+E 7
+I 1
+N 2
+R 4
+S 6
+Y 5
+
+A 8
+B 0
+E 7
+I 1
+N 2
+R 4
+S 6
+Y 5
+
+A 8
+B 0
+E 7
+I 1
+N 2
+R 9
+S 6
+Y 5
+
+A 8
+B 0
+C 10
+E 7
+I 1
+N 2
+R 9
+S 6
+Y 5
+
+A 8
+B 0
+C 10
+E 7
+H 11
+I 1
+N 2
+R 9
+S 6
+Y 5
+
+A 8
+B 0
+C 10
+E 12
+H 11
+I 1
+N 2
+R 9
+S 6
+Y 5
+
+A 8
+B 0
+C 10
+E 12
+H 11
+I 1
+N 2
+R 9
+S 6
+X 13
+Y 5
+
+A 14
+B 0
+C 10
+E 12
+H 11
+I 1
+N 2
+R 9
+S 6
+X 13
+Y 5
+
+A 14
+B 0
+C 10
+E 12
+H 11
+I 1
+M 15
+N 2
+R 9
+S 6
+X 13
+Y 5
+
+A 14
+B 0
+C 10
+E 12
+H 11
+I 1
+M 15
+N 2
+P 16
+R 9
+S 6
+X 13
+Y 5
+
+A 14
+B 0
+C 10
+E 12
+H 11
+I 1
+L 17
+M 15
+N 2
+P 16
+R 9
+S 6
+X 13
+Y 5
+
+A 14
+B 0
+C 10
+E 18
+H 11
+I 1
+L 17
+M 15
+N 2
+P 16
+R 9
+S 6
+X 13
+Y 5
+
 B 0
 C 10
 E 18
@@ -147,9 +797,65 @@ X 13
 Y 5
 
 Y
+B 0
+C 10
+E 18
+H 11
+I 1
+L 17
+M 15
+N 2
+P 16
+R 9
+S 6
+X 13
+Y 5
+
 4
+B 0
+C 10
+E 18
+H 11
+I 1
+L 17
+M 15
+N 2
+P 16
+R 9
+S 6
+X 13
+Y 5
+
 true
+B 0
+C 10
+E 18
+H 11
+I 1
+L 17
+M 15
+N 2
+P 16
+R 9
+S 6
+X 13
+Y 5
+
 1
+B 0
+C 10
+E 18
+H 11
+I 1
+L 17
+M 15
+N 2
+P 16
+R 9
+S 6
+X 13
+Y 5
+
 I
 ----------------------------------------
 ########## Testcase 4: Failed ##########
@@ -168,11 +874,124 @@ S 0
 T 6
 Y 1
 Your Output: 
+
+S 0
+
+S 0
+Y 1
+
+M 2
+S 0
+Y 1
+
+B 3
+M 2
+S 0
+Y 1
+
+B 3
+M 2
+O 4
+S 0
+Y 1
+
+B 3
+L 5
+M 2
+O 4
+S 0
+Y 1
+
+B 3
+L 5
+M 2
+O 4
+S 0
+T 6
+Y 1
+
+A 7
+B 3
+L 5
+M 2
+O 4
+S 0
+T 6
+Y 1
+
+A 7
+B 8
+L 5
+M 2
+O 4
+S 0
+T 6
+Y 1
+
+A 7
+B 8
+L 9
+M 2
+O 4
+S 0
+T 6
+Y 1
+
+A 7
+B 8
+E 10
+L 9
+M 2
+O 4
+S 0
+T 6
+Y 1
+
 Y
+A 7
+B 8
+E 10
+L 9
+M 2
+O 4
+S 0
+T 6
+Y 1
+
 1
 Y
+A 7
+B 8
+E 10
+L 9
+M 2
+O 4
+S 0
+T 6
+Y 1
+
 8
+A 7
+B 8
+E 10
+L 9
+M 2
+O 4
+S 0
+T 6
+Y 1
+
 true
+A 7
+B 8
+E 10
+L 9
+M 2
+O 4
+S 0
+T 6
+Y 1
+
 B 8
 E 10
 L 9

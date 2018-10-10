@@ -43,6 +43,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
 	}
 
 	public int rank(Key key) {
+		System.out.println(toString());
 		if (key == null) throw new IllegalArgumentException("argument to contains() is null");
 		int lo = 0, hi = n - 1;
 		while (lo <= hi) {
