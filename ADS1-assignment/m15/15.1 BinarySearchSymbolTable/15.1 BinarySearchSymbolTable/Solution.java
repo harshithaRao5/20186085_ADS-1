@@ -60,7 +60,6 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
 			delete(key);
 			return;
 		}
-		if (key != null) {
 		int i = rank(key);
 		if (i < n && keys[i].compareTo(key) == 0) {
 			vals[i] = val;
@@ -76,7 +75,8 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
 		keys[i] = key;
 		vals[i] = val;
 		n++;
-	}
+		assert check();
+		//System.out.println(keys[i]+" "+vals[i]);
 	}
 	public void delete(Key key) {
         if (isEmpty()) return;
@@ -92,6 +92,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
         keys[n] = null;
         vals[n] = null;
         if (n > 0 && n == keys.length/4) resize(keys.length/2);
+        assert check();
 
     }
 	public void deleteMin() {
@@ -123,6 +124,26 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
         return s;
 
     }
+    private boolean check() {
+        return isSorted() && rankCheck();
+    }
+
+    private boolean isSorted() {
+        for (int i = 1; i < size(); i++)
+            if (keys[i].compareTo(keys[i-1]) < 0) return false;
+        return true;
+    }
+
+    private boolean rankCheck() {
+        for (int i = 0; i < size(); i++)
+            if (i != rank(select(i))) return false;
+        for (int i = 0; i < size(); i++)
+            if (keys[i].compareTo(select(rank(keys[i]))) != 0) return false;
+        return true;
+    }
+     public Key select(int k) {
+        return keys[k];
+    }
 
 
 }
@@ -137,7 +158,7 @@ public final class Solution {
 		for (int i = 0; i < tokens.length; i++) {
 			bst.put(tokens[i], i);
 		}
-		while (sc.hasNext()) {
+		while (sc.hasNextLine()) {
 			String[] choice = sc.nextLine().split(" ");
 			switch (choice[0]) {
 			case "max":
