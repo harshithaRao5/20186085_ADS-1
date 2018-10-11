@@ -1,24 +1,6 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:2: Missing a Javadoc comment. [JavadocType]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:3:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:22:21: Parameter bookname should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:22:38: Parameter bookauthor should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:22:57: Parameter bookprice should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:58:30: Parameter object should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:74: Class Node should be declared as final. [FinalClass]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:97:30: Parameter key should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:97:42: 'key' hides a field. [HiddenField]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:97:47: Parameter val should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:97:51: 'val' hides a field. [HiddenField]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:117:24: Parameter key should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:137:25: Parameter key should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:137:42: Parameter val should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:149:26: Parameter x should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:149:34: Parameter key should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:149:51: Parameter val should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:186: Line is longer than 80 characters (found 123). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:187: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:190: Line is longer than 80 characters (found 111). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:25: Line is longer than 80 characters (found 88). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:100:40: 'key' hides a field. [HiddenField]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:100:55: 'val' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 21 errors.
+Checkstyle ends with 3 errors.
