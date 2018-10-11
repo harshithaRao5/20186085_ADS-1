@@ -23,10 +23,13 @@ class BookDetails implements Comparable<BookDetails> {
 		// } else if (this.getPrice() < that.getPrice()){
 		// 	return -1;
 		// }
-		if(this.getName().equals(that.getName())) {
+		// System.out.println(this.name+" "+that.name);
+		if (this.name.equals(that.name)) {
 			return 0;
+		} else {
+			return this.name.compareTo(that.name);
 		}
-		return 1;
+
 
 	}
 }
@@ -37,18 +40,19 @@ class BinarySearchTree<BookDetails extends Comparable<BookDetails>, Value> {
 		private BookDetails key;
 		private Value val;
 		private Node left, right;
-		private int size;
+		//private int size;
 
-		public Node(BookDetails key, Value val, int size) {
+		public Node(BookDetails key, Value val) {
 			this.key = key;
 			this.val = val;
-			this.size = size;
+			//this.size = size;
 		}
 	}
 	BinarySearchTree() {
 
 	}
 	public Value get(BookDetails key) {
+		System.out.println("hello");
 		Node x = root;
 		while (x != null) {
 			int cmp = key.compareTo(x.key);
@@ -63,13 +67,17 @@ class BinarySearchTree<BookDetails extends Comparable<BookDetails>, Value> {
 		return null;
 	}
 	public void put(BookDetails key, Value val) {
+		//System.out.println(key.getName()+"put 2 values "+val);
 		root = put(root, key, val);
 	}
 	private Node put(Node x, BookDetails key, Value val) {
 		if (x == null) {
-			return new Node(key, val, 1);
+			return new Node(key, val);
+			//break;
 		}
+		// System.out.println(key+" "+x.key);
 		int cmp = key.compareTo(x.key);
+		//System.out.println(cmp);
 		if (cmp < 0) {
 			x.left = put(x.left, key, val);
 		} else if (cmp > 0) {
@@ -90,14 +98,15 @@ public final class Solution {
 		Scanner sc = new Scanner(System.in);
 		String[] tokens = sc.nextLine().split(",");
 		BinarySearchTree<BookDetails, Integer> bstobj = new BinarySearchTree<BookDetails, Integer>();
-		BookDetails deobj = new BookDetails(tokens[1], tokens[2], Float.parseFloat(tokens[2 + 1]));
 		while (sc.hasNextLine()) {
 			switch (tokens[0]) {
 			case "put":
+				BookDetails deobj = new BookDetails(tokens[1], tokens[2], Float.parseFloat(tokens[2 + 1]));
 				bstobj.put(deobj, Integer.parseInt(tokens[2 + 2]));
 				break;
 			case "get":
 				//bstobj.get(deobj);
+				deobj = new BookDetails(tokens[1], tokens[2], Float.parseFloat(tokens[2 + 1]));
 				System.out.println(bstobj.get(deobj));
 				break;
 			}
