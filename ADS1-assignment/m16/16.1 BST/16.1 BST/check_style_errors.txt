@@ -1,7 +1,2 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:98:12: Unused @param tag for 'key'. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:99:12: Unused @param tag for 'val'. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:101:40: Expected @param tag for 'key1'. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:101:56: Expected @param tag for 'val1'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 4 errors.

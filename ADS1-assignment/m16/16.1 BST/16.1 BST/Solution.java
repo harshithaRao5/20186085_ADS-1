@@ -95,8 +95,8 @@ class BinarySearchTree {
         /**
          * Constructs the object.
          *
-         * @param      key   The key
-         * @param      val   The value
+         * @param      key1   The key
+         * @param      val1  The value
          */
         private Node(final BookDetails key1, final int val1) {
             this.key = key1;
@@ -113,7 +113,7 @@ class BinarySearchTree {
     }
     /**
      * get method.
-     *
+     *time complexity is O(logN)
      * @param      key   The key
      *
      * @return  integer.
@@ -134,7 +134,7 @@ class BinarySearchTree {
     }
     /**
      * put method to insert the key, value.
-     *
+     *time complexity is O(N)
      * @param      key   The key
      * @param      val   The value
      */
@@ -143,7 +143,7 @@ class BinarySearchTree {
     }
     /**
      * overloaded constructor.
-     *
+     * time complexity is O(N)
      * @param      x   root node.
      * @param      key   The key
      * @param      val   The value
