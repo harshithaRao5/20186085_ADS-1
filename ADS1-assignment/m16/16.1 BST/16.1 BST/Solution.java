@@ -1,8 +1,9 @@
 import java.util.Scanner;
-class BookDetails implements Comparable<BookDetails> {
+class BookDetails implements Comparable {
 	private String name;
 	private String author;
 	private float price;
+
 	BookDetails(String bookname, String bookauthor, float bookprice) {
 		this.name = bookname;
 		this.author = bookauthor;
@@ -17,42 +18,40 @@ class BookDetails implements Comparable<BookDetails> {
 	public float getPrice() {
 		return this.price;
 	}
-	public int compareTo(BookDetails that) {
-		// if(this.getPrice() > that.getPrice()){
-		// 	return 1;
-		// } else if (this.getPrice() < that.getPrice()){
-		// 	return -1;
-		// }
-		// System.out.println(this.name+" "+that.name);
-		if (this.name.equals(that.name)) {
-			return 0;
-		} else {
-			return this.name.compareTo(that.name);
-		}
-
-
+	public int compareTo(Object object) {
+		BookDetails that = (BookDetails) object;
+		return this.name.compareTo(that.name);
 	}
 }
-class BinarySearchTree<BookDetails extends Comparable<BookDetails>, Value> {
+
+
+class Node {
+	public BookDetails key;
+	public int val;
+	public Node left, right;
+	//private int size;
+
+	public Node(BookDetails key, int val) {
+		this.key = key;
+		this.val = val;
+		left = null;
+		right = null;
+		//this.size = size;
+	}
+}
+
+class BinarySearchTree {
 	//BookDetails dobj = new BookDetails();
 	private Node root;
-	private class Node {
-		private BookDetails key;
-		private Value val;
-		private Node left, right;
-		//private int size;
 
-		public Node(BookDetails key, Value val) {
-			this.key = key;
-			this.val = val;
-			//this.size = size;
-		}
-	}
 	BinarySearchTree() {
-
+		root = null;
 	}
-	public Value get(BookDetails key) {
-		System.out.println("hello");
+	public Node root(){
+		return root;
+	}
+	public int get(BookDetails key) {
+		//System.out.println("hello");
 		Node x = root;
 		while (x != null) {
 			int cmp = key.compareTo(x.key);
@@ -64,13 +63,13 @@ class BinarySearchTree<BookDetails extends Comparable<BookDetails>, Value> {
 				return x.val;
 			}
 		}
-		return null;
+		return -1;
 	}
-	public void put(BookDetails key, Value val) {
-		//System.out.println(key.getName()+"put 2 values "+val);
+	public void put(BookDetails key, int val) {
+		//System.out.println(key.getName()+"put 2 ints "+val);
 		root = put(root, key, val);
 	}
-	private Node put(Node x, BookDetails key, Value val) {
+	private Node put(Node x, BookDetails key, int val) {
 		if (x == null) {
 			return new Node(key, val);
 			//break;
@@ -84,6 +83,7 @@ class BinarySearchTree<BookDetails extends Comparable<BookDetails>, Value> {
 			x.right = put(x.right, key, val);
 		} else if (cmp == 0) {
 			x.val = val;
+			//System.out.println("Replaced");
 		}
 		return x;
 	}
@@ -96,9 +96,9 @@ public final class Solution {
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String[] tokens = sc.nextLine().split(",");
-		BinarySearchTree<BookDetails, Integer> bstobj = new BinarySearchTree<BookDetails, Integer>();
+		BinarySearchTree bstobj = new BinarySearchTree();
 		while (sc.hasNextLine()) {
+			String[] tokens = sc.nextLine().split(",");
 			switch (tokens[0]) {
 			case "put":
 				BookDetails deobj = new BookDetails(tokens[1], tokens[2], Float.parseFloat(tokens[2 + 1]));
@@ -109,6 +109,9 @@ public final class Solution {
 				deobj = new BookDetails(tokens[1], tokens[2], Float.parseFloat(tokens[2 + 1]));
 				System.out.println(bstobj.get(deobj));
 				break;
+			default:
+			System.out.println(bstobj.root());
+			break;
 			}
 		}
 	}
