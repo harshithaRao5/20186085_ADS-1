@@ -1,57 +1,120 @@
 import java.util.Scanner;
 class BookDetails implements Comparable {
+	/**
+	 * variable declaration.
+	 */
 	private String name;
+	/**
+	 * variable declaration.
+	 */
 	private String author;
+	/**
+	 * variable declaration.
+	 */
 	private float price;
-
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      bookname    The bookname
+	 * @param      bookauthor  The bookauthor
+	 * @param      bookprice   The bookprice
+	 */
 	BookDetails(String bookname, String bookauthor, float bookprice) {
 		this.name = bookname;
 		this.author = bookauthor;
 		this.price = bookprice;
 	}
+	/**
+	 * Gets the name.
+	 *
+	 * @return     The name.
+	 */
 	public String getName() {
 		return this.name;
 	}
+	/**
+	 * Gets the author.
+	 *
+	 * @return     The author.
+	 */
 	public String getAuthor() {
 		return this.author;
 	}
+	/**
+	 * Gets the price.
+	 *
+	 * @return     The price.
+	 */
 	public float getPrice() {
 		return this.price;
 	}
+	/**
+	 * compare to method that returns integer.
+	 *
+	 * @param      object  The object
+	 *
+	 * @return  integer.
+	 */
 	public int compareTo(Object object) {
 		BookDetails that = (BookDetails) object;
 		return this.name.compareTo(that.name);
 	}
 }
-
-
-class Node {
-	public BookDetails key;
-	public int val;
-	public Node left, right;
-	//private int size;
-
-	public Node(BookDetails key, int val) {
-		this.key = key;
-		this.val = val;
-		left = null;
-		right = null;
-		//this.size = size;
-	}
-}
-
+/**
+ * Class for binary search tree.
+ */
 class BinarySearchTree {
-	//BookDetails dobj = new BookDetails();
+	/**
+	 * variable declaration.
+	 */
 	private Node root;
-
+	/**
+	 * Class for node.
+	 */
+	private class Node {
+		/**
+		 * variable declaration.
+		 */
+		private BookDetails key;
+		/**
+		 * variable declaration.
+		 */
+		private int val;
+		/**
+		 * variable declaration.
+		 */
+		private Node left;
+		/**
+		 * variable declaration.
+		 */
+		private Node right;
+		/**
+		 * Constructs the object.
+		 *
+		 * @param      key   The key
+		 * @param      val   The value
+		 */
+		private Node(BookDetails key, int val) {
+			this.key = key;
+			this.val = val;
+			left = null;
+			right = null;
+		}
+	}
+	/**
+	 * Constructs the object.
+	 */
 	BinarySearchTree() {
 		root = null;
 	}
-	public Node root() {
-		return root;
-	}
+	/**
+	 * get method.
+	 *
+	 * @param      key   The key
+	 *
+	 * @return  integer.
+	 */
 	public int get(BookDetails key) {
-		//System.out.println("hello");
 		Node x = root;
 		while (x != null) {
 			int cmp = key.compareTo(x.key);
@@ -65,36 +128,55 @@ class BinarySearchTree {
 		}
 		return -1;
 	}
+	/**
+	 * put method to insert the key, value.
+	 *
+	 * @param      key   The key
+	 * @param      val   The value
+	 */
 	public void put(BookDetails key, int val) {
-		//System.out.println(key.getName()+"put 2 ints "+val);
 		root = put(root, key, val);
 	}
+	/**
+	 * overloaded constructor.
+	 *
+	 * @param      x   root node.
+	 * @param      key   The key
+	 * @param      val   The value
+	 *
+	 * @return root
+	 */
 	private Node put(Node x, BookDetails key, int val) {
 		if (x == null) {
 			return new Node(key, val);
-			//break;
 		}
-		// System.out.println(key+" "+x.key);
 		int cmp = key.compareTo(x.key);
-		//System.out.println(cmp);
 		if (cmp < 0) {
 			x.left = put(x.left, key, val);
 		} else if (cmp > 0) {
 			x.right = put(x.right, key, val);
 		} else if (cmp == 0) {
 			x.val = val;
-			//System.out.println("Replaced");
 		}
 		return x;
 	}
-
-
 }
+/**
+ * client program.
+ */
 public final class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	private Solution() {
-
+		//unused constructor.
 	}
-	public static void main(String[] args) {
+	/**
+	 * main method.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		BinarySearchTree bstobj = new BinarySearchTree();
 		while (sc.hasNextLine()) {
@@ -105,7 +187,6 @@ public final class Solution {
 				bstobj.put(deobj, Integer.parseInt(tokens[2 + 2]));
 				break;
 			case "get":
-				//bstobj.get(deobj);
 				deobj = new BookDetails(tokens[1], tokens[2], Float.parseFloat(tokens[2 + 1]));
 				if (bstobj.get(deobj) == -1) {
 					System.out.println("null");
@@ -114,7 +195,6 @@ public final class Solution {
 				}
 				break;
 			default:
-				//System.out.println(bstobj.root());
 				break;
 			}
 		}
