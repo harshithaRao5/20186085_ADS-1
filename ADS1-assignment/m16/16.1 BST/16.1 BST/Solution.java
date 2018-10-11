@@ -47,7 +47,7 @@ class BinarySearchTree {
 	BinarySearchTree() {
 		root = null;
 	}
-	public Node root(){
+	public Node root() {
 		return root;
 	}
 	public int get(BookDetails key) {
@@ -107,11 +107,15 @@ public final class Solution {
 			case "get":
 				//bstobj.get(deobj);
 				deobj = new BookDetails(tokens[1], tokens[2], Float.parseFloat(tokens[2 + 1]));
-				System.out.println(bstobj.get(deobj));
+				if (bstobj.get(deobj) == -1) {
+					System.out.println("null");
+				} else {
+					System.out.println(bstobj.get(deobj));
+				}
 				break;
 			default:
-			System.out.println(bstobj.root());
-			break;
+				//System.out.println(bstobj.root());
+				break;
 			}
 		}
 	}

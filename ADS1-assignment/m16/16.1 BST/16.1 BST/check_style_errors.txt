@@ -32,7 +32,6 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:45:9: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:47:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:50:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:50:27: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:53:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:53:24: Parameter key should be final. [FinalParameters]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:68:9: Missing a Javadoc comment. [JavadocMethod]
@@ -50,4 +49,4 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:105: Line is longer than 80 characters (found 83). [LineLength]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m16\16.1 BST\16.1 BST\Solution.java:109: Line is longer than 80 characters (found 111). [LineLength]
 Audit done.
-Checkstyle ends with 50 errors.
+Checkstyle ends with 49 errors.
