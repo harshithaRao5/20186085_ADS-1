@@ -22,7 +22,8 @@ class BookDetails implements Comparable {
      * @param      bookauthor  The bookauthor
      * @param      bookprice   The bookprice
      */
-    BookDetails(final String bookname, final String bookauthor, final float bookprice) {
+    BookDetails(final String bookname,
+        final String bookauthor, final float bookprice) {
         this.name = bookname;
         this.author = bookauthor;
         this.price = bookprice;
@@ -97,9 +98,9 @@ class BinarySearchTree {
          * @param      key   The key
          * @param      val   The value
          */
-        private Node(final BookDetails key, final int val) {
-            this.key = key;
-            this.val = val;
+        private Node(final BookDetails key1, final int val1) {
+            this.key = key1;
+            this.val = val1;
             left = null;
             right = null;
         }
