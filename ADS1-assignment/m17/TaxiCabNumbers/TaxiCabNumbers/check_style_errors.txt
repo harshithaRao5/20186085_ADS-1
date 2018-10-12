@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:61:33: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:94:21: '600' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 2 errors.
