@@ -28,7 +28,7 @@ public final class Solution {
         int N = scan.nextInt();
         int M = scan.nextInt();
         int count = 0;
-        int temp = -1;
+        int temp = 0;
         // initialize priority queue
         MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
         for (int i = 0; i <= n; i++) {

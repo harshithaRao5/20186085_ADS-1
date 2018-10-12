@@ -24,6 +24,6 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:26:17: '600' is a magic number. [MagicNumber]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:28:13: Name 'N' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:29:13: Name 'M' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:45:15: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:45:15: 'if' is not followed by whitespace. [WhitespaceAround]
 Audit done.
 Checkstyle ends with 26 errors.
