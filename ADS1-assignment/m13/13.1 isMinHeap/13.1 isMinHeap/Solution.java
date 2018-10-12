@@ -24,7 +24,7 @@ class IsMinHeap<E extends Comparable<E>> {
      */
     public boolean isMinHeap() {
         for (int i = 0; i < array.length - 1; i++) {
-            if (less(2*i + 1, 2*i + 2)) {
+            if (less(2*i + 2, 2*i + 1)) {
                 return false;
             }
         }
