@@ -1,9 +1,5 @@
 Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:24:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:24:20: Parameter i should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:24:24: 'i' hides a field. [HiddenField]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:24:27: Parameter j should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:24:31: 'j' hides a field. [HiddenField]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:60:26: Parameter that should be final. [FinalParameters]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:61: 'if' construct must use '{}'s. [NeedBraces]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:62: 'if' construct must use '{}'s. [NeedBraces]
@@ -13,4 +9,4 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:86:13: Name 'N' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:87:13: Name 'M' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
 Audit done.
-Checkstyle ends with 13 errors.
+Checkstyle ends with 9 errors.

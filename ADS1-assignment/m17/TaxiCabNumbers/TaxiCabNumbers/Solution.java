@@ -10,21 +10,21 @@ class CubeSum implements Comparable<CubeSum> {
     /**
      * variable declaration.
      */
-    private final int i;
+    private final int number1;
     /**
      * variable declaration.
      */
-    private final int j;
+    private final int number2;
     /**
      * Constructs the object.
      *
      * @param      i integer.
      * @param      j integer.
      */
-    public CubeSum(int i, int j) {
+    public CubeSum(final int i, final int j) {
         this.sum = i * i * i + j * j * j;
-        this.i = i;
-        this.j = j;
+        this.number1 = i;
+        this.number2 = j;
     }
     /**
      * Gets the sum.
@@ -39,16 +39,16 @@ class CubeSum implements Comparable<CubeSum> {
      *
      * @return number.
      */
-    public int geti() {
-        return i;
+    public int getNumber1() {
+        return number1;
     }
     /**
      * gets the number.
      *
      * @return number.
      */
-    public int getj() {
-        return j;
+    public int getNumber2() {
+        return number2;
     }
     /**
      * compare to method.
@@ -68,7 +68,7 @@ class CubeSum implements Comparable<CubeSum> {
      * @return     String representation of the object.
      */
     public String toString() {
-        return sum + " = " + i + "^3" + " + " + j + "^3";
+        return sum + " = " + number1 + "^3" + " + " + number2 + "^3";
     }
 }
 /**
@@ -109,8 +109,8 @@ public final class Solution {
                 }
             }
             temp = s.getSum();
-            if (s.getj() < n) {
-                pq.insert(new CubeSum(s.geti(), s.getj() + 1));
+            if (s.getNumber2() < n) {
+                pq.insert(new CubeSum(s.getNumber1(), s.getNumber2() + 1));
             }
         }
     }
