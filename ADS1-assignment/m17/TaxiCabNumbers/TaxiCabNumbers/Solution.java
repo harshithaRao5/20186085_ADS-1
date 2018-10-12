@@ -101,7 +101,7 @@ public final class Solution {
             } else {
                 count = 0;
             }
-            if(count == M - 1) {
+            if (count == M - 1) {
                 N--;
                 if (N == 0) {
                     System.out.println(s.getSum());
@@ -109,10 +109,10 @@ public final class Solution {
                 }
             }
             temp = s.getSum();
-            if (s.getj()< n) {
-                pq.insert(new CubeSum(s.geti(), s.getj()+ 1));
-            }
+            if (s.getj() < n) {
+                pq.insert(new CubeSum(s.geti(), s.getj() + 1));
             }
         }
+    }
 
 }
