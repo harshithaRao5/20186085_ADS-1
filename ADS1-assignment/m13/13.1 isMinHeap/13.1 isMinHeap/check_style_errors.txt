@@ -1,7 +1,5 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:27:23: '*' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:27:24: '*' is not followed by whitespace. [WhitespaceAround]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:27:32: '*' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:27:33: '*' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:27:23: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m13\13.1 isMinHeap\13.1 isMinHeap\Solution.java:27:24: '+' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 2 errors.
