@@ -1,12 +1,5 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:24:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:60:26: Parameter that should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:61: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:62: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:77:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:83:29: Parameter args should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:84:17: '600' is a magic number. [MagicNumber]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:86:13: Name 'N' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:87:13: Name 'M' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:61:33: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m17\TaxiCabNumbers\TaxiCabNumbers\Solution.java:94:21: '600' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 9 errors.
+Checkstyle ends with 2 errors.

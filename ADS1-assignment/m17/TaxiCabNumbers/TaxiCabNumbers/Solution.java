@@ -21,7 +21,7 @@ class CubeSum implements Comparable<CubeSum> {
      * @param      i integer.
      * @param      j integer.
      */
-    public CubeSum(final int i, final int j) {
+    CubeSum(final int i, final int j) {
         this.sum = i * i * i + j * j * j;
         this.number1 = i;
         this.number2 = j;
@@ -57,9 +57,13 @@ class CubeSum implements Comparable<CubeSum> {
      *
      * @return  integer.
      */
-    public int compareTo(CubeSum that) {
-        if (this.sum < that.sum) return -1;
-        if (this.sum > that.sum) return +1;
+    public int compareTo(final CubeSum that) {
+        if (this.sum < that.sum){
+            return -1;
+        }
+        if (this.sum > that.sum) {
+            return +1;
+        }
         return 0;
     }
     /**
@@ -76,20 +80,26 @@ class CubeSum implements Comparable<CubeSum> {
  */
 public final class Solution {
     /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //unused constructor.
+    }
+    /**
      * main method.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
-        int n = 600;
+    public static void main(final String[] args) {
+        int limit = 600;
         Scanner scan = new Scanner(System.in);
-        int N = scan.nextInt();
-        int M = scan.nextInt();
+        int n = scan.nextInt();
+        int m = scan.nextInt();
         int count = 0;
         int temp = 1;
         // initialize priority queue
         MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
-        for (int i = 0; i <= n; i++) {
+        for (int i = 0; i <= limit; i++) {
             pq.insert(new CubeSum(i, i));
         }
         // find smallest sum, print it out, and update
@@ -101,15 +111,15 @@ public final class Solution {
             } else {
                 count = 0;
             }
-            if (count == M - 1) {
-                N--;
-                if (N == 0) {
+            if (count == m - 1) {
+                n--;
+                if (n == 0) {
                     System.out.println(s.getSum());
                     break;
                 }
             }
             temp = s.getSum();
-            if (s.getNumber2() < n) {
+            if (s.getNumber2() < limit) {
                 pq.insert(new CubeSum(s.getNumber1(), s.getNumber2() + 1));
             }
         }
