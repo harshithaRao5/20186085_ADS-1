@@ -14,7 +14,7 @@ class Stocks implements Comparable<Stocks> {
 	/**
 	 * Constructs the object.
 	 */
-	Stocks(){
+	Stocks() {
 
 	}
 	/**
@@ -85,8 +85,8 @@ public final class Solution {
 		MinPQ minpq = new MinPQ();
 		while (sc.hasNext()) {
 			String[] tokens = sc.nextLine().split(",");
-			maxpq.insert(new Stocks(tokens[0],Float.parseFloat(tokens[1])));
-			minpq.insert(new Stocks(tokens[0],Float.parseFloat(tokens[1])));
+			maxpq.insert(new Stocks(tokens[0], Float.parseFloat(tokens[1])));
+			minpq.insert(new Stocks(tokens[0], Float.parseFloat(tokens[1])));
 		}
 		System.out.println(maxpq);
 		System.out.println(minpq);
