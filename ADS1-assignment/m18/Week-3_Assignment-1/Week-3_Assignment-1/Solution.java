@@ -61,48 +61,46 @@ class Stocks implements Comparable<Stocks> {
         if (stockname.compareTo(that.stockname) < 0) {
             return -1;
         } else {
-                return 0;
-            }
-
+            return 0;
         }
 
-        public String toString() {
-            return this.stockname+" "+this.percentchange;
-        }
+    }
+
+    public String toString() {
+        return this.stockname + " " + this.percentchange;
+    }
+}
+/**
+ * { item_description }.
+ */
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+
     }
     /**
-     * { item_description }.
+     * { function_description }.
+     *
+     * @param      args  The arguments
      */
-    public final class Solution {
-        /**
-         * Constructs the object.
-         */
-        private Solution() {
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = Integer.parseInt(sc.nextLine());
+        final int five = 5;
+        MinPQ<Stocks> minpq = new MinPQ<>();
+        MaxPQ<Stocks> maxpq = new MaxPQ<>();
+        for (int j = 0; j < n; j++) {
+            String[] tokens = sc.nextLine().split(",");
+            minpq.insert(new Stocks(tokens[0],
+                                    Float.parseFloat(tokens[1])));
+            maxpq.insert(new Stocks(tokens[0],
+                                    Float.parseFloat(tokens[1])));
 
         }
-        /**
-         * { function_description }.
-         *
-         * @param      args  The arguments
-         */
-        public static void main(final String[] args) {
-            Scanner sc = new Scanner(System.in);
-
-            int n = Integer.parseInt(sc.nextLine());
-            final int five = 5;
-            /**
-             * 9 o clock
-             */
-            MinPQ<Stocks> minpq = new MinPQ<>();
-            MaxPQ<Stocks> maxpq = new MaxPQ<>();
-            for (int j = 0; j < n; j++) {
-                String[] tokens = sc.nextLine().split(",");
-                minpq.insert(new Stocks(tokens[0],
-                                        Float.parseFloat(tokens[1])));
-                maxpq.insert(new Stocks(tokens[0],
-                                        Float.parseFloat(tokens[1])));
-
-            }
+        for (int j = 0; j < 6; j++) {
             for (int i = 0; i < five; i++) {
                 System.out.println(maxpq.delMax().toString());
             }
@@ -113,3 +111,4 @@ class Stocks implements Comparable<Stocks> {
             System.out.println();
         }
     }
+}
