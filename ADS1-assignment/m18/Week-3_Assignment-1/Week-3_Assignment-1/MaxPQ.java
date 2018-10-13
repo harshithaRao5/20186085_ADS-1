@@ -1,6 +1,6 @@
 import java.util.Arrays;
 class MaxPQ {
-	private Stocks[] stockarray;
+	private Stocks[] stockarray = new Stocks[100];
 	private int size;
 	MaxPQ() {
 
