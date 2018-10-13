@@ -56,7 +56,7 @@ class MaxPQ {
 		if (size == size() - 1) {
 			resize(2 * size());
 		}
-		stockarray[++size] = x;
+		stockarray[size++] = x;
 		swim(size);
 	}
 	public Stocks delMax() {
