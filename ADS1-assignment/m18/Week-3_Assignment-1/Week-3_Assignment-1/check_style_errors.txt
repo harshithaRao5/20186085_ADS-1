@@ -1,12 +1,2 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:6: First sentence should end with a period. [JavadocStyle]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:10: First sentence should end with a period. [JavadocStyle]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:46: First sentence should end with a period. [JavadocStyle]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:66: First sentence should end with a period. [JavadocStyle]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:76: First sentence should end with a period. [JavadocStyle]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:88: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:89: Line is longer than 80 characters (found 89). [LineLength]
 Audit done.
-Checkstyle ends with 9 errors.
