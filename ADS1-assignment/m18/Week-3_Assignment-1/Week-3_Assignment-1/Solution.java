@@ -104,11 +104,11 @@ class Stocks implements Comparable<Stocks> {
 
             }
             for (int i = 0; i < five; i++) {
-                System.out.println(maxpq.delMax());
+                System.out.println(maxpq.delMax().toString());
             }
             System.out.println();
             for (int i = 0; i < five; i++) {
-                System.out.println(minpq.delMin());
+                System.out.println(minpq.delMin().toString());
             }
             System.out.println();
         }
