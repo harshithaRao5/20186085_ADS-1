@@ -63,7 +63,7 @@ class MaxPQ {
 		Stocks max = stockarray[1];
 		exch(1, size--);
 		sink(1);
-		stockarray[size + 1] = null;   // to avoid loiteing and help with garbage collection
+		//stockarray[size + 1] = null;   // to avoid loiteing and help with garbage collection
 		if ((size > 0) && (size == (stockarray.length - 1) / 4)) resize(size()/2);
 
 		return max;

@@ -63,7 +63,7 @@ class MinPQ {
 		Stocks min = stockarray[1];
 		exch(1, size--);
 		sink(1);
-		stockarray[size + 1] = null;   // to avoid loiteing and help with garbage collection
+		//stockarray[size + 1] = null;   // to avoid loiteing and help with garbage collection
 		if ((size > 0) && (size == (stockarray.length - 1) / 4)) {
 			resize(stockarray.length/2);
 		}
