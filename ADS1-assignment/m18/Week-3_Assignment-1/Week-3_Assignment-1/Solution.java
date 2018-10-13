@@ -66,7 +66,9 @@ class Stocks implements Comparable<Stocks> {
 
         }
 
-
+        public String toString() {
+            return this.stockname+" "+this.percentchange;
+        }
     }
     /**
      * { item_description }.

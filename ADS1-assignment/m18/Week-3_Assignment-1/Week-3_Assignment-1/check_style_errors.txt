@@ -1,4 +1,9 @@
 Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:58:9: '}' at column 9 should be alone on a line. [RightCurly]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:69:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:70:34: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:70:35: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:70:38: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m18\Week-3_Assignment-1\Week-3_Assignment-1\Solution.java:70:39: '+' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 1 errors.
+Checkstyle ends with 6 errors.
