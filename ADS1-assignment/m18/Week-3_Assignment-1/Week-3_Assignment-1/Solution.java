@@ -109,9 +109,9 @@ public final class Solution {
             }
             System.out.println();
         }
-        int m = Integer.parseInt(sc.nextLine());
         BinarySearchST<String, Integer> minst = new BinarySearchST<>();
         BinarySearchST<String, Integer> maxst = new BinarySearchST<>();
+        int m = Integer.parseInt(sc.nextLine());
         for (int x = 0; x < m; x++) {
             String[] input = sc.nextLine().split(",");
             if (input[0].equals("get")) {
