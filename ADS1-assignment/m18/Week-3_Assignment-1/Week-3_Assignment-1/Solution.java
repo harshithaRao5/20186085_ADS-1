@@ -90,17 +90,17 @@ public final class Solution {
 
         int n = Integer.parseInt(sc.nextLine());
         final int five = 5;
-        MinPQ<Stocks> minpq = new MinPQ<>();
-        MaxPQ<Stocks> maxpq = new MaxPQ<>();
-        for (int j = 0; j < n; j++) {
-            String[] tokens = sc.nextLine().split(",");
-            minpq.insert(new Stocks(tokens[0],
-                                    Float.parseFloat(tokens[1])));
-            maxpq.insert(new Stocks(tokens[0],
-                                    Float.parseFloat(tokens[1])));
+        for (int k = 0; k < 6; k++) {
+            MinPQ<Stocks> minpq = new MinPQ<>();
+            MaxPQ<Stocks> maxpq = new MaxPQ<>();
+            for (int j = 0; j < n; j++) {
+                String[] tokens = sc.nextLine().split(",");
+                minpq.insert(new Stocks(tokens[0],
+                                        Float.parseFloat(tokens[1])));
+                maxpq.insert(new Stocks(tokens[0],
+                                        Float.parseFloat(tokens[1])));
 
-        }
-        for (int j = 0; j < 6; j++) {
+            }
             for (int i = 0; i < five; i++) {
                 System.out.println(maxpq.delMax().toString());
             }
@@ -110,5 +110,6 @@ public final class Solution {
             }
             System.out.println();
         }
+
     }
 }
