@@ -99,7 +99,6 @@ public final class Solution {
                                         Float.parseFloat(tokens[1])));
                 maxpq.insert(new Stocks(tokens[0],
                                         Float.parseFloat(tokens[1])));
-
             }
             for (int i = 0; i < five; i++) {
                 System.out.println(maxpq.delMax().toString());
@@ -109,6 +108,34 @@ public final class Solution {
                 System.out.println(minpq.delMin().toString());
             }
             System.out.println();
+        }
+        int m = Integer.parseInt(sc.nextLine());
+        BinarySearchST<String, Integer> minst = new BinarySearchST<>();
+        BinarySearchST<String, Integer> maxst = new BinarySearchST<>();
+        int queryLength = Integer.parseInt(sc.nextLine());
+        for (int x = 0; x < queryLength; x++) {
+            String[] input = sc.nextLine().split(",");
+            if (input[0].equals("get")) {
+                if (input[1].equals("maxST")) {
+                    if (maxst.get(input[2]) == null) {
+                        System.out.println(0);
+                    } else {
+                        System.out.println(maxst.get(input[2]));
+                    }
+                } else if (input[1].equals("minST")) {
+                    if (minst.get(input[2]) == null) {
+                        System.out.println(0);
+                    } else {
+                        System.out.println(minst.get(input[2]));
+                    }
+                }
+            } else {
+                for (String key : maxst.keys()) {
+                    if (minst.contains(key)) {
+                        System.out.println(key);
+                    }
+                }
+            }
         }
 
     }
