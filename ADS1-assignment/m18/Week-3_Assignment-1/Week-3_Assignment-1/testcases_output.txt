@@ -1,4 +1,4 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 Merck Ltd 4.83
 ICRA 2.84
@@ -143,12 +143,8 @@ Honeywell Auto -1.08
 Sanofi India 0.21
 Tasty Bite Eat 0.23
 WABCO India 0.33
-
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:115)
 ----------------------------------------
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 Larsen & Toubro 4.11
 Vinati Organics 4.03
@@ -293,10 +289,6 @@ NIIT Tech 0.21
 Fine Organic Industries Ltd. 0.29
 Vinati Organics 1.03
 Chola Inv Fin 1.47
-
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:115)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -449,11 +441,10 @@ Sanofi India 0.21
 Tasty Bite Eat 0.23
 WABCO India 0.33
 
-Exception in thread "main" java.lang.NumberFormatException: For input string: "get,maxST,Merck Ltd"
-	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.main(Solution.java:115)
+0
+0
+0
+0
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -606,11 +597,10 @@ Fine Organic Industries Ltd. 0.29
 Vinati Organics 1.03
 Chola Inv Fin 1.47
 
-Exception in thread "main" java.lang.NumberFormatException: For input string: "get,minST,Chola Inv Fin"
-	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.main(Solution.java:115)
+0
+0
+0
+0
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -778,9 +768,16 @@ Sanofi India 0.21
 Tasty Bite Eat 0.23
 WABCO India 0.33
 
-Exception in thread "main" java.lang.NumberFormatException: For input string: "get,minST,HEG Ltd"
-	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.main(Solution.java:115)
+0
+0
+0
+0
+0
+0
+0
+0
+Exception in thread "main" java.util.NoSuchElementException: called min() with empty symbol table
+	at BinarySearchST.min(BinarySearchST.java:249)
+	at BinarySearchST.keys(BinarySearchST.java:337)
+	at Solution.main(Solution.java:132)
 ----------------------------------------

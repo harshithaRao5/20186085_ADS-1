@@ -112,8 +112,7 @@ public final class Solution {
         int m = Integer.parseInt(sc.nextLine());
         BinarySearchST<String, Integer> minst = new BinarySearchST<>();
         BinarySearchST<String, Integer> maxst = new BinarySearchST<>();
-        int queryLength = Integer.parseInt(sc.nextLine());
-        for (int x = 0; x < queryLength; x++) {
+        for (int x = 0; x < m; x++) {
             String[] input = sc.nextLine().split(",");
             if (input[0].equals("get")) {
                 if (input[1].equals("maxST")) {
