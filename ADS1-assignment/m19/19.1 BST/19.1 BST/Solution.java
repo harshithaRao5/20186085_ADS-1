@@ -64,7 +64,7 @@ class BookDetails implements Comparable {
         return this.name.compareTo(that.name);
     }
     public String toString() {
-        return getName()+", "+getAuthor()+", "+getPrice();
+        return getName() + ", " + getAuthor() + ", " + getPrice();
     }
 }
 /**
@@ -153,7 +153,7 @@ class BinarySearchTree {
     }
     /**
      * put method to insert the key, value.
-     *time complexity is O(N)
+     *time complexity is O(1)
      * @param      key   The key
      * @param      val   The value
      */
@@ -162,7 +162,7 @@ class BinarySearchTree {
     }
     /**
      * overloaded constructor.
-     * time complexity is O(N)
+     * time complexity is O(logN)
      * @param      x   root node.
      * @param      key   The key
      * @param      val   The value
@@ -185,7 +185,7 @@ class BinarySearchTree {
     }
     /**
      * min element.
-     *
+     * time complexity is O(1)
      * @return minimum.
      */
     public BookDetails min() {
@@ -193,7 +193,7 @@ class BinarySearchTree {
     }
     /**
      * overloaded constructor.
-     *
+     * time complexity is O(logN)
      * @param      x Node
      *
      * @return minimum.
@@ -207,7 +207,7 @@ class BinarySearchTree {
     }
     /**
      * maximum element.
-     *
+     * time complexity is O(1)
      * @return maximum.
      */
     public BookDetails max() {
@@ -215,7 +215,7 @@ class BinarySearchTree {
     }
     /**
      * overloaded constructor.
-     *
+     * time complexity is O(logN)
      * @param      x Node
      *
      * @return maximum.
@@ -229,7 +229,7 @@ class BinarySearchTree {
     }
     /**
      * floor method.
-     *
+     * time complexity is O(1)
      * @param      key   The key
      *
      * @return  key
@@ -244,11 +244,12 @@ class BinarySearchTree {
     }
     /**
      *
-     *
-     * @param      x     { parameter_description }
+     *overloaded constructor.
+     *time complexity is O(logN)
+     * @param      x Node
      * @param      key   The key
      *
-     * @return     { description_of_the_return_value }
+     * @return floor.
      */
     private Node floor(Node x, BookDetails key) {
         if (x == null) {
@@ -268,6 +269,13 @@ class BinarySearchTree {
             return x;
         }
     }
+    /**
+     * ceiling method.
+     * time complexity is O(1)
+     * @param      key   The key
+     *
+     * @return key.
+     */
     public BookDetails ceiling(BookDetails key) {
         Node x = ceiling(root, key);
         if (x == null) {
@@ -276,7 +284,14 @@ class BinarySearchTree {
             return x.key;
         }
     }
-
+    /**
+     * overloaded constructor.
+     * time complexity is O(logN)
+     * @param      x
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     private Node ceiling(Node x, BookDetails key) {
         if (x == null) {
             return null;
@@ -295,10 +310,25 @@ class BinarySearchTree {
         }
         return ceiling(x.right, key);
     }
+    /**
+     * {Select Method}.
+     * Time complexity of this method is O(1).
+     * @param      k     {Integer}
+     *
+     * @return     {BookDetails Object}
+     */
     public BookDetails select(int k) {
         Node x = select(root, k);
         return x.key;
     }
+    /**
+     * {Select method}
+     * Time complexity of this method is O(log(N)).
+     * @param      x     {Node}
+     * @param      k     {Integer}
+     *
+     * @return     {Node}
+     */
     private Node select(Node x, int k) {
         if (x == null) {
             return null;
@@ -312,11 +342,24 @@ class BinarySearchTree {
             return x;
         }
     }
+    /**
+     * {Rank}.
+     * Time complexity of this method is O(1).
+     * @param      key   The key
+     *
+     * @return     {Integer}
+     */
     public int rank(BookDetails key) {
         return rank(key, root);
     }
-
-    // Number of keys in the subtree less than key.
+    /**
+     * {Method of rank}.
+     * Time complexity of this method is O(log(N)).
+     * @param      key   The key
+     * @param      x     {Node}
+     *
+     * @return     {Integer}
+     */
     private int rank(BookDetails key, Node x) {
         if (x == null) {
             return 0;
