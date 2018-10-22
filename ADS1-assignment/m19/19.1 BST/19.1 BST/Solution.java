@@ -63,6 +63,9 @@ class BookDetails implements Comparable {
         BookDetails that = (BookDetails) object;
         return this.name.compareTo(that.name);
     }
+    public String toString() {
+        return getName()+", "+getAuthor()+", "+getPrice();
+    }
 }
 /**
  * Class for binary search tree.
@@ -312,7 +315,7 @@ public final class Solution {
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         BinarySearchTree bstobj = new BinarySearchTree();
-        while (sc.hasNextLine()) {
+        while (sc.hasNext()) {
             String[] tokens = sc.nextLine().split(",");
             switch (tokens[0]) {
             case "put":
@@ -330,19 +333,13 @@ public final class Solution {
                 }
                 break;
             case "max":
-                deobj = new BookDetails(tokens[1],
-                                        tokens[2], Float.parseFloat(tokens[2 + 1]));
                 System.out.println(bstobj.max());
                 break;
             case "min":
-                deobj = new BookDetails(tokens[1],
-                                        tokens[2], Float.parseFloat(tokens[2 + 1]));
                 System.out.println(bstobj.min());
                 break;
             case "select":
-                deobj = new BookDetails(tokens[1],
-                                        tokens[2], Float.parseFloat(tokens[2 + 1]));
-                //System.out.println(bstobj.select(deobj.));
+                System.out.println(bstobj.select(Integer.parseInt(tokens[1])));
                 break;
             case "floor":
                 deobj = new BookDetails(tokens[1],
