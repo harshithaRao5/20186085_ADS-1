@@ -63,6 +63,11 @@ class BookDetails implements Comparable {
         BookDetails that = (BookDetails) object;
         return this.name.compareTo(that.name);
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return getName() + ", " + getAuthor() + ", " + getPrice();
     }
@@ -299,7 +304,7 @@ class BinarySearchTree {
     /**
      * overloaded constructor.
      * time complexity is O(logN)
-     * @param      x
+     * @param      x Node
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }

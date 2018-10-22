@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:66:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:307:37: Expected @param tag for 'x'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 2 errors.
