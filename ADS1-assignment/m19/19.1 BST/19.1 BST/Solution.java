@@ -183,10 +183,21 @@ class BinarySearchTree {
         }
         return x;
     }
+    /**
+     * min element.
+     *
+     * @return minimum.
+     */
     public BookDetails min() {
         return min(root).key;
     }
-
+    /**
+     * overloaded constructor.
+     *
+     * @param      x Node
+     *
+     * @return minimum.
+     */
     private Node min(Node x) {
         if (x.left == null) {
             return x;
@@ -194,10 +205,21 @@ class BinarySearchTree {
             return min(x.left);
         }
     }
+    /**
+     * maximum element.
+     *
+     * @return maximum.
+     */
     public BookDetails max() {
         return max(root).key;
     }
-
+    /**
+     * overloaded constructor.
+     *
+     * @param      x Node
+     *
+     * @return maximum.
+     */
     private Node max(Node x) {
         if (x.right == null) {
             return x;
@@ -205,6 +227,13 @@ class BinarySearchTree {
             return max(x.right);
         }
     }
+    /**
+     * floor method.
+     *
+     * @param      key   The key
+     *
+     * @return  key
+     */
     public BookDetails floor(BookDetails key) {
         Node x = floor(root, key);
         if (x == null) {
@@ -213,7 +242,14 @@ class BinarySearchTree {
             return x.key;
         }
     }
-
+    /**
+     *
+     *
+     * @param      x     { parameter_description }
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     private Node floor(Node x, BookDetails key) {
         if (x == null) {
             return null;
@@ -263,8 +299,6 @@ class BinarySearchTree {
         Node x = select(root, k);
         return x.key;
     }
-
-    // Return key of rank k.
     private Node select(Node x, int k) {
         if (x == null) {
             return null;
