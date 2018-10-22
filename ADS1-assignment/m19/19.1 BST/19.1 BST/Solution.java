@@ -104,6 +104,7 @@ class BinarySearchTree {
          *
          * @param      key1   The key
          * @param      val1  The value
+         * @param s int size
          */
         private Node(final BookDetails key1, final int val1, final int s) {
             this.key = key1;
@@ -119,11 +120,22 @@ class BinarySearchTree {
     BinarySearchTree() {
         root = null;
     }
+    /**
+     * size method.
+     *
+     * @return size.
+     */
     public int size() {
         return size(root);
     }
-
-    private int size(Node x) {
+    /**
+     * size overloaded method.
+     *
+     * @param      x Node
+     *
+     * @return size.
+     */
+    private int size(final Node x) {
         if (x == null) {
             return 0;
         } else {
@@ -198,7 +210,7 @@ class BinarySearchTree {
      *
      * @return minimum.
      */
-    private Node min(Node x) {
+    private Node min(final Node x) {
         if (x.left == null) {
             return x;
         } else {
@@ -220,7 +232,7 @@ class BinarySearchTree {
      *
      * @return maximum.
      */
-    private Node max(Node x) {
+    private Node max(final Node x) {
         if (x.right == null) {
             return x;
         } else {
@@ -234,7 +246,7 @@ class BinarySearchTree {
      *
      * @return  key
      */
-    public BookDetails floor(BookDetails key) {
+    public BookDetails floor(final BookDetails key) {
         Node x = floor(root, key);
         if (x == null) {
             return null;
@@ -251,7 +263,7 @@ class BinarySearchTree {
      *
      * @return floor.
      */
-    private Node floor(Node x, BookDetails key) {
+    private Node floor(final Node x, final BookDetails key) {
         if (x == null) {
             return null;
         }
@@ -276,7 +288,7 @@ class BinarySearchTree {
      *
      * @return key.
      */
-    public BookDetails ceiling(BookDetails key) {
+    public BookDetails ceiling(final BookDetails key) {
         Node x = ceiling(root, key);
         if (x == null) {
             return null;
@@ -292,7 +304,7 @@ class BinarySearchTree {
      *
      * @return     { description_of_the_return_value }
      */
-    private Node ceiling(Node x, BookDetails key) {
+    private Node ceiling(final Node x, final BookDetails key) {
         if (x == null) {
             return null;
         }
@@ -317,7 +329,7 @@ class BinarySearchTree {
      *
      * @return     {BookDetails Object}
      */
-    public BookDetails select(int k) {
+    public BookDetails select(final int k) {
         Node x = select(root, k);
         return x.key;
     }
@@ -329,7 +341,7 @@ class BinarySearchTree {
      *
      * @return     {Node}
      */
-    private Node select(Node x, int k) {
+    private Node select(final Node x, final int k) {
         if (x == null) {
             return null;
         }
@@ -349,7 +361,7 @@ class BinarySearchTree {
      *
      * @return     {Integer}
      */
-    public int rank(BookDetails key) {
+    public int rank(final BookDetails key) {
         return rank(key, root);
     }
     /**
@@ -360,7 +372,7 @@ class BinarySearchTree {
      *
      * @return     {Integer}
      */
-    private int rank(BookDetails key, Node x) {
+    private int rank(final BookDetails key, final Node x) {
         if (x == null) {
             return 0;
         }
@@ -397,7 +409,7 @@ public final class Solution {
             switch (tokens[0]) {
             case "put":
                 BookDetails deobj = new BookDetails(tokens[1],
-                                                    tokens[2], Float.parseFloat(tokens[2 + 1]));
+                    tokens[2], Float.parseFloat(tokens[2 + 1]));
                 bstobj.put(deobj, Integer.parseInt(tokens[2 + 2]));
                 break;
             case "get":
@@ -420,12 +432,12 @@ public final class Solution {
                 break;
             case "floor":
                 deobj = new BookDetails(tokens[1],
-                                        tokens[2], Float.parseFloat(tokens[2 + 1]));
+                    tokens[2], Float.parseFloat(tokens[2 + 1]));
                 System.out.println(bstobj.floor(deobj));
                 break;
             case "ceiling":
                 deobj = new BookDetails(tokens[1],
-                                        tokens[2], Float.parseFloat(tokens[2 + 1]));
+                    tokens[2], Float.parseFloat(tokens[2 + 1]));
                 System.out.println(bstobj.ceiling(deobj));
                 break;
             default:

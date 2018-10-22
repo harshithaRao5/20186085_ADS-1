@@ -1,26 +1,5 @@
 Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:66:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:108:72: Expected @param tag for 's'. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:122:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:126:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:126:22: Parameter x should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:201:22: Parameter x should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:223:22: Parameter x should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:237:30: Parameter key should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:254:24: Parameter x should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:254:32: Parameter key should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:279:32: Parameter key should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:295:26: Parameter x should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:295:31: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:295:34: Parameter key should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:320:31: Parameter k should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:332:25: Parameter x should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:332:33: Parameter k should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:352:21: Parameter key should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:363:22: Parameter key should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:363:39: Parameter x should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:400: Line is longer than 80 characters (found 96). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:423: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:428: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m19\19.1 BST\19.1 BST\Solution.java:307:37: Expected @param tag for 'x'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 23 errors.
+Checkstyle ends with 2 errors.
