@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:453: 'if' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 1 errors.

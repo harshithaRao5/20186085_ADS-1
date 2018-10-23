@@ -450,7 +450,9 @@ class BinarySearchTree {
      */
     private Node delete(final Node x, final BookDetails key) {
         Node x1 = x;
-        if (x1 == null) return null;
+        if (x1 == null) {
+            return null;
+        }
 
         int cmp = key.compareTo(x1.key);
         if      (cmp < 0) {
