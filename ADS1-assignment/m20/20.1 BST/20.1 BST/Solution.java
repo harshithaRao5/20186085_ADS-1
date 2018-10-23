@@ -390,8 +390,9 @@ class BinarySearchTree {
             return size(x.left);
         }
     }
-    public BookDetails deleteMin() {
-        return deleteMin(root).key;
+    public void deleteMin() {
+        root = deleteMin(root);
+        System.out.println(root);
     }
 
     private Node deleteMin(Node x) {
@@ -402,8 +403,9 @@ class BinarySearchTree {
         x.size = size(x.left) + size(x.right) + 1;
         return x;
     }
-    public BookDetails deleteMax() {
-        return deleteMax(root).key;
+    public void deleteMax() {
+        root = deleteMax(root);
+        System.out.println(root);
     }
 
     private Node deleteMax(Node x) {
@@ -414,8 +416,9 @@ class BinarySearchTree {
         x.size = size(x.left) + size(x.right) + 1;
         return x;
     }
-    public BookDetails delete(BookDetails key) {
-        return delete(root, key).key;
+    public void delete(BookDetails key) {
+        root = delete(root, key);
+        System.out.println(root);
     }
 
     private Node delete(Node x, BookDetails key) {
@@ -497,16 +500,15 @@ public final class Solution {
                 System.out.println(bstobj.ceiling(deobj));
                 break;
             case "deleteMax":
-                System.out.println(bstobj.deleteMax());
+                bstobj.deleteMax();
                 break;
             case "deleteMin":
-                System.out.println(bstobj.deleteMin());
+                bstobj.deleteMin();
                 break;
             case "delete":
                 deobj = new BookDetails(tokens[1],
                                         tokens[2], Float.parseFloat(tokens[2 + 1]));
-                System.out.println(bstobj.delete(deobj));
-                break;
+                bstobj.delete(deobj);
 
             default:
                 break;
