@@ -390,12 +390,20 @@ class BinarySearchTree {
             return size(x.left);
         }
     }
+    /**
+     * delete minimum node.
+     */
     public void deleteMin() {
         root = deleteMin(root);
-        //System.out.println(root);
     }
-
-    private Node deleteMin(Node x) {
+    /**
+     * overloaded constructor of delete minimum method.
+     *
+     * @param      x  The Node.
+     *
+     * @return  Node
+     */
+    private Node deleteMin(final Node x) {
         if (x.left == null) {
             return x.right;
         }
@@ -403,12 +411,20 @@ class BinarySearchTree {
         x.size = size(x.left) + size(x.right) + 1;
         return x;
     }
+    /**
+     * delete maximum node.
+     */
     public void deleteMax() {
         root = deleteMax(root);
-        //System.out.println(root);
     }
-
-    private Node deleteMax(Node x) {
+    /**
+     * overloaded constructor of delete maximum method.
+     *
+     * @param      x  The Node.
+     *
+     * @return   Node
+     */
+    private Node deleteMax(final Node x) {
         if (x.right == null) {
             return x.left;
         }
@@ -416,12 +432,23 @@ class BinarySearchTree {
         x.size = size(x.left) + size(x.right) + 1;
         return x;
     }
-    public void delete(BookDetails key) {
+    /**
+     * delete node.
+     *
+     * @param      key   The key
+     */
+    public void delete(final BookDetails key) {
         root = delete(root, key);
-        //System.out.println(root);
     }
-
-    private Node delete(Node x, BookDetails key) {
+    /**
+     * overloaded constructor of delete.
+     *
+     * @param      x  Node
+     * @param      key   The key
+     *
+     * @return Node.
+     */
+    private Node delete(Node x, final BookDetails key) {
         if (x == null) return null;
 
         int cmp = key.compareTo(x.key);

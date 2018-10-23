@@ -1,19 +1,9 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:393:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:398:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:398:28: Parameter x should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:406:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:411:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:411:28: Parameter x should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:419:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:419:24: Parameter key should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:424:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:424:25: Parameter x should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:424:33: Parameter key should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:425: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:471: Line is longer than 80 characters (found 96). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:494: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:499: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:510: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:451:25: Parameter x should be final. [FinalParameters]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:452: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:498: Line is longer than 80 characters (found 96). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:521: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:526: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:537: Line is longer than 80 characters (found 84). [LineLength]
 Audit done.
-Checkstyle ends with 16 errors.
+Checkstyle ends with 6 errors.
