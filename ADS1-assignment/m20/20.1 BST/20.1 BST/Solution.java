@@ -392,7 +392,7 @@ class BinarySearchTree {
     }
     public void deleteMin() {
         root = deleteMin(root);
-        System.out.println(root);
+        //System.out.println(root);
     }
 
     private Node deleteMin(Node x) {
@@ -405,7 +405,7 @@ class BinarySearchTree {
     }
     public void deleteMax() {
         root = deleteMax(root);
-        System.out.println(root);
+        //System.out.println(root);
     }
 
     private Node deleteMax(Node x) {
@@ -418,7 +418,7 @@ class BinarySearchTree {
     }
     public void delete(BookDetails key) {
         root = delete(root, key);
-        System.out.println(root);
+        //System.out.println(root);
     }
 
     private Node delete(Node x, BookDetails key) {
