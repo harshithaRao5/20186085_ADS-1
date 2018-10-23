@@ -1,0 +1,19 @@
+Starting audit...
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:393:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:397:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:397:28: Parameter x should be final. [FinalParameters]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:405:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:409:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:409:28: Parameter x should be final. [FinalParameters]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:417:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:417:31: Parameter key should be final. [FinalParameters]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:421:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:421:25: Parameter x should be final. [FinalParameters]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:421:33: Parameter key should be final. [FinalParameters]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:422: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:468: Line is longer than 80 characters (found 96). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:491: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:496: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:507: Line is longer than 80 characters (found 84). [LineLength]
+Audit done.
+Checkstyle ends with 16 errors.
