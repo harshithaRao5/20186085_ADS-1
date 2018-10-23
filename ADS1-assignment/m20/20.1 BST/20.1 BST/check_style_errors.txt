@@ -1,9 +1,4 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:451:25: Parameter x should be final. [FinalParameters]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:452: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:498: Line is longer than 80 characters (found 96). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:521: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:526: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:537: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m20\20.1 BST\20.1 BST\Solution.java:453: 'if' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 6 errors.
+Checkstyle ends with 1 errors.
