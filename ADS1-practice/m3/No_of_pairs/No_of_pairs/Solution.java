@@ -16,6 +16,7 @@ class Noofpairs {
 				count++;
 			} else {
 				temp = temp + count * (count - 1) / 2;
+				count = 1;
 			}
 		}
 		temp = temp + count * (count - 1) / 2;
