@@ -249,10 +249,11 @@ public class LinearProbingHashST<Key, Value> {
             }
         }
         if(keys[i] != null) {
-        s += keys[i] + ":" + vals[i] + "}";
+        s += keys[i] + ":" + vals[i];
         } else {
             s = s.substring(0, s.length()-2);
         }
+        s+="}";
         return s;
     }
 
