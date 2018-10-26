@@ -253,7 +253,7 @@ public class LinearProbingHashST<Key, Value> {
         } else {
             s = s.substring(0, s.length()-2);
         }
-        s+="}";
+        s += "}";
         return s;
     }
 
