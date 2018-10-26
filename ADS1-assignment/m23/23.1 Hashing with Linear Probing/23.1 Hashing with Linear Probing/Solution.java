@@ -21,7 +21,8 @@ public final class Solution {
 					System.out.println(hashobj.get(tokens[1]));
 					break;
 				case "display" :
-					hashobj.display();
+					System.out.println(hashobj.display());
+
 					break;
 				case "delete" :
 					hashobj.delete(tokens[1]);
