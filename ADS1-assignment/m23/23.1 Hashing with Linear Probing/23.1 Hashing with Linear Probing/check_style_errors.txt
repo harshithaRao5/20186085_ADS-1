@@ -3,7 +3,7 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m23\23.1 Hashing with Linear Probing\23.1 Hashing with Linear Probing\Solution.java:2: Missing a Javadoc comment. [JavadocType]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m23\23.1 Hashing with Linear Probing\23.1 Hashing with Linear Probing\Solution.java:3:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m23\23.1 Hashing with Linear Probing\23.1 Hashing with Linear Probing\Solution.java:9:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m23\23.1 Hashing with Linear Probing\23.1 Hashing with Linear Probing\Solution.java:14:22: 'while' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m23\23.1 Hashing with Linear Probing\23.1 Hashing with Linear Probing\Solution.java:14:22: 'while' is not followed by whitespace. [WhitespaceAround]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m23\23.1 Hashing with Linear Probing\23.1 Hashing with Linear Probing\Solution.java:14:24: '>' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m23\23.1 Hashing with Linear Probing\23.1 Hashing with Linear Probing\Solution.java:14:25: '>' is not followed by whitespace. [WhitespaceAround]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m23\23.1 Hashing with Linear Probing\23.1 Hashing with Linear Probing\Solution.java:16:31: 'switch' is not followed by whitespace. [WhitespaceAround]

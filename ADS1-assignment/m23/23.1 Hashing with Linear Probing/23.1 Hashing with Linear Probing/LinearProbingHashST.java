@@ -241,12 +241,18 @@ public class LinearProbingHashST<Key, Value> {
         return true;
     }
     public String display() {
-        String s = "";
+        String s = "{";
         int i;
         for(i = 0;i < keys.length; i++) {
-            s += "{" + keys[i] + ":" + vals[i] + ", ";
+            if(keys[i] != null) {
+            s += keys[i] + ":" + vals[i] + ", ";
+            }
         }
+        if(keys[i] != null) {
         s += keys[i] + ":" + vals[i] + "}";
+        } else {
+            s = s.substring(0, s.length()-2);
+        }
         return s;
     }
 
