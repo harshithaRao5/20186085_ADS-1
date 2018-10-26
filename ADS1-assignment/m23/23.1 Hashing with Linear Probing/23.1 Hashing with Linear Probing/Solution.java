@@ -9,6 +9,11 @@ public final class Solution {
     private Solution() {
         //unused constructor.
     }
+    /**
+     * main method.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         LinearProbingHashST<String, Integer> hashobj
