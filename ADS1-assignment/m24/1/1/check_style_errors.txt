@@ -1,6 +1,2 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:38: Line is longer than 80 characters (found 91). [LineLength]
 Audit done.
-Checkstyle ends with 3 errors.
