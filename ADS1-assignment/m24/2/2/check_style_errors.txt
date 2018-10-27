@@ -1,17 +1,6 @@
 Starting audit...
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:9:21: Name 'roll_number' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:13:16: Name 'student_name' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:13:16: Variable 'student_name' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:65: Line is longer than 80 characters (found 88). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:71: Line is longer than 80 characters (found 86). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:72: Line is longer than 80 characters (found 92). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:75: Line is longer than 80 characters (found 88). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:80:41: '(' should be on the previous line. [MethodParamPad]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:83: Line is longer than 80 characters (found 88). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:90:41: '(' should be on the previous line. [MethodParamPad]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:93: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:93:49: '(' should be on the previous line. [MethodParamPad]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:13:12: Variable 'studentname' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:80:21: '(' should be on the previous line. [MethodParamPad]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:88:21: '(' should be on the previous line. [MethodParamPad]
 Audit done.
-Checkstyle ends with 14 errors.
+Checkstyle ends with 3 errors.
