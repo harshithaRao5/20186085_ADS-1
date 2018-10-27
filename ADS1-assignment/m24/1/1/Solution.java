@@ -1,42 +1,46 @@
 import java.util.Scanner;
-/**
- * client program.
- */
-public final class Solution {
-    /**
-     * Constructs the object.
-     */
-    private Solution() {
-        //unused constructor.
+class StudentDetails {
+
+    private String student_name;
+    private double total_marks;
+    StudentDetails(String sn, double tm) {
+
+        this.student_name = sn;
+        this.total_marks = tm;
     }
-    /**
-     * main method.
-     *
-     * @param      args  The arguments
-     */
-    public static void main(final String[] args) {
+
+    public String getStudentName() {
+        return this.student_name;
+    }
+    public double getTotalMarks() {
+        return this.total_marks;
+    }
+}
+public final class Solution {
+    private Solution() {
+
+    }
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.nextLine());
-        LinearProbingHashST<Integer, String> hashobj =
-            new LinearProbingHashST<Integer, String>();
+        LinearProbingHashST<Integer, StudentDetails> hashobj =
+            new LinearProbingHashST<Integer, StudentDetails>();
         for (int i = 0; i < n; i++) {
             String[] tokens = sc.nextLine().split(",");
-            String s = tokens[1] + "," + tokens[2];
-            hashobj.put(Integer.parseInt(tokens[0]), s);
+            hashobj.put(Integer.parseInt(tokens[0]),
+                new StudentDetails(tokens[1], Double.parseDouble(tokens[2])));
         }
         int m = Integer.parseInt(sc.nextLine());
-        for (int j = 0; j < m; j++) {
-            String[] tokens = sc.nextLine().split(" ");
-            String s = hashobj.get(Integer.parseInt(tokens[1]));
+        for (int i = 0; i < m; i++) {
+            String[] tokens = sc.nextLine().split(",");
+            StudentDetails s = hashobj.get(Integer.parseInt(tokens[1]));
             if (s == null) {
                 System.out.println("Student doesn't exists...");
-
             } else {
-                String[] tokens1 = s.split(",");
                 if (Integer.parseInt(tokens[2]) == 1) {
-                    System.out.println(tokens1[0]);
+                    System.out.println(s.getStudentName());
                 } else {
-                    System.out.println(Double.parseDouble(tokens1[1]));
+                    System.out.println(s.getTotalMarks());
                 }
             }
         }

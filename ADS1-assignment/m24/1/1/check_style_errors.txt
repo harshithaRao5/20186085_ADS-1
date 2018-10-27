@@ -1,2 +1,18 @@
 Starting audit...
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:2: Missing a Javadoc comment. [JavadocType]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:4:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:4:20: Name 'student_name' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:5:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:5:20: Name 'total_marks' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:6:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:6:20: Parameter sn should be final. [FinalParameters]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:6:31: Parameter tm should be final. [FinalParameters]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:12:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:15:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:19: Missing a Javadoc comment. [JavadocType]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:20:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:23:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:23:29: Parameter args should be final. [FinalParameters]
 Audit done.
+Checkstyle ends with 15 errors.
