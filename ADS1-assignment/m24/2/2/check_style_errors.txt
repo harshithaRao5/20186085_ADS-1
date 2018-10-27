@@ -5,7 +5,7 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:3:9: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:3:21: Name 'roll_number' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:4:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:4:24: Name 'student_name' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:4:31: Name 'student_name' must match pattern '^[a-z][a-zA-Z0-9]*$'. [StaticVariableName]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:5:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:9:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:12:9: Missing a Javadoc comment. [JavadocMethod]
@@ -14,7 +14,8 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:21:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:24: Line is longer than 80 characters (found 87). [LineLength]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:28: Line is longer than 80 characters (found 95). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:33:27: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:34: Line is longer than 80 characters (found 124). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:33:27: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:34: Line is longer than 80 characters (found 104). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:35: Line is longer than 80 characters (found 84). [LineLength]
 Audit done.
-Checkstyle ends with 17 errors.
+Checkstyle ends with 18 errors.
