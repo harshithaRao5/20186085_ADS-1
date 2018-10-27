@@ -18,15 +18,15 @@ public final class Solution {
         Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.nextLine());
         LinearProbingHashST<Integer, String> hashobj =
-     new LinearProbingHashST<Integer, String>();
+            new LinearProbingHashST<Integer, String>();
         for (int i = 0; i < n; i++) {
             String[] tokens = sc.nextLine().split(",");
             String s = tokens[1] + "," + tokens[2];
             hashobj.put(Integer.parseInt(tokens[0]), s);
         }
         int m = Integer.parseInt(sc.nextLine());
-        for (int i = 0; i < m; i++) {
-            String[] tokens = sc.nextLine().split(",");
+        for (int j = 0; j < m; j++) {
+            String[] tokens = sc.nextLine().split(" ");
             String s = hashobj.get(Integer.parseInt(tokens[1]));
             if (s == null) {
                 System.out.println("Student doesn't exists...");
