@@ -1,7 +1,7 @@
 import java.util.Scanner;
 class StudentDetails {
 	private int roll_number;
-	private static String student_name;
+	static String student_name;
 	StudentDetails(final int rn, final String sn) {
 		this.roll_number = rn;
 		this.student_name = sn;
@@ -31,7 +31,10 @@ public final class Solution {
 		for (int j = 0; j < m; j++) {
 			String[] input = sc.nextLine().split(" ");
 			if(input[0].equals("BE")) {
-				System.out.println(bstobj.keys(Double.parseDouble(input[1]), Double.parseDouble(input[2])));
+				String[] s = bstobj.keys(Double.parseDouble(input[1]), Double.parseDouble(input[2])).toString().split(" ");
+				for(int i =0; i<s.length;i++) {
+					System.out.println(bstobj.get(Double.parseDouble(s[i])).student_name);
+				}
 			}
 
 		}
