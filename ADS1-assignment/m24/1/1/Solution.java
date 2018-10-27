@@ -1,75 +1,44 @@
 import java.util.Scanner;
-class StudentDetails {
-    /**
-     * student name.
-     */
-	private String student_name;
-    /**
-     * marks variable.
-     */
-	private double total_marks;
-    /**
-     * Constructs the object.
-     *
-     * @param      sn    The serial number
-     * @param      tm    The time
-     */
-	StudentDetails(final String sn, final double tm) {
-
-		this.student_name = sn;
-		this.total_marks = tm;
-	}
-    /**
-     * Gets the student name.
-     *
-     * @return     The student name.
-     */
-	public String getStudentName() {
-		return this.student_name;
-	}
-    /**
-     * Gets the total marks.
-     *
-     * @return     The total marks.
-     */
-	public double getTotalMarks() {
-		return this.total_marks;
-	}
-}
 /**
- * client class
+ * client program.
  */
 public final class Solution {
     /**
      * Constructs the object.
      */
-	private Solution() {
+    private Solution() {
         //unused constructor.
-	}
+    }
     /**
      * main method.
      *
      * @param      args  The arguments
      */
-	public static void main(final String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int n = Integer.parseInt(sc.nextLine());
-		LinearProbingHashST<Integer, StudentDetails>  hashobj
-        = new LinearProbingHashST<Integer, StudentDetails>();
-		for (int i = 0; i < n; i++) {
-			String[] tokens = sc.nextLine().split(",");
-			hashobj.put(Integer.parseInt(tokens[0]),
-                new StudentDetails(tokens[1], Double.parseDouble(tokens[2])));
-		}
-		int m = Integer.parseInt(sc.nextLine());
-		for (int i = 0; i < n; i++) {
-			String[] tokens = sc.nextLine().split(",");
-			StudentDetails s = hashobj.get(Integer.parseInt(tokens[1]));
-			if (Integer.parseInt(tokens[2]) == 1) {
-				System.out.println(s.getStudentName());
-			} else {
-				System.out.println(s.getTotalMarks());
-			}
-		}
-	}
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = Integer.parseInt(sc.nextLine());
+        LinearProbingHashST<Integer, String> hashobj =
+     new LinearProbingHashST<Integer, String>();
+        for (int i = 0; i < n; i++) {
+            String[] tokens = sc.nextLine().split(",");
+            String s = tokens[1] + "," + tokens[2];
+            hashobj.put(Integer.parseInt(tokens[0]), s);
+        }
+        int m = Integer.parseInt(sc.nextLine());
+        for (int i = 0; i < n; i++) {
+            String[] tokens = sc.nextLine().split(",");
+            String s = hashobj.get(Integer.parseInt(tokens[1]));
+            if (s == null) {
+                System.out.println("Student doesn't exists...");
+
+            } else {
+                String[] tokens1 = s.split(",");
+                if (Integer.parseInt(tokens[2]) == 1) {
+                    System.out.println(tokens1[0]);
+                } else {
+                    System.out.println(Double.parseDouble(tokens1[1]));
+                }
+            }
+        }
+    }
 }

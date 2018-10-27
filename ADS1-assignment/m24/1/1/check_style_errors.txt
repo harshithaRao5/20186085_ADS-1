@@ -1,10 +1,4 @@
 Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:2: Missing a Javadoc comment. [JavadocType]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:6:24: Name 'student_name' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:10:24: Name 'total_marks' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:39: First sentence should end with a period. [JavadocStyle]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\1\1\Solution.java:67: Line is longer than 80 characters (found 84). [LineLength]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 1 errors.
