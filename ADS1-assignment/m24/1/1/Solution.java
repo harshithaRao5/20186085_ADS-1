@@ -1,9 +1,20 @@
 import java.util.Scanner;
+/**
+ * client program.
+ */
 public final class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	private Solution() {
-
+		//unused constructor.
 	}
-	public static void main(String[] args) {
+	/**
+	 * main method.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = Integer.parseInt(sc.nextLine());
 		LinearProbingHashST<Integer, String> hashobj =
@@ -17,11 +28,15 @@ public final class Solution {
 		for (int j = 0; j < m; j++) {
 			String[] tokens = sc.nextLine().split(" ");
 			String s = hashobj.get(Integer.parseInt(tokens[1]));
-			String[] tokens1 = s.split(",");
-			if (Integer.parseInt(tokens[2]) == 1) {
-				System.out.println(tokens1[0]);
+			if (s == null) {
+				System.out.println("Student doesn't exists...");
 			} else {
-				System.out.println(Double.parseDouble(tokens1[1]));
+				String[] tokens1 = s.split(",");
+				if (Integer.parseInt(tokens[2]) == 1) {
+					System.out.println(tokens1[0]);
+				} else {
+					System.out.println(Double.parseDouble(tokens1[1]));
+				}
 			}
 		}
 	}
