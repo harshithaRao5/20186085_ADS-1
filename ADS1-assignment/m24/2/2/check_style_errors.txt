@@ -1,6 +1,4 @@
 Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:13:12: Variable 'studentname' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:80:21: '(' should be on the previous line. [MethodParamPad]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:88:21: '(' should be on the previous line. [MethodParamPad]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.

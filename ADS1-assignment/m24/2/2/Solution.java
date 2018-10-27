@@ -76,16 +76,16 @@ public final class Solution {
                 }
             } else if (input[0].equals("LE")) {
                 double min = bstobj.min();
-                String[] s = bstobj.keys(min, Double.parseDouble
-                    (input[1])).toString().split(" ");
+                String[] s = bstobj.keys(min, Double.parseDouble(
+                    input[1])).toString().split(" ");
                 for (int i = 0; i < s.length; i++) {
                     System.out.println(bstobj.get(
                         Double.parseDouble(s[i])).studentname);
                 }
             } else if (input[0].equals("GE")) {
                 double max = bstobj.max();
-                String[] s = bstobj.keys(max, Double.parseDouble
-                    (input[1])).toString().split(" ");
+                String[] s = bstobj.keys(max, Double.parseDouble(
+                    input[1])).toString().split(" ");
                 for (int i = 0; i < s.length; i++) {
                     System.out.println(bstobj.get(
                         Double.parseDouble(s[i])).studentname);
