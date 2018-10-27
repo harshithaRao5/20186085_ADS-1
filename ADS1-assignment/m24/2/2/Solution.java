@@ -1,7 +1,7 @@
 import java.util.Scanner;
 class StudentDetails {
 	private int roll_number;
-	static String student_name;
+	String student_name;
 	StudentDetails(final int rn, final String sn) {
 		this.roll_number = rn;
 		this.student_name = sn;
@@ -9,7 +9,7 @@ class StudentDetails {
 	public int getRollNumber() {
 		return this.roll_number;
 	}
-	public static String getStudentName() {
+	public String getStudentName() {
 		return student_name;
 	}
 
@@ -33,7 +33,7 @@ public final class Solution {
 			if (input[0].equals("BE")) {
 				String[] s = bstobj.keys(Double.parseDouble(input[1]), Double.parseDouble(input[2])).toString().split(" ");
 				for (int i = 0; i < s.length; i++) {
-					System.out.println(bstobj.get(Double.parseDouble(s[i])));
+					System.out.println(bstobj.get(Double.parseDouble(s[i])).student_name);
 				}
 			} else if(input[0].equals("LE")) {
 
