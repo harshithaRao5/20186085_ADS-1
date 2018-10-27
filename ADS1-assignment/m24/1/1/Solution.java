@@ -25,7 +25,7 @@ public final class Solution {
             hashobj.put(Integer.parseInt(tokens[0]), s);
         }
         int m = Integer.parseInt(sc.nextLine());
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < m; i++) {
             String[] tokens = sc.nextLine().split(",");
             String s = hashobj.get(Integer.parseInt(tokens[1]));
             if (s == null) {
