@@ -30,11 +30,15 @@ public final class Solution {
 		int m = Integer.parseInt(sc.nextLine());
 		for (int j = 0; j < m; j++) {
 			String[] input = sc.nextLine().split(" ");
-			if(input[0].equals("BE")) {
+			if (input[0].equals("BE")) {
 				String[] s = bstobj.keys(Double.parseDouble(input[1]), Double.parseDouble(input[2])).toString().split(" ");
-				for(int i =0; i<s.length;i++) {
-					System.out.println(bstobj.get(Double.parseDouble(s[i])).student_name);
+				for (int i = 0; i < s.length; i++) {
+					System.out.println(bstobj.get(Double.parseDouble(s[i])));
 				}
+			} else if(input[0].equals("LE")) {
+
+			} else if(input[0].equals("GE")) {
+
 			}
 
 		}

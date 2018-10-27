@@ -15,13 +15,11 @@ Starting audit...
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:21:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:24: Line is longer than 80 characters (found 87). [LineLength]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:28: Line is longer than 80 characters (found 95). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:33:27: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:34: Line is longer than 80 characters (found 139). [LineLength]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:35:36: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:35:44: '=' is not followed by whitespace. [WhitespaceAround]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:35:48: '<' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:35:49: '<' is not followed by whitespace. [WhitespaceAround]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:35:58: ';' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:36: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:36: Line is longer than 80 characters (found 97). [LineLength]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:38:34: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:38:58: Must have at least one statement. [EmptyBlock]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:40:34: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] E:\msit\20186085_ADS-1\ADS1-assignment\m24\2\2\Solution.java:40:58: Must have at least one statement. [EmptyBlock]
 Audit done.
-Checkstyle ends with 24 errors.
+Checkstyle ends with 22 errors.
