@@ -1,46 +1,42 @@
 import java.util.Scanner;
-class StudentDetails {
-
-    private String student_name;
-    private double total_marks;
-    StudentDetails(String sn, double tm) {
-
-        this.student_name = sn;
-        this.total_marks = tm;
-    }
-
-    public String getStudentName() {
-        return this.student_name;
-    }
-    public double getTotalMarks() {
-        return this.total_marks;
-    }
-}
+/**
+ * client program.
+ */
 public final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
-
+        //unused constructor.
     }
-    public static void main(String[] args) {
+    /**
+     * main method.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.nextLine());
-        LinearProbingHashST<Integer, StudentDetails> hashobj =
-            new LinearProbingHashST<Integer, StudentDetails>();
+        LinearProbingHashST<Integer, String> hashobj =
+            new LinearProbingHashST<Integer, String>();
         for (int i = 0; i < n; i++) {
             String[] tokens = sc.nextLine().split(",");
-            hashobj.put(Integer.parseInt(tokens[0]),
-                new StudentDetails(tokens[1], Double.parseDouble(tokens[2])));
+            String s = tokens[1] + "," + tokens[2];
+            hashobj.put(Integer.parseInt(tokens[0]), s);
         }
         int m = Integer.parseInt(sc.nextLine());
-        for (int i = 0; i < m; i++) {
-            String[] tokens = sc.nextLine().split(",");
-            StudentDetails s = hashobj.get(Integer.parseInt(tokens[1]));
+        for (int j = 0; j < m; j++) {
+            String[] tokens = sc.nextLine().split(" ");
+            String s = hashobj.get(Integer.parseInt(tokens[1]));
             if (s == null) {
                 System.out.println("Student doesn't exists...");
+
             } else {
+                String[] tokens1 = s.split(",");
                 if (Integer.parseInt(tokens[2]) == 1) {
-                    System.out.println(s.getStudentName());
+                    System.out.println(tokens1[0]);
                 } else {
-                    System.out.println(s.getTotalMarks());
+                    System.out.println(Double.parseDouble(tokens1[1]));
                 }
             }
         }
