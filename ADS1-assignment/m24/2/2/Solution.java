@@ -31,8 +31,7 @@ public final class Solution {
 		for (int j = 0; j < m; j++) {
 			String[] input = sc.nextLine().split(" ");
 			if(input[0].equals("BE")) {
-				bstobj.keys(Double.parseDouble(input[1]), Double.parseDouble(input[2]));
-				System.out.println(StudentDetails.getStudentName());
+				System.out.println(bstobj.keys(Double.parseDouble(input[1]), Double.parseDouble(input[2])));
 			}
 
 		}
